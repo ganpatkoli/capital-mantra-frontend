@@ -7,14 +7,16 @@ import Footer from "../components/Layout/Footer";
 import Hero from "../components/Modules/Hero";
 import IpoSection from "../components/Modules/IpoSection";
 import BlogSection from "../components/Modules/BlogSection";
-import CalculatorSection from "../Calculators/CalculatorSection";
+import CalculatorSection from "../components/Modules/CalculatorSectionInfo";
 import NewsletterSection from "../components/Modules/NewsletterSection";
+import WhyIpoMatters from "../components/Modules/WhyIpoMatters";
+import AboutSection from "@/components/Modules/AboutUs";
 
 // Note: No need for activeView/detailData state here anymore!
 // The page itself only renders the dashboard content.
 
 const Dashboard = () => {
-    
+
     // Function to ensure Navbar links work, although smooth scrolling is client-side
     const goHome = (e) => {
         if (e) e.preventDefault();
@@ -28,8 +30,10 @@ const Dashboard = () => {
                 <Hero />
                 {/* navigateToDetail is no longer needed, components will use <Link> */}
                 <IpoSection />
+                <WhyIpoMatters />
                 <BlogSection />
                 <CalculatorSection />
+                <AboutSection />
                 <NewsletterSection />
             </main>
             <Footer />

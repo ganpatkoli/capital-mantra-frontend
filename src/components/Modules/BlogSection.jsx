@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 // FIX: Correct path up two levels to reach the data folder
-import { BLOG_POSTS, BLOG_CATEGORIES, slugify } from '../../data/Data'; 
+import { BLOG_POSTS, BLOG_CATEGORIES, slugify } from '../../data/Data';
 import Link from 'next/link';
 
 const BlogFilters = ({ activeCategory, setActiveCategory }) => {
@@ -13,11 +13,10 @@ const BlogFilters = ({ activeCategory, setActiveCategory }) => {
                 <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`rounded-full px-3 py-1 font-medium transition ${
-                        activeCategory === cat
+                    className={`rounded-full px-3 py-1 font-medium transition ${activeCategory === cat
                             ? "bg-emerald-500 text-emerald-950"
                             : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
-                    }`}
+                        }`}
                 >
                     {cat}
                 </button>
@@ -29,7 +28,7 @@ const BlogFilters = ({ activeCategory, setActiveCategory }) => {
 const BlogPostCard = ({ post }) => {
     return (
         // Link to the SEO-friendly Catch-All route
-        <Link 
+        <Link
             key={post.id}
             href={`/blog/${post.id}/${slugify(post.title)}`}
             className="group flex flex-col justify-between rounded-2xl border border-slate-200 bg-white/80 p-0 shadow-sm shadow-slate-200 transition hover:-translate-y-1 hover:border-emerald-500/60 hover:shadow-emerald-500/20 cursor-pointer dark:border-slate-800 dark:bg-slate-950/80 dark:shadow-slate-950/60"
@@ -40,7 +39,7 @@ const BlogPostCard = ({ post }) => {
                     src={post.imageUrl}
                     alt={`Featured image for ${post.title}`}
                     className="w-full h-40 object-cover rounded-t-2xl transition duration-300 group-hover:scale-105"
-                    onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/600x400/475569/white?text=Blog+Image" }}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/475569/white?text=Blog+Image" }}
                 />
                 <span className="absolute bottom-0 right-0 m-2 rounded-full bg-slate-950/70 px-2 py-0.5 text-[10px] font-semibold text-white backdrop-blur-sm">
                     {post.readTime}
@@ -98,11 +97,9 @@ const BlogSection = () => {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
                         <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50">
-                            Financial blogs & learning hub
-                        </h2>
+                            Stock Market & Investing Blogs: Free Financial Education for Indian Investors.   </h2>
                         <p className="mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400">
-                            Short, practical articles on investing basics, IPO investing
-                            strategies, market psychology, and tax planning.
+                        Enhance your financial knowledge with Capital Mantra. Explore practical, easy-to-read articles on Investing Basics, Stock Market Strategies, Mutual Funds, and Indian Tax Regulations.
                         </p>
                     </div>
                     <BlogFilters

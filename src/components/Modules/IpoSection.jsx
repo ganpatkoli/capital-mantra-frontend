@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { IPO_LIST, slugify } from '../../data/Data';
 import Link from 'next/link';
+import AnimatedSection from './AnimationWeb';
 // Assuming IpoDetailView is in Modules, so we pass navigateToDetail down
 
 const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch }) => {
@@ -17,8 +18,8 @@ const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch }) 
                         key={status}
                         onClick={() => setSelectedStatus(status)}
                         className={`rounded-full px-3 py-1 font-medium transition ${selectedStatus === status
-                                ? "bg-emerald-500 text-emerald-950"
-                                : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
+                            ? "bg-emerald-500 text-emerald-950"
+                            : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
                             }`}
                     >
                         {status}
@@ -80,10 +81,10 @@ const IpoTable = ({ ipos, navigateToDetail }) => {
                         </span>
                         <span
                             className={`inline-flex rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide ${ipo.status === "Ongoing"
-                                    ? "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/40 dark:text-emerald-300"
-                                    : ipo.status === "Upcoming"
-                                        ? "bg-cyan-500/10 text-cyan-600 ring-1 ring-cyan-500/40 dark:text-cyan-300"
-                                        : "bg-slate-200/50 text-slate-600 ring-1 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300 dark:ring-slate-500/40"
+                                ? "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/40 dark:text-emerald-300"
+                                : ipo.status === "Upcoming"
+                                    ? "bg-cyan-500/10 text-cyan-600 ring-1 ring-cyan-500/40 dark:text-cyan-300"
+                                    : "bg-slate-200/50 text-slate-600 ring-1 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300 dark:ring-slate-500/40"
                                 }`}
                         >
                             {ipo.status}
@@ -111,39 +112,39 @@ const IpoSection = ({ navigateToDetail }) => {
     });
 
     return (
-        <section
-            id="ipos"
-            className="border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950"
-        >
-            <div className="mx-auto max-w-6xl px-4 sm:px-6">
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                        <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50">
-                            IPO dashboard
-                        </h2>
-                        <p className="mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400">
-                            Track latest, upcoming and recently closed IPOs. Data below is
-                            sample only – connect with an external API or your backend to make
-                            it 100% live.
+        <AnimatedSection animationClass="translate-y-10" rootMargin='-50px 0px'>
+
+            <section
+                id="ipos"
+                className="border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950"
+            >
+                <div className="mx-auto max-w-6xl px-4 sm:px-6">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                        <div>
+                            <h2 className="text-lg font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50">
+                                Live IPO Dashboard India: Track Upcoming, Ongoing & Latest Mainboard/SME IPOs.
+                            </h2>
+                            <p className="mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400">
+                                Get comprehensive IPO data: Bidding Status, Price Bands, Lot Sizes, and real-time Grey Market Premium (GMP) values for both Mainboard and SME IPO segments.</p>
+                        </div>
+                        <p className="text-[11px] text-slate-500 sm:text-xs">
+                            Tip: Click any card for detailed dates and financials.
                         </p>
                     </div>
-                    <p className="text-[11px] text-slate-500 sm:text-xs">
-                        Tip: Click any card for detailed dates and financials.
-                    </p>
-                </div>
 
-                <div className="mt-5 space-y-4">
-                    <IpoFilterBar
-                        selectedStatus={selectedStatus}
-                        setSelectedStatus={setSelectedStatus}
-                        search={search}
-                        setSearch={setSearch}
-                    />
-                    <IpoTable ipos={filteredIpos} navigateToDetail={navigateToDetail} />
-                </div>
+                    <div className="mt-5 space-y-4">
+                        <IpoFilterBar
+                            selectedStatus={selectedStatus}
+                            setSelectedStatus={setSelectedStatus}
+                            search={search}
+                            setSearch={setSearch}
+                        />
+                        <IpoTable ipos={filteredIpos} navigateToDetail={navigateToDetail} />
+                    </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </AnimatedSection>
     );
 };
 

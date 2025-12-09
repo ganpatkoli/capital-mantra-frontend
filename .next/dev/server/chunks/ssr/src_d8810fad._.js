@@ -65,10 +65,10 @@ const ThemeToggle = ()=>{
             viewBox: "0 0 24 24",
             fill: "none",
             stroke: "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round",
-            class: "lucide lucide-sun-icon lucide-sun",
+            strokeWidth: "2",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            className: "lucide lucide-sun-icon lucide-sun",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
                     cx: "12",
@@ -77,63 +77,63 @@ const ThemeToggle = ()=>{
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 240
+                    columnNumber: 241
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M12 2v2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 272
+                    columnNumber: 273
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M12 20v2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 292
+                    columnNumber: 293
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m4.93 4.93 1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 313
+                    columnNumber: 314
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m17.66 17.66 1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 346
+                    columnNumber: 347
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M2 12h2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 381
+                    columnNumber: 382
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M20 12h2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 401
+                    columnNumber: 402
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m6.34 17.66-1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 422
+                    columnNumber: 423
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m19.07 4.93-1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                     lineNumber: 64,
-                    columnNumber: 456
+                    columnNumber: 457
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
@@ -148,16 +148,16 @@ const ThemeToggle = ()=>{
             viewBox: "0 0 24 24",
             fill: "none",
             stroke: "currentColor",
-            "stroke-width": "2",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round",
-            class: "lucide lucide-moon-icon lucide-moon",
+            strokeWidth: "2",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            className: "lucide lucide-moon-icon lucide-moon",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
             }, void 0, false, {
                 fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
                 lineNumber: 68,
-                columnNumber: 242
+                columnNumber: 243
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
@@ -790,11 +790,432 @@ const Footer = ()=>{
 };
 const __TURBOPACK__default__export__ = Footer;
 }),
-"[project]/src/components/Modules/Hero.jsx [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
+"[project]/src/components/Modules/AnimationWeb.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const e = new Error("Could not parse module '[project]/src/components/Modules/Hero.jsx'\n\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?");
-e.code = 'MODULE_UNPARSABLE';
-throw e;
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+;
+;
+const AnimatedSection = ({ children, animationClass, rootMargin = '-100px 0px' })=>{
+    // --- Custom Hook for Scroll Animations ---
+    const useIntersectionObserver = (options)=>{
+        const [isVisible, setIsVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+        const elementRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+            const observer = new IntersectionObserver(([entry])=>{
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    // Optionally stop observing once visible (for fade-in effects)
+                    observer.unobserve(entry.target);
+                }
+            }, options);
+            if (elementRef.current) {
+                observer.observe(elementRef.current);
+            }
+            return ()=>{
+                if (elementRef.current) {
+                    observer.unobserve(elementRef.current);
+                }
+            };
+        }, [
+            options
+        ]);
+        return [
+            elementRef,
+            isVisible
+        ];
+    };
+    const [ref, isVisible] = useIntersectionObserver({
+        threshold: 0.1,
+        rootMargin
+    });
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        ref: ref,
+        className: `transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : `opacity-0 ${animationClass}`}`,
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/components/Modules/AnimationWeb.jsx",
+        lineNumber: 37,
+        columnNumber: 9
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const __TURBOPACK__default__export__ = AnimatedSection;
+}),
+"[project]/src/components/Modules/Hero.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+// components/Modules/Hero.jsx
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Context/ThemeContext.jsx [app-ssr] (ecmascript)");
+;
+;
+;
+;
+;
+const Hero = ()=>{
+    const { theme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTheme"])();
+    console.log("first0", theme);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+        animationClass: "translate-y-10",
+        rootMargin: "-50px 0px",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            id: "hero",
+            className: "border-b border-slate-200/70 bg-gradient-to-b from-white via-white to-slate-50 dark:border-slate-800/70 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-10 sm:px-6 sm:pt-16 lg:flex-row lg:items-center lg:gap-16 lg:pb-20",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex-1 space-y-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-600 dark:text-emerald-300",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 22,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    "Live Market Insights • Best IPO Analysis"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                lineNumber: 21,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: "   text-balance    text-2xl    sm:text-3xl    lg:text-4xl    font-semibold    tracking-tight    text-slate-900    dark:text-slate-50   ",
+                                children: "Smart IPO Insights & Simplified Investing — All in One Place."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                lineNumber: 26,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "max-w-xl text-sm leading-relaxed text-slate-700 sm:text-base dark:text-slate-300",
+                                children: "Capital Mantra brings you real-time GMP updates, concise IPO research, and beginner-friendly financial blogs — everything you need to make confident investment decisions."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                lineNumber: 41,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex flex-wrap gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "#ipos",
+                                        className: "inline-flex items-center gap-2 rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400 hover:scale-[1.05] duration-200",
+                                        children: [
+                                            "View IPO Dashboard",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-lg",
+                                                children: "↗"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 52,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 47,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "#blogs",
+                                        className: "inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/60 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-emerald-500/60 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-emerald-500/60 dark:hover:text-emerald-200 transition hover:scale-[1.05] duration-200",
+                                        children: "Read Latest Blogs"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 54,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                lineNumber: 46,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid gap-3 pt-2 text-xs text-slate-500 sm:grid-cols-3 sm:text-[13px] dark:text-slate-400",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "rounded-xl border border-slate-200 bg-white/70 px-3 py-3 dark:border-slate-800 dark:bg-slate-900/70 transition hover:shadow-md duration-300",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "font-semibold text-slate-800 dark:text-slate-100",
+                                                children: "100% Free Financial Education"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 64,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mt-1 text-[11px] leading-relaxed text-slate-600 dark:text-slate-400",
+                                                children: "No paywall. Learn the basics of investment, IPOs, and mutual funds."
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 65,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 63,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "rounded-xl border border-slate-200 bg-white/70 px-3 py-3 dark:border-slate-800 dark:bg-slate-900/70 transition hover:shadow-md duration-300",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "font-semibold text-slate-800 dark:text-slate-100",
+                                                children: "Beginner-friendly Investing"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 70,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mt-1 text-[11px] leading-relaxed text-slate-600 dark:text-slate-400",
+                                                children: "Simple language, real examples, and clear action points for the Indian market."
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 71,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 69,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "rounded-xl border border-slate-200 bg-white/70 px-3 py-3 dark:border-slate-800 dark:bg-slate-900/70 transition hover:shadow-md duration-300",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "font-semibold text-slate-800 dark:text-slate-100",
+                                                children: "Live IPO Tracking (GMP)"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 76,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "mt-1 text-[11px] leading-relaxed text-slate-600 dark:text-slate-400",
+                                                children: "View latest, upcoming, and recently listed IPOs with GMP tracking."
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                lineNumber: 77,
+                                                columnNumber: 33
+                                            }, ("TURBOPACK compile-time value", void 0))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                                        lineNumber: 75,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/Hero.jsx",
+                                lineNumber: 62,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                        lineNumber: 20,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex-1",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative mx-auto max-w-md",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-emerald-400/50 via-cyan-400/40 to-teal-500/30 opacity-60 blur-xl animate-pulse-slow"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                    lineNumber: 86,
+                                    columnNumber: 29
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                " ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "relative rounded-3xl border border-emerald-500/50 bg-white/95 p-4 shadow-xl shadow-emerald-500/20 dark:border-emerald-400/30 dark:bg-slate-900/95",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-3 flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                    lineNumber: 89,
+                                                    columnNumber: 37
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                "Live IPO Snapshot (Demo Data)"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                            lineNumber: 88,
+                                            columnNumber: 33
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "rounded-2xl bg-slate-100/80 p-3 dark:bg-slate-950/80",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: "Company (IPO)"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                            lineNumber: 95,
+                                                            columnNumber: 41
+                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            children: "GMP • Status"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                            lineNumber: 96,
+                                                            columnNumber: 41
+                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                    lineNumber: 94,
+                                                    columnNumber: 37
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "mt-2 divide-y divide-slate-300/80 text-xs dark:divide-slate-800/80",
+                                                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["IPO_LIST"].slice(0, 3).map((ipo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "flex items-center justify-between py-2",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-[13px] font-medium text-slate-900 dark:text-slate-100",
+                                                                            children: ipo.company
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                            lineNumber: 106,
+                                                                            columnNumber: 57
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-[11px] text-slate-500 dark:text-slate-400",
+                                                                            children: [
+                                                                                ipo.symbol,
+                                                                                " • ",
+                                                                                ipo.ipoType
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                            lineNumber: 109,
+                                                                            columnNumber: 57
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                    lineNumber: 105,
+                                                                    columnNumber: 53
+                                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "text-right",
+                                                                    children: [
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-[11px] font-semibold text-emerald-600 dark:text-emerald-300",
+                                                                            children: ipo.gmp
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                            lineNumber: 114,
+                                                                            columnNumber: 57
+                                                                        }, ("TURBOPACK compile-time value", void 0)),
+                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                            className: "text-[11px] text-slate-500 dark:text-slate-400",
+                                                                            children: ipo.status
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                            lineNumber: 117,
+                                                                            columnNumber: 57
+                                                                        }, ("TURBOPACK compile-time value", void 0))
+                                                                    ]
+                                                                }, void 0, true, {
+                                                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                                    lineNumber: 113,
+                                                                    columnNumber: 53
+                                                                }, ("TURBOPACK compile-time value", void 0))
+                                                            ]
+                                                        }, ipo.id, true, {
+                                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                            lineNumber: 101,
+                                                            columnNumber: 49
+                                                        }, ("TURBOPACK compile-time value", void 0)))
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                                    lineNumber: 98,
+                                                    columnNumber: 37
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                            lineNumber: 93,
+                                            columnNumber: 33
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "mt-3 text-[10px] leading-relaxed text-slate-500",
+                                            children: "* All IPO and GMP numbers are for demonstration purposes only. Please verify before investing."
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                                            lineNumber: 125,
+                                            columnNumber: 33
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                                    lineNumber: 87,
+                                    columnNumber: 29
+                                }, ("TURBOPACK compile-time value", void 0))
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/Modules/Hero.jsx",
+                            lineNumber: 85,
+                            columnNumber: 25
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/Hero.jsx",
+                        lineNumber: 84,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/Hero.jsx",
+                lineNumber: 19,
+                columnNumber: 17
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/Hero.jsx",
+            lineNumber: 15,
+            columnNumber: 13
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/src/components/Modules/Hero.jsx",
+        lineNumber: 13,
+        columnNumber: 9
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const __TURBOPACK__default__export__ = Hero;
 }),
 "[project]/src/components/Modules/IpoSection.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -808,7 +1229,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -833,12 +1256,12 @@ const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch })=
                         children: status
                     }, status, false, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 16,
+                        lineNumber: 17,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,7 +1272,7 @@ const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch })=
                         children: "🔍"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -860,19 +1283,19 @@ const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch })=
                         className: "w-full bg-transparent text-xs outline-none placeholder:text-slate-500 sm:max-w-xs sm:text-[13px]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-        lineNumber: 13,
+        lineNumber: 14,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -883,7 +1306,7 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
             children: "No IPOs found for the selected filters."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -904,7 +1327,7 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                         children: ipo.company
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 65,
+                        lineNumber: 66,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -916,7 +1339,7 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 66,
+                        lineNumber: 67,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -929,29 +1352,11 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                         children: "Open:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                        lineNumber: 71,
-                                        columnNumber: 28
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    " ",
-                                    ipo.openDate
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                lineNumber: 71,
-                                columnNumber: 25
-                            }, ("TURBOPACK compile-time value", void 0)),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-slate-500 dark:text-slate-400",
-                                        children: "Close:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
                                         lineNumber: 72,
                                         columnNumber: 28
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
-                                    ipo.closeDate
+                                    ipo.openDate
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
@@ -962,14 +1367,14 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-slate-500 dark:text-slate-400",
-                                        children: "Price Band:"
+                                        children: "Close:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
                                         lineNumber: 73,
                                         columnNumber: 28
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
-                                    ipo.priceBand
+                                    ipo.closeDate
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
@@ -980,10 +1385,28 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-slate-500 dark:text-slate-400",
-                                        children: "Lot Size:"
+                                        children: "Price Band:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
                                         lineNumber: 74,
+                                        columnNumber: 28
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    " ",
+                                    ipo.priceBand
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                lineNumber: 74,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-slate-500 dark:text-slate-400",
+                                        children: "Lot Size:"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                        lineNumber: 75,
                                         columnNumber: 28
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     " ",
@@ -991,13 +1414,13 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                lineNumber: 74,
+                                lineNumber: 75,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 70,
+                        lineNumber: 71,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1008,7 +1431,7 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                 children: ipo.gmp
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                lineNumber: 78,
+                                lineNumber: 79,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1016,24 +1439,24 @@ const IpoTable = ({ ipos, navigateToDetail })=>{
                                 children: ipo.status
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                lineNumber: 81,
+                                lineNumber: 82,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                        lineNumber: 77,
+                        lineNumber: 78,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, ipo.id, true, {
                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                lineNumber: 59,
+                lineNumber: 60,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)))
     }, void 0, false, {
         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-        lineNumber: 57,
+        lineNumber: 58,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1046,89 +1469,97 @@ const IpoSection = ({ navigateToDetail })=>{
         const searchMatch = !query || ipo.company.toLowerCase().includes(query) || ipo.symbol.toLowerCase().includes(query);
         return statusMatch && searchMatch;
     });
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        id: "ipos",
-        className: "border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mx-auto max-w-6xl px-4 sm:px-6",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50",
-                                    children: "IPO dashboard"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 121,
-                                    columnNumber: 25
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400",
-                                    children: "We provide comprehensive data on Upcoming IPOs, Ongoing Bidding Status, Price Bands, Lot Sizes, and latest GMP values for both Mainboard and SME segments. Stay ahead of the market with reliable IPO information. (Data below is sample only)."
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 124,
-                                    columnNumber: 25
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 120,
-                            columnNumber: 21
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-[11px] text-slate-500 sm:text-xs",
-                            children: "Tip: Click any card for detailed dates and financials."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 128,
-                            columnNumber: 21
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 119,
-                    columnNumber: 17
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-5 space-y-4",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoFilterBar, {
-                            selectedStatus: selectedStatus,
-                            setSelectedStatus: setSelectedStatus,
-                            search: search,
-                            setSearch: setSearch
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 134,
-                            columnNumber: 21
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoTable, {
-                            ipos: filteredIpos,
-                            navigateToDetail: navigateToDetail
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 140,
-                            columnNumber: 21
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 133,
-                    columnNumber: 17
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+        animationClass: "translate-y-10",
+        rootMargin: "-50px 0px",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            id: "ipos",
+            className: "border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mx-auto max-w-6xl px-4 sm:px-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-lg font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50",
+                                        children: "Live IPO Dashboard India: Track Upcoming, Ongoing & Latest Mainboard/SME IPOs."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                        lineNumber: 124,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400",
+                                        children: "Get comprehensive IPO data: Bidding Status, Price Bands, Lot Sizes, and real-time Grey Market Premium (GMP) values for both Mainboard and SME IPO segments."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                lineNumber: 123,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-[11px] text-slate-500 sm:text-xs",
+                                children: "Tip: Click any card for detailed dates and financials."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                lineNumber: 130,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 122,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-5 space-y-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoFilterBar, {
+                                selectedStatus: selectedStatus,
+                                setSelectedStatus: setSelectedStatus,
+                                search: search,
+                                setSearch: setSearch
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                lineNumber: 136,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoTable, {
+                                ipos: filteredIpos,
+                                navigateToDetail: navigateToDetail
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                                lineNumber: 142,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 135,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 121,
+                columnNumber: 17
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 118,
+            lineNumber: 117,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/Modules/IpoSection.jsx",
-        lineNumber: 114,
+        lineNumber: 115,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1192,7 +1623,7 @@ const BlogPostCard = ({ post })=>{
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 39,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1200,13 +1631,13 @@ const BlogPostCard = ({ post })=>{
                         children: post.readTime
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 45,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                lineNumber: 38,
+                lineNumber: 37,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1220,28 +1651,28 @@ const BlogPostCard = ({ post })=>{
                                 children: post.category
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "•"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 56,
+                                lineNumber: 55,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: post.date
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 57,
+                                lineNumber: 56,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "•"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1251,13 +1682,13 @@ const BlogPostCard = ({ post })=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 59,
+                                lineNumber: 58,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1265,7 +1696,7 @@ const BlogPostCard = ({ post })=>{
                         children: post.title
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 62,
+                        lineNumber: 61,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1273,13 +1704,13 @@ const BlogPostCard = ({ post })=>{
                         children: post.excerpt
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 65,
+                        lineNumber: 64,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                lineNumber: 51,
+                lineNumber: 50,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1290,7 +1721,7 @@ const BlogPostCard = ({ post })=>{
                         children: "Read More"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 71,
+                        lineNumber: 70,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1302,25 +1733,25 @@ const BlogPostCard = ({ post })=>{
                                 children: "→"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                lineNumber: 74,
+                                lineNumber: 73,
                                 columnNumber: 21
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                        lineNumber: 72,
+                        lineNumber: 71,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                lineNumber: 70,
+                lineNumber: 69,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, post.id, true, {
         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-        lineNumber: 32,
+        lineNumber: 31,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0)));
 };
@@ -1343,24 +1774,24 @@ const BlogSection = ()=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50",
-                                    children: "Financial blogs & learning hub"
+                                    children: "Stock Market & Investing Blogs: Free Financial Education for Indian Investors.   "
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                    lineNumber: 100,
+                                    lineNumber: 99,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400",
-                                    children: "Short, practical articles on investing basics, IPO investing strategies, market psychology, and tax planning."
+                                    children: "Enhance your financial knowledge with Capital Mantra. Explore practical, easy-to-read articles on Investing Basics, Stock Market Strategies, Mutual Funds, and Indian Tax Regulations."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                                    lineNumber: 103,
+                                    lineNumber: 101,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                            lineNumber: 99,
+                            lineNumber: 98,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(BlogFilters, {
@@ -1368,13 +1799,13 @@ const BlogSection = ()=>{
                             setActiveCategory: setActiveCategory
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                            lineNumber: 108,
+                            lineNumber: 105,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                    lineNumber: 98,
+                    lineNumber: 97,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1383,23 +1814,23 @@ const BlogSection = ()=>{
                             post: post
                         }, post.id, false, {
                             fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                            lineNumber: 116,
+                            lineNumber: 113,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/BlogSection.jsx",
-                    lineNumber: 114,
+                    lineNumber: 111,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/BlogSection.jsx",
-            lineNumber: 97,
+            lineNumber: 96,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/components/Modules/BlogSection.jsx",
-        lineNumber: 93,
+        lineNumber: 92,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -5055,6 +5486,165 @@ const NewsletterSection = ()=>{
 };
 const __TURBOPACK__default__export__ = NewsletterSection;
 }),
+"[project]/src/components/Modules/WhyIpoMatters.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-ssr] (ecmascript)");
+;
+;
+;
+const WhyIposMatterSection = ()=>{
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+        animationClass: "translate-y-10",
+        rootMargin: "-50px 0px",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+            id: "why-ipos",
+            className: "border-b border-slate-200/70 bg-slate-100 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-900",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mx-auto max-w-6xl px-4 sm:px-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-center max-w-3xl mx-auto space-y-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-600 dark:text-emerald-300",
+                                children: "Investment Opportunity"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 13,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50",
+                                children: "Maximize Returns: Why Investing in Indian IPOs is Crucial for Portfolio Growth."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 16,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-base leading-relaxed text-slate-700 dark:text-slate-300",
+                                children: "An Initial Public Offering (IPO) provides early access to high-growth companies. At Capital Mantra, we highlight how smart IPO participation offers long-term portfolio diversification, not just quick listing gains."
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 19,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                        lineNumber: 12,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl p-6 bg-white shadow-lg dark:bg-slate-950 transform transition duration-500 hover:scale-[1.03] hover:shadow-emerald-500/20",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-2xl font-bold text-emerald-600 dark:text-emerald-400",
+                                        children: "Growth Potential"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 25,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-2 text-slate-700 dark:text-slate-300",
+                                        children: "IPOs offer an opportunity to invest in new companies with rapid growth potential in emerging sectors."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 26,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 24,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl p-6 bg-white shadow-lg dark:bg-slate-950 transform transition duration-500 hover:scale-[1.03] hover:shadow-emerald-500/20",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-2xl font-bold text-cyan-600 dark:text-cyan-400",
+                                        children: "Liquidity Advantage"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 29,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-2 text-slate-700 dark:text-slate-300",
+                                        children: "Once listed, your shares can be easily sold, providing high liquidity compared to unlisted investments."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 30,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 28,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl p-6 bg-white shadow-lg dark:bg-slate-950 transform transition duration-500 hover:scale-[1.03] hover:shadow-emerald-500/20",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "text-2xl font-bold text-indigo-600 dark:text-indigo-400",
+                                        children: "Market Insight"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 33,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "mt-2 text-slate-700 dark:text-slate-300",
+                                        children: "The detailed information required for the IPO process gives you a deep understanding of the company's fundamentals and strategy."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                        lineNumber: 34,
+                                        columnNumber: 29
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                                lineNumber: 32,
+                                columnNumber: 25
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                        lineNumber: 23,
+                        columnNumber: 21
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+                lineNumber: 11,
+                columnNumber: 17
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+            lineNumber: 7,
+            columnNumber: 13
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/src/components/Modules/WhyIpoMatters.jsx",
+        lineNumber: 6,
+        columnNumber: 9
+    }, ("TURBOPACK compile-time value", void 0));
+};
+const __TURBOPACK__default__export__ = WhyIposMatterSection;
+}),
 "[project]/src/app/page.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -5072,7 +5662,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$BlogSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/BlogSection.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Calculators$2f$CalculatorSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Calculators/CalculatorSection.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$NewsletterSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/NewsletterSection.jsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$WhyIpoMatters$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/WhyIpoMatters.jsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -5101,51 +5693,56 @@ const Dashboard = ()=>{
                 goHome: goHome
             }, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$Hero$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.js",
-                        lineNumber: 28,
+                        lineNumber: 29,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$IpoSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.js",
-                        lineNumber: 30,
-                        columnNumber: 17
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$BlogSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                        fileName: "[project]/src/app/page.js",
                         lineNumber: 31,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Calculators$2f$CalculatorSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$WhyIpoMatters$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.js",
                         lineNumber: 32,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$NewsletterSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$BlogSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/page.js",
                         lineNumber: 33,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Calculators$2f$CalculatorSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        fileName: "[project]/src/app/page.js",
+                        lineNumber: 34,
+                        columnNumber: 17
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$NewsletterSection$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                        fileName: "[project]/src/app/page.js",
+                        lineNumber: 35,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$Footer$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/page.js",
-                lineNumber: 35,
+                lineNumber: 37,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/page.js",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -5153,4 +5750,4 @@ const __TURBOPACK__default__export__ = Dashboard;
 }),
 ];
 
-//# sourceMappingURL=src_b544996e._.js.map
+//# sourceMappingURL=src_d8810fad._.js.map
