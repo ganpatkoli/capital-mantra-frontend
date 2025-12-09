@@ -1327,6 +1327,239 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/src/Service/axios.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "apiDelete",
+    ()=>apiDelete,
+    "apiGet",
+    ()=>apiGet,
+    "apiPost",
+    ()=>apiPost,
+    "apiPut",
+    ()=>apiPut,
+    "default",
+    ()=>__TURBOPACK__default__export__
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+;
+const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+    baseURL: "http://localhost:5000/api",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    timeout: 10000
+});
+const __TURBOPACK__default__export__ = api;
+async function apiGet(path) {
+    try {
+        const res = await api.get(`/${path}`);
+        return res.data;
+    } catch (error) {
+        console.error("GET API Error:", error);
+        throw error;
+    }
+}
+async function apiPost(path, body) {
+    try {
+        const res = await api.post(`/${path}`, body);
+        return res.data;
+    } catch (error) {
+        console.error("POST API Error:", error);
+        throw error;
+    }
+}
+async function apiPut(path, body) {
+    try {
+        const res = await api.put(`/${path}`, body);
+        return res.data;
+    } catch (error) {
+        console.error("PUT API Error:", error);
+        throw error;
+    }
+}
+async function apiDelete(path) {
+    try {
+        const res = await api.delete(`/${path}`);
+        return res.data;
+    } catch (error) {
+        console.error("DELETE API Error:", error);
+        throw error;
+    }
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/hooks/useAPI.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>useAPI
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Service/axios.js [app-client] (ecmascript)");
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+function useAPI(path) {
+    _s();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(21);
+    if ($[0] !== "d943b1507ae443ce9a557589d6d3972b67a13a6651e6614103cb32a52a119c32") {
+        for(let $i = 0; $i < 21; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "d943b1507ae443ce9a557589d6d3972b67a13a6651e6614103cb32a52a119c32";
+    }
+    let t0;
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
+        t0 = [];
+        $[1] = t0;
+    } else {
+        t0 = $[1];
+    }
+    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(t0);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    let t1;
+    if ($[2] !== path) {
+        t1 = ({
+            "useAPI[fetchData]": async ()=>{
+                setLoading(true);
+                ;
+                try {
+                    const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiGet"])(path);
+                    setData(result);
+                    setError(null);
+                } catch (t2) {
+                    const err = t2;
+                    setError(err.message || "API Error");
+                }
+                setLoading(false);
+            }
+        })["useAPI[fetchData]"];
+        $[2] = path;
+        $[3] = t1;
+    } else {
+        t1 = $[3];
+    }
+    const fetchData = t1;
+    let t2;
+    if ($[4] !== path) {
+        t2 = ({
+            "useAPI[create]": async (body)=>{
+                ;
+                try {
+                    const result_0 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPost"])(path, body);
+                    return result_0;
+                } catch (t3) {
+                    const err_0 = t3;
+                    console.error("POST Error:", err_0);
+                    throw err_0;
+                }
+            }
+        })["useAPI[create]"];
+        $[4] = path;
+        $[5] = t2;
+    } else {
+        t2 = $[5];
+    }
+    const create = t2;
+    let t3;
+    if ($[6] !== path) {
+        t3 = ({
+            "useAPI[update]": async (body_0)=>{
+                ;
+                try {
+                    const result_1 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPut"])(path, body_0);
+                    return result_1;
+                } catch (t4) {
+                    const err_1 = t4;
+                    console.error("PUT Error:", err_1);
+                    throw err_1;
+                }
+            }
+        })["useAPI[update]"];
+        $[6] = path;
+        $[7] = t3;
+    } else {
+        t3 = $[7];
+    }
+    const update = t3;
+    let t4;
+    if ($[8] !== path) {
+        t4 = ({
+            "useAPI[remove]": async ()=>{
+                ;
+                try {
+                    const result_2 = await apiDelete(path);
+                    return result_2;
+                } catch (t5) {
+                    const err_2 = t5;
+                    console.error("DELETE Error:", err_2);
+                    throw err_2;
+                }
+            }
+        })["useAPI[remove]"];
+        $[8] = path;
+        $[9] = t4;
+    } else {
+        t4 = $[9];
+    }
+    const remove = t4;
+    let t5;
+    let t6;
+    if ($[10] !== fetchData) {
+        t5 = ({
+            "useAPI[useEffect()]": ()=>{
+                fetchData();
+            }
+        })["useAPI[useEffect()]"];
+        t6 = [
+            fetchData
+        ];
+        $[10] = fetchData;
+        $[11] = t5;
+        $[12] = t6;
+    } else {
+        t5 = $[11];
+        t6 = $[12];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t5, t6);
+    let t7;
+    if ($[13] !== create || $[14] !== data || $[15] !== error || $[16] !== fetchData || $[17] !== loading || $[18] !== remove || $[19] !== update) {
+        t7 = {
+            data,
+            loading,
+            error,
+            refetch: fetchData,
+            create,
+            update,
+            remove
+        };
+        $[13] = create;
+        $[14] = data;
+        $[15] = error;
+        $[16] = fetchData;
+        $[17] = loading;
+        $[18] = remove;
+        $[19] = update;
+        $[20] = t7;
+    } else {
+        t7 = $[20];
+    }
+    return t7;
+}
+_s(useAPI, "kWZdzN90hBDc11Mwymr9WP8BN6w=");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/components/Modules/Hero.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1341,11 +1574,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Context/ThemeContext.jsx [app-client] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module '../hooks/useAPI'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/useAPI.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 ;
@@ -1356,15 +1585,16 @@ var _s = __turbopack_context__.k.signature();
 ;
 const Hero = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(15);
-    if ($[0] !== "4c76c0873c0716615fa7380cffe8bd35605e3e89e22a9db8ceb9c094c5d6f17e") {
-        for(let $i = 0; $i < 15; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(21);
+    if ($[0] !== "3394b44c99393befc799b08528fbfeaa5f56321f66da6e4ad754eede6a5da6a7") {
+        for(let $i = 0; $i < 21; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c76c0873c0716615fa7380cffe8bd35605e3e89e22a9db8ceb9c094c5d6f17e";
+        $[0] = "3394b44c99393befc799b08528fbfeaa5f56321f66da6e4ad754eede6a5da6a7";
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
-    const { loading, error } = useAPI("ipo/all");
+    const { data, loading, error } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
+    console.log("Ddddddddddd0", data);
     if (loading) {
         let t0;
         if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1372,7 +1602,7 @@ const Hero = ()=>{
                 children: "Loading..."
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 24,
+                lineNumber: 26,
                 columnNumber: 12
             }, ("TURBOPACK compile-time value", void 0));
             $[1] = t0;
@@ -1391,7 +1621,7 @@ const Hero = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 34,
+                lineNumber: 36,
                 columnNumber: 12
             }, ("TURBOPACK compile-time value", void 0));
             $[2] = error;
@@ -1412,14 +1642,14 @@ const Hero = ()=>{
                     className: "h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 46,
+                    lineNumber: 48,
                     columnNumber: 221
                 }, ("TURBOPACK compile-time value", void 0)),
                 "Live Market Insights • Best IPO Analysis"
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 46,
+            lineNumber: 48,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1427,7 +1657,7 @@ const Hero = ()=>{
             children: "Smart IPO Insights & Simplified Investing \u2014 All in One Place."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 47,
+            lineNumber: 49,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1435,7 +1665,7 @@ const Hero = ()=>{
             children: "Capital Mantra brings you real-time GMP updates, concise IPO research, and beginner-friendly financial blogs — everything you need to make confident investment decisions."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 48,
+            lineNumber: 50,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[4] = t0;
@@ -1461,13 +1691,13 @@ const Hero = ()=>{
                             children: "↗"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 59,
+                            lineNumber: 61,
                             columnNumber: 298
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 59,
+                    lineNumber: 61,
                     columnNumber: 48
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1476,13 +1706,13 @@ const Hero = ()=>{
                     children: "Read Latest Blogs"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 59,
+                    lineNumber: 61,
                     columnNumber: 336
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 59,
+            lineNumber: 61,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = t3;
@@ -1499,7 +1729,7 @@ const Hero = ()=>{
                     children: "100% Free Financial Education"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 66,
+                    lineNumber: 68,
                     columnNumber: 167
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1507,13 +1737,13 @@ const Hero = ()=>{
                     children: "No paywall. Learn the basics of investment, IPOs, and mutual funds."
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 66,
+                    lineNumber: 68,
                     columnNumber: 264
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 66,
+            lineNumber: 68,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[8] = t4;
@@ -1530,7 +1760,7 @@ const Hero = ()=>{
                     children: "Beginner-friendly Investing"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 73,
+                    lineNumber: 75,
                     columnNumber: 167
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1538,13 +1768,13 @@ const Hero = ()=>{
                     children: "Simple language, real examples, and clear action points for the Indian market."
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 73,
+                    lineNumber: 75,
                     columnNumber: 262
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 73,
+            lineNumber: 75,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[9] = t5;
@@ -1573,7 +1803,7 @@ const Hero = ()=>{
                                     children: "Live IPO Tracking (GMP)"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                                    lineNumber: 80,
+                                    lineNumber: 82,
                                     columnNumber: 331
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1581,25 +1811,25 @@ const Hero = ()=>{
                                     children: "View latest, upcoming, and recently listed IPOs with GMP tracking."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                                    lineNumber: 80,
+                                    lineNumber: 82,
                                     columnNumber: 422
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 80,
+                            lineNumber: 82,
                             columnNumber: 174
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 80,
+                    lineNumber: 82,
                     columnNumber: 60
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 80,
+            lineNumber: 82,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[10] = t6;
@@ -1612,7 +1842,7 @@ const Hero = ()=>{
             className: "absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-emerald-400/50 via-cyan-400/40 to-teal-500/30 opacity-60 blur-xl animate-pulse-slow"
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 87,
+            lineNumber: 89,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[11] = t7;
@@ -1628,14 +1858,14 @@ const Hero = ()=>{
                     className: "inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 94,
+                    lineNumber: 96,
                     columnNumber: 103
                 }, ("TURBOPACK compile-time value", void 0)),
                 "Live IPO Snapshot (Demo Data)"
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 94,
+            lineNumber: 96,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[12] = t8;
@@ -1651,20 +1881,20 @@ const Hero = ()=>{
                     children: "Company (IPO)"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 101,
+                    lineNumber: 103,
                     columnNumber: 108
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     children: "GMP • Status"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 101,
+                    lineNumber: 103,
                     columnNumber: 134
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 101,
+            lineNumber: 103,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[13] = t9;
@@ -1672,8 +1902,55 @@ const Hero = ()=>{
         t9 = $[13];
     }
     let t10;
-    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+    if ($[14] !== data) {
+        t10 = data?.slice(0, 3).map(_temp);
+        $[14] = data;
+        $[15] = t10;
+    } else {
+        t10 = $[15];
+    }
+    let t11;
+    if ($[16] !== t10) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "rounded-2xl bg-slate-100/80 p-3 dark:bg-slate-950/80",
+            children: [
+                t9,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "mt-2 divide-y divide-slate-300/80 text-xs dark:divide-slate-800/80",
+                    children: t10
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Modules/Hero.jsx",
+                    lineNumber: 118,
+                    columnNumber: 85
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Modules/Hero.jsx",
+            lineNumber: 118,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[16] = t10;
+        $[17] = t11;
+    } else {
+        t11 = $[17];
+    }
+    let t12;
+    if ($[18] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "mt-3 text-[10px] leading-relaxed text-slate-500",
+            children: "* All IPO and GMP numbers are for demonstration purposes only. Please verify before investing."
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/Hero.jsx",
+            lineNumber: 126,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[18] = t12;
+    } else {
+        t12 = $[18];
+    }
+    let t13;
+    if ($[19] !== t11) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             animationClass: "translate-y-10",
             rootMargin: "-50px 0px",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1694,75 +1971,52 @@ const Hero = ()=>{
                                         className: "relative rounded-3xl border border-emerald-500/50 bg-white/95 p-4 shadow-xl shadow-emerald-500/20 dark:border-emerald-400/30 dark:bg-slate-900/95",
                                         children: [
                                             t8,
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "rounded-2xl bg-slate-100/80 p-3 dark:bg-slate-950/80",
-                                                children: [
-                                                    t9,
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "mt-2 divide-y divide-slate-300/80 text-xs dark:divide-slate-800/80",
-                                                        children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["IPO_LIST"].slice(0, 3).map(_temp)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/Modules/Hero.jsx",
-                                                        lineNumber: 108,
-                                                        columnNumber: 729
-                                                    }, ("TURBOPACK compile-time value", void 0))
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/components/Modules/Hero.jsx",
-                                                lineNumber: 108,
-                                                columnNumber: 655
-                                            }, ("TURBOPACK compile-time value", void 0)),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "mt-3 text-[10px] leading-relaxed text-slate-500",
-                                                children: "* All IPO and GMP numbers are for demonstration purposes only. Please verify before investing."
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/Modules/Hero.jsx",
-                                                lineNumber: 108,
-                                                columnNumber: 858
-                                            }, ("TURBOPACK compile-time value", void 0))
+                                            t11,
+                                            t12
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                                        lineNumber: 108,
+                                        lineNumber: 133,
                                         columnNumber: 488
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                                lineNumber: 108,
+                                lineNumber: 133,
                                 columnNumber: 440
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 108,
+                            lineNumber: 133,
                             columnNumber: 416
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 108,
+                    lineNumber: 133,
                     columnNumber: 275
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 108,
+                lineNumber: 133,
                 columnNumber: 83
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 108,
+            lineNumber: 133,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[14] = t10;
+        $[19] = t11;
+        $[20] = t13;
     } else {
-        t10 = $[14];
+        t13 = $[20];
     }
-    return t10;
+    return t13;
 };
-_s(Hero, "XJ4CaM9Qm43In1g3Aih4p/Ni8AE=", false, function() {
+_s(Hero, "LL3LF6lZkV+uii2QFAn5n3kBbhk=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
-        useAPI
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
     ];
 });
 _c = Hero;
@@ -1775,10 +2029,10 @@ function _temp(ipo) {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-[13px] font-medium text-slate-900 dark:text-slate-100",
-                        children: ipo.company
+                        children: ipo.name
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 117,
+                        lineNumber: 143,
                         columnNumber: 84
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1790,13 +2044,13 @@ function _temp(ipo) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 117,
-                        columnNumber: 175
+                        lineNumber: 143,
+                        columnNumber: 172
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 117,
+                lineNumber: 143,
                 columnNumber: 79
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1807,27 +2061,27 @@ function _temp(ipo) {
                         children: ipo.gmp
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 117,
-                        columnNumber: 303
+                        lineNumber: 143,
+                        columnNumber: 300
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-[11px] text-slate-500 dark:text-slate-400",
                         children: ipo.status
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 117,
-                        columnNumber: 396
+                        lineNumber: 143,
+                        columnNumber: 393
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 117,
-                columnNumber: 275
+                lineNumber: 143,
+                columnNumber: 272
             }, this)
         ]
     }, ipo.id, true, {
         fileName: "[project]/src/components/Modules/Hero.jsx",
-        lineNumber: 117,
+        lineNumber: 143,
         columnNumber: 10
     }, this);
 }
@@ -3832,4 +4086,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_d80c8a0a._.js.map
+//# sourceMappingURL=src_5acc6cf7._.js.map

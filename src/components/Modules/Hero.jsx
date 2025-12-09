@@ -3,12 +3,25 @@ import React from 'react';
 import { IPO_LIST } from '../../data/Data';
 import AnimatedSection from './AnimationWeb';
 import { useTheme } from '@/Context/ThemeContext';
+import useAPI from '../../hooks/useAPI';
 
 const Hero = () => {
     const { theme } = useTheme();
 
+    const { data, loading, error, refetch, create } = useAPI("ipo/all");
 
-    console.log("first0", theme)
+    // const addIPO = async () => {
+    //     await create({ name: "New IPO", price: 500 });
+    //     refetch(); // reload list
+    // };
+
+
+
+    console.log("Ddddddddddd0" ,data)
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>ERROR: {error}</p>;
+
+    // console.log("first0", theme)
     return (
         <AnimatedSection animationClass="translate-y-10" rootMargin='-50px 0px'>
 
@@ -97,14 +110,14 @@ const Hero = () => {
                                     </div>
                                     <div className="mt-2 divide-y divide-slate-300/80 text-xs dark:divide-slate-800/80">
                                         {
-                                            IPO_LIST.slice(0, 3).map((ipo) => (
+                                            data?.slice(0, 3).map((ipo) => (
                                                 <div
                                                     key={ipo.id}
                                                     className="flex items-center justify-between py-2"
                                                 >
                                                     <div>
                                                         <p className="text-[13px] font-medium text-slate-900 dark:text-slate-100">
-                                                            {ipo.company}
+                                                            {ipo.name}
                                                         </p>
                                                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
                                                             {ipo.symbol} • {ipo.ipoType}

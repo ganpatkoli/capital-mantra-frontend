@@ -1327,6 +1327,282 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/src/Service/apiConfig.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "getActiveGmpIpos",
+    ()=>getActiveGmpIpos,
+    "getActiveMainboard",
+    ()=>getActiveMainboard,
+    "getActiveSme",
+    ()=>getActiveSme,
+    "getAllIpos",
+    ()=>getAllIpos,
+    "getClosingToday",
+    ()=>getClosingToday,
+    "getListedIpos",
+    ()=>getListedIpos,
+    "getOpenIpos",
+    ()=>getOpenIpos,
+    "getUpcomingIpos",
+    ()=>getUpcomingIpos
+]);
+const API_BASE = "http://localhost:5000/api/ipo";
+async function getAllIpos() {
+    try {
+        const res = await fetch(`${API_BASE}/all`, {
+            cache: "no-store"
+        });
+        if (!res.ok) throw new Error("Failed to fetch IPOs");
+        return await res.json();
+    } catch (err) {
+        console.error("API ERROR (ALL IPO):", err);
+        return [];
+    }
+}
+async function getUpcomingIpos() {
+    try {
+        const res = await fetch(`${API_BASE}/upcoming`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getActiveGmpIpos() {
+    try {
+        const res = await fetch(`${API_BASE}/gmp/active`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getActiveMainboard() {
+    try {
+        const res = await fetch(`${API_BASE}/mainboard/active`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getActiveSme() {
+    try {
+        const res = await fetch(`${API_BASE}/sme/active`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getOpenIpos() {
+    try {
+        const res = await fetch(`${API_BASE}/open`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getClosingToday() {
+    try {
+        const res = await fetch(`${API_BASE}/closing-today`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+async function getListedIpos() {
+    try {
+        const res = await fetch(`${API_BASE}/listed`, {
+            cache: "no-store"
+        });
+        return await res.json();
+    } catch  {
+        return [];
+    }
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/hooks/useAPI.js [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>useAPI
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$apiConfig$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Service/apiConfig.js [app-client] (ecmascript)");
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+function useAPI(path) {
+    _s();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(21);
+    if ($[0] !== "c35d689bfbef3b659a0e4778c172e14cdf95a43e48d47ac0738fd141ea12a58b") {
+        for(let $i = 0; $i < 21; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "c35d689bfbef3b659a0e4778c172e14cdf95a43e48d47ac0738fd141ea12a58b";
+    }
+    let t0;
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
+        t0 = [];
+        $[1] = t0;
+    } else {
+        t0 = $[1];
+    }
+    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(t0);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    let t1;
+    if ($[2] !== path) {
+        t1 = ({
+            "useAPI[fetchData]": async ()=>{
+                setLoading(true);
+                ;
+                try {
+                    const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$apiConfig$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiGet"])(path);
+                    setData(result);
+                    setError(null);
+                } catch (t2) {
+                    const err = t2;
+                    setError(err.message || "API Error");
+                }
+                setLoading(false);
+            }
+        })["useAPI[fetchData]"];
+        $[2] = path;
+        $[3] = t1;
+    } else {
+        t1 = $[3];
+    }
+    const fetchData = t1;
+    let t2;
+    if ($[4] !== path) {
+        t2 = ({
+            "useAPI[create]": async (body)=>{
+                ;
+                try {
+                    const result_0 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$apiConfig$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPost"])(path, body);
+                    return result_0;
+                } catch (t3) {
+                    const err_0 = t3;
+                    console.error("POST Error:", err_0);
+                    throw err_0;
+                }
+            }
+        })["useAPI[create]"];
+        $[4] = path;
+        $[5] = t2;
+    } else {
+        t2 = $[5];
+    }
+    const create = t2;
+    let t3;
+    if ($[6] !== path) {
+        t3 = ({
+            "useAPI[update]": async (body_0)=>{
+                ;
+                try {
+                    const result_1 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$apiConfig$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPut"])(path, body_0);
+                    return result_1;
+                } catch (t4) {
+                    const err_1 = t4;
+                    console.error("PUT Error:", err_1);
+                    throw err_1;
+                }
+            }
+        })["useAPI[update]"];
+        $[6] = path;
+        $[7] = t3;
+    } else {
+        t3 = $[7];
+    }
+    const update = t3;
+    let t4;
+    if ($[8] !== path) {
+        t4 = ({
+            "useAPI[remove]": async ()=>{
+                ;
+                try {
+                    const result_2 = await apiDelete(path);
+                    return result_2;
+                } catch (t5) {
+                    const err_2 = t5;
+                    console.error("DELETE Error:", err_2);
+                    throw err_2;
+                }
+            }
+        })["useAPI[remove]"];
+        $[8] = path;
+        $[9] = t4;
+    } else {
+        t4 = $[9];
+    }
+    const remove = t4;
+    let t5;
+    let t6;
+    if ($[10] !== fetchData) {
+        t5 = ({
+            "useAPI[useEffect()]": ()=>{
+                fetchData();
+            }
+        })["useAPI[useEffect()]"];
+        t6 = [
+            fetchData
+        ];
+        $[10] = fetchData;
+        $[11] = t5;
+        $[12] = t6;
+    } else {
+        t5 = $[11];
+        t6 = $[12];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t5, t6);
+    let t7;
+    if ($[13] !== create || $[14] !== data || $[15] !== error || $[16] !== fetchData || $[17] !== loading || $[18] !== remove || $[19] !== update) {
+        t7 = {
+            data,
+            loading,
+            error,
+            refetch: fetchData,
+            create,
+            update,
+            remove
+        };
+        $[13] = create;
+        $[14] = data;
+        $[15] = error;
+        $[16] = fetchData;
+        $[17] = loading;
+        $[18] = remove;
+        $[19] = update;
+        $[20] = t7;
+    } else {
+        t7 = $[20];
+    }
+    return t7;
+}
+_s(useAPI, "kWZdzN90hBDc11Mwymr9WP8BN6w=");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/components/Modules/Hero.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1341,11 +1617,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Context/ThemeContext.jsx [app-client] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module '../hooks/useAPI'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/useAPI.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 ;
@@ -1357,14 +1629,14 @@ var _s = __turbopack_context__.k.signature();
 const Hero = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(15);
-    if ($[0] !== "4c76c0873c0716615fa7380cffe8bd35605e3e89e22a9db8ceb9c094c5d6f17e") {
+    if ($[0] !== "031ea47de50a29d587fac50f629794053d1483162c60cdcf3bb6ca225a0f6690") {
         for(let $i = 0; $i < 15; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4c76c0873c0716615fa7380cffe8bd35605e3e89e22a9db8ceb9c094c5d6f17e";
+        $[0] = "031ea47de50a29d587fac50f629794053d1483162c60cdcf3bb6ca225a0f6690";
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
-    const { loading, error } = useAPI("ipo/all");
+    const { loading, error } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
     if (loading) {
         let t0;
         if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1762,7 +2034,7 @@ const Hero = ()=>{
 _s(Hero, "XJ4CaM9Qm43In1g3Aih4p/Ni8AE=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
-        useAPI
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
     ];
 });
 _c = Hero;
@@ -3832,4 +4104,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_d80c8a0a._.js.map
+//# sourceMappingURL=src_c21df38f._.js.map

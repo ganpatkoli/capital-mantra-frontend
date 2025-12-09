@@ -1020,6 +1020,86 @@ const Footer = ()=>{
 };
 const __TURBOPACK__default__export__ = Footer;
 }),
+"[project]/src/hooks/useAPI.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>useAPI
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module '@/lib/apiService'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
+"use client";
+;
+;
+function useAPI(path) {
+    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    // ========== GET API ==========
+    const fetchData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async ()=>{
+        setLoading(true);
+        try {
+            const result = await apiGet(path);
+            setData(result);
+            setError(null);
+        } catch (err) {
+            setError(err.message || "API Error");
+        }
+        setLoading(false);
+    }, [
+        path
+    ]);
+    // ========== POST API ==========
+    const create = async (body)=>{
+        try {
+            const result = await apiPost(path, body);
+            return result;
+        } catch (err) {
+            console.error("POST Error:", err);
+            throw err;
+        }
+    };
+    // ========== PUT API ==========
+    const update = async (body)=>{
+        try {
+            const result = await apiPut(path, body);
+            return result;
+        } catch (err) {
+            console.error("PUT Error:", err);
+            throw err;
+        }
+    };
+    // ========== DELETE API ==========
+    const remove = async ()=>{
+        try {
+            const result = await apiDelete(path);
+            return result;
+        } catch (err) {
+            console.error("DELETE Error:", err);
+            throw err;
+        }
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        fetchData();
+    }, [
+        fetchData
+    ]);
+    return {
+        data,
+        loading,
+        error,
+        refetch: fetchData,
+        create,
+        update,
+        remove
+    };
+}
+}),
 "[project]/src/components/Modules/Hero.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -1033,11 +1113,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Context/ThemeContext.jsx [app-ssr] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module '../hooks/useAPI'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/useAPI.js [app-ssr] (ecmascript)");
 ;
 ;
 ;
@@ -1046,7 +1122,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeConte
 ;
 const Hero = ()=>{
     const { theme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useTheme"])();
-    const { data, loading, error, refetch, create } = useAPI("ipo/all");
+    const { data, loading, error, refetch, create } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])("ipo/all");
     const addIPO = async ()=>{
         await create({
             name: "New IPO",
@@ -2791,4 +2867,4 @@ const __TURBOPACK__default__export__ = Dashboard;
 }),
 ];
 
-//# sourceMappingURL=src_4d89b72f._.js.map
+//# sourceMappingURL=src_784977e4._.js.map
