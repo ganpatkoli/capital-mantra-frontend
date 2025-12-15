@@ -80,7 +80,7 @@ export const ThemeProvider = ({ children }) => {
       console.error("Could not access localStorage for theme.", e);
     }
     // Check system preference if localStorage fails or is empty
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    // return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
   useEffect(() => {

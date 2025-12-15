@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/ipo/layout.js"],"sourcesContent":["// src/app/ipo/layout.js\r\n\r\nexport default function IpoLayout({ children }) {\r\n    // This layout simply wraps all pages under /blog/ (i.e., [id]/page.js)\r\n    return <div>{children}</div>;\r\n}"],"names":[],"mappings":"AAAA,wBAAwB;;;;;;;AAET,SAAS,UAAU,EAAE,QAAQ,EAAE;IAC1C,uEAAuE;IACvE,qBAAO,8OAAC;kBAAK;;;;;;AACjB"}},
-    {"offset": {"line": 25, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-rsc']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
-}

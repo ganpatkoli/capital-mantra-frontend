@@ -1,57 +1,39 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { apiGet, apiPost, apiPut } from "../Service/axios";
+import { apiGet, apiPost, apiPut, apiDelete } from "../Service/axios";
 
-export default function useAPI(path) {
+export default function useAPI(path, params = {}) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // ========== GET API ==========
+  // GET
   const fetchData = useCallback(async () => {
     setLoading(true);
     try {
-      const result = await apiGet(path);
+      const result = await apiGet(path, params);
       setData(result);
       setError(null);
     } catch (err) {
       setError(err.message || "API Error");
     }
     setLoading(false);
-  }, [path]);
+  }, [path, JSON.stringify(params)]);
 
-  // ========== POST API ==========
-  const create = async (body) => {
-    try {
-      const result = await apiPost(path, body);
-      return result;
-    } catch (err) {
-      console.error("POST Error:", err);
-      throw err;
-    }
+  // POST
+  const create = async (body = {}, extraParams = {}) => {
+    return await apiPost(path, body, extraParams);
   };
 
-  // ========== PUT API ==========
-  const update = async (body) => {
-    try {
-      const result = await apiPut(path, body);
-      return result;
-    } catch (err) {
-      console.error("PUT Error:", err);
-      throw err;
-    }
+  // PUT
+  const update = async (body = {}, extraParams = {}) => {
+    return await apiPut(path, body, extraParams);
   };
 
-  // ========== DELETE API ==========
-  const remove = async () => {
-    try {
-      const result = await apiDelete(path);
-      return result;
-    } catch (err) {
-      console.error("DELETE Error:", err);
-      throw err;
-    }
+  // DELETE
+  const remove = async (extraParams = {}) => {
+    return await apiDelete(path, extraParams);
   };
 
   useEffect(() => {

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Base theme styles */
+body {
+  @apply bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-slate-950 dark:text-slate-50;
+}
+
+/* Range input styling */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--tw-prose-pre-bg, rgb(226 232 240)); /* slate-200 */
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: var(--tw-prose-pre-bg, rgb(226 232 240)); /* slate-200 */
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: rgb(16 185 129); /* emerald-500 */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: rgb(5 150 105); /* emerald-600 */
+}
+
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: rgb(16 185 129); /* emerald-500 */
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background-color: rgb(5 150 105); /* emerald-600 */
+}

@@ -1,58 +1,35 @@
+// 'use client';
 import axios from "axios";
+  export const baseURL = "http://localhost:5000/api";
 
-const api = axios.create({
-    baseURL: "http://localhost:5000/api",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    timeout: 10000, // 10 seconds
+
+const API = axios.create({
+  baseURL: "http://localhost:5000/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-export default api;
+// GET with params
+export const apiGet = async (path, params = {}) => {
+  const res = await API.get(`/${path}`, { params });
+  return res.data;
+};
 
+// POST
+export const apiPost = async (path, body = {}, params = {}) => {
+  const res = await API.post(`/${path}`, body, { params });
+  return res.data;
+};
 
-// import api from "./axiosInstance";
+// PUT
+export const apiPut = async (path, body = {}, params = {}) => {
+  const res = await API.put(`/${path}`, body, { params });
+  return res.data;
+};
 
-// ========= GET ==========
-export async function apiGet(path) {
-    try {
-        const res = await api.get(`/${path}`);
-        return res.data;
-    } catch (error) {
-        console.error("GET API Error:", error);
-        throw error;
-    }
-}
-
-// ========= POST ==========
-export async function apiPost(path, body) {
-    try {
-        const res = await api.post(`/${path}`, body);
-        return res.data;
-    } catch (error) {
-        console.error("POST API Error:", error);
-        throw error;
-    }
-}
-
-// ========= PUT ==========
-export async function apiPut(path, body) {
-    try {
-        const res = await api.put(`/${path}`, body);
-        return res.data;
-    } catch (error) {
-        console.error("PUT API Error:", error);
-        throw error;
-    }
-}
-
-// ========= DELETE ==========
-export async function apiDelete(path) {
-    try {
-        const res = await api.delete(`/${path}`);
-        return res.data;
-    } catch (error) {
-        console.error("DELETE API Error:", error);
-        throw error;
-    }
-}
+// DELETE
+export const apiDelete = async (path, params = {}) => {
+  const res = await API.delete(`/${path}`, { params });
+  return res.data;
+};

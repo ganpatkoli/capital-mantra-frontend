@@ -17,9 +17,8 @@ const Hero = () => {
 
 
 
-    console.log("Ddddddddddd0" ,data)
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>ERROR: {error}</p>;
+    // if (loading) return <p>Loading...</p>;
+    // if (error) return <p>ERROR: {error}</p>;
 
     // console.log("first0", theme)
     return (
@@ -36,18 +35,7 @@ const Hero = () => {
                             Live Market Insights • Best IPO Analysis
                         </span>
 
-                        <h1
-                            className="
-        text-balance 
-        text-2xl 
-        sm:text-3xl 
-        lg:text-4xl 
-        font-semibold 
-        tracking-tight 
-        text-slate-900 
-        dark:text-slate-50
-    "
-                        >
+                        <h1 className="text-balance text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
                             Smart IPO Insights & Simplified Investing — All in One Place.
                         </h1>
 
@@ -100,17 +88,17 @@ const Hero = () => {
                             <div className="relative rounded-3xl border border-emerald-500/50 bg-white/95 p-4 shadow-xl shadow-emerald-500/20 dark:border-emerald-400/30 dark:bg-slate-900/95">
                                 <div className="mb-3 flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
                                     <span className="inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400" />
-                                    Live IPO Snapshot (Demo Data)
+                                    Live IPO Snapshot
                                 </div>
 
                                 <div className="rounded-2xl bg-slate-100/80 p-3 dark:bg-slate-950/80">
                                     <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400">
-                                        <span>Company (IPO)</span>
+                                        <span>Company (IPO) • Exchange</span>
                                         <span>GMP • Status</span>
                                     </div>
                                     <div className="mt-2 divide-y divide-slate-300/80 text-xs dark:divide-slate-800/80">
                                         {
-                                            data?.slice(0, 3).map((ipo) => (
+                                            data?.filter((item) => item.status === "O").slice(0, 5).map((ipo) => (
                                                 <div
                                                     key={ipo.id}
                                                     className="flex items-center justify-between py-2"
@@ -120,14 +108,14 @@ const Hero = () => {
                                                             {ipo.name}
                                                         </p>
                                                         <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                                                            {ipo.symbol} • {ipo.ipoType}
+                                                            {ipo.exchange} • {ipo.category ? ipo.category : "MAINBOARD"}
                                                         </p>
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-300">
-                                                            {ipo.gmp}
+                                                        <p className={`text-[11px] font-semibold {${parseInt(ipo.gmp) > 0 ? 'text-emerald-600' : 'text-red-600'} dark:text-emerald-300`}>
+                                                            {ipo.gmp && "-"} ({ipo.gmp_percent})%
                                                         </p>
-                                                        <p className="text-[11px] text-slate-500 dark:text-slate-400">{ipo.status}</p>
+                                                        <p className="text-[11px] text-slate-500 dark:text-slate-400">{ipo.status_text}</p>
                                                     </div>
                                                 </div>
                                             ))

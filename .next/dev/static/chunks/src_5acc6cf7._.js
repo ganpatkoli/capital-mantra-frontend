@@ -2,7 +2,6 @@
 "[project]/src/components/Layout/ThemeToggle.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// components/Layout/ThemeToggle.jsx
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
@@ -10,79 +9,108 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Context/ThemeContext.jsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-;
 const ThemeToggle = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "375bf8da241ead31c23834262a381100337e8e1894ebe3e062ec180d448b51bb") {
-        for(let $i = 0; $i < 10; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
+    if ($[0] !== "fb277497b46087b1f0924a8620ae00186187ea7cd3e729cba739782ed9acb428") {
+        for(let $i = 0; $i < 14; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "375bf8da241ead31c23834262a381100337e8e1894ebe3e062ec180d448b51bb";
+        $[0] = "fb277497b46087b1f0924a8620ae00186187ea7cd3e729cba739782ed9acb428";
     }
-    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(_temp);
+    const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("light");
     let t0;
     let t1;
-    if ($[1] !== theme) {
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = ()=>{
-            const root = document.documentElement;
-            if (theme === "dark") {
-                root.classList.add("dark");
-                root.classList.remove("light");
-            } else {
-                root.classList.remove("dark");
-                root.classList.add("light");
+            setMounted(true);
+            const saved = localStorage.getItem("theme");
+            if (saved) {
+                setTheme(saved);
+                document.documentElement.classList.toggle("dark", saved === "dark");
+                return;
             }
-            ;
-            try {
-                localStorage.setItem("theme", theme);
-            } catch (t2) {
-                const e_0 = t2;
-                console.error("Could not save theme to localStorage.", e_0);
-            }
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const systemTheme = prefersDark ? "dark" : "light";
+            setTheme(systemTheme);
+            document.documentElement.classList.toggle("dark", systemTheme === "dark");
         };
-        t1 = [
-            theme
-        ];
-        $[1] = theme;
-        $[2] = t0;
-        $[3] = t1;
+        t1 = [];
+        $[1] = t0;
+        $[2] = t1;
     } else {
-        t0 = $[2];
-        t1 = $[3];
+        t0 = $[1];
+        t1 = $[2];
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
     let t2;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
+    let t3;
+    if ($[3] !== mounted || $[4] !== theme) {
         t2 = ()=>{
-            setTheme(_temp2);
+            if (!mounted) {
+                return;
+            }
+            document.documentElement.classList.toggle("dark", theme === "dark");
+            localStorage.setItem("theme", theme);
         };
-        $[4] = t2;
+        t3 = [
+            theme,
+            mounted
+        ];
+        $[3] = mounted;
+        $[4] = theme;
+        $[5] = t2;
+        $[6] = t3;
     } else {
-        t2 = $[4];
+        t2 = $[5];
+        t3 = $[6];
     }
-    const toggleTheme = t2;
-    console.log("theme", theme);
-    const t3 = `Switch to ${theme === "light" ? "dark" : "light"} mode`;
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
     let t4;
-    if ($[5] !== theme) {
-        t4 = theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+        t4 = ()=>{
+            setTheme(_temp);
+        };
+        $[7] = t4;
+    } else {
+        t4 = $[7];
+    }
+    const toggleTheme = t4;
+    if (!mounted) {
+        let t5;
+        if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
+            t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                suppressHydrationWarning: true,
+                className: "inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-300 bg-slate-100 dark:border-slate-700 dark:bg-slate-800"
+            }, void 0, false, {
+                fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
+                lineNumber: 72,
+                columnNumber: 12
+            }, ("TURBOPACK compile-time value", void 0));
+            $[8] = t5;
+        } else {
+            t5 = $[8];
+        }
+        return t5;
+    }
+    const t5 = `Switch to ${theme === "light" ? "dark" : "light"} mode`;
+    let t6;
+    if ($[9] !== theme) {
+        t6 = theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "17",
             height: "17",
-            viewBox: "0 0 24 24",
             fill: "none",
             stroke: "currentColor",
             strokeWidth: "2",
             strokeLinecap: "round",
             strokeLinejoin: "round",
-            className: "lucide lucide-sun-icon lucide-sun",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
                     cx: "12",
@@ -90,136 +118,122 @@ const ThemeToggle = ()=>{
                     r: "4"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 254
+                    lineNumber: 82,
+                    columnNumber: 188
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M12 2v2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 286
+                    lineNumber: 82,
+                    columnNumber: 220
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M12 20v2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 306
+                    lineNumber: 82,
+                    columnNumber: 240
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m4.93 4.93 1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 327
+                    lineNumber: 82,
+                    columnNumber: 261
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m17.66 17.66 1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 360
+                    lineNumber: 82,
+                    columnNumber: 294
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M2 12h2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 395
+                    lineNumber: 82,
+                    columnNumber: 329
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "M20 12h2"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 415
+                    lineNumber: 82,
+                    columnNumber: 349
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m6.34 17.66-1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 436
+                    lineNumber: 82,
+                    columnNumber: 370
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                     d: "m19.07 4.93-1.41 1.41"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                    lineNumber: 59,
-                    columnNumber: 470
+                    lineNumber: 82,
+                    columnNumber: 404
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-            lineNumber: 59,
+            lineNumber: 82,
             columnNumber: 30
         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "17",
             height: "17",
-            viewBox: "0 0 24 24",
             fill: "none",
             stroke: "currentColor",
             strokeWidth: "2",
             strokeLinecap: "round",
             strokeLinejoin: "round",
-            className: "lucide lucide-moon-icon lucide-moon",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
             }, void 0, false, {
                 fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-                lineNumber: 59,
-                columnNumber: 739
+                lineNumber: 82,
+                columnNumber: 605
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-            lineNumber: 59,
-            columnNumber: 513
+            lineNumber: 82,
+            columnNumber: 447
         }, ("TURBOPACK compile-time value", void 0));
-        $[5] = theme;
-        $[6] = t4;
+        $[9] = theme;
+        $[10] = t6;
     } else {
-        t4 = $[6];
+        t6 = $[10];
     }
-    let t5;
-    if ($[7] !== t3 || $[8] !== t4) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+    let t7;
+    if ($[11] !== t5 || $[12] !== t6) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            suppressHydrationWarning: true,
             onClick: toggleTheme,
             className: "inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-300 bg-slate-100 text-slate-800 transition hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700",
-            "aria-label": t3,
-            children: t4
+            "aria-label": t5,
+            children: t6
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/ThemeToggle.jsx",
-            lineNumber: 67,
+            lineNumber: 90,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[7] = t3;
-        $[8] = t4;
-        $[9] = t5;
+        $[11] = t5;
+        $[12] = t6;
+        $[13] = t7;
     } else {
-        t5 = $[9];
+        t7 = $[13];
     }
-    return t5;
+    return t7;
 };
-_s(ThemeToggle, "tCbPyTMdUn8yhrvBiwhDKFUY6BE=");
+_s(ThemeToggle, "yLq2oAjmd0cQvIPFJF3D7jVmNBE=");
 _c = ThemeToggle;
 const __TURBOPACK__default__export__ = ThemeToggle;
-function _temp() {
-    ;
-    try {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            return savedTheme;
-        }
-    } catch (t0) {
-        const e = t0;
-        console.error("Could not access localStorage for theme.", e);
-    }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-}
-function _temp2(prevTheme) {
-    return prevTheme === "light" ? "dark" : "light";
+function _temp(prev) {
+    return prev === "light" ? "dark" : "light";
 }
 var _c;
 __turbopack_context__.k.register(_c, "ThemeToggle");
@@ -500,7 +514,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/components/Layout/Navbar.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// components/Layout/Navbar.jsx
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
@@ -510,6 +523,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Layout/ThemeToggle.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -517,353 +531,516 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const Navbar = (t0)=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(27);
-    if ($[0] !== "b6a76dba8aa2c467c0ebbd70a15097c354b880a4a5c599ab4554266727a4c1d5") {
-        for(let $i = 0; $i < 27; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
+    if ($[0] !== "c0f295b81376c45917efcf4846fad2b9fdf2aaa843dfedc8dbfa72f83e39cd4b") {
+        for(let $i = 0; $i < 47; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "b6a76dba8aa2c467c0ebbd70a15097c354b880a4a5c599ab4554266727a4c1d5";
+        $[0] = "c0f295b81376c45917efcf4846fad2b9fdf2aaa843dfedc8dbfa72f83e39cd4b";
     }
     const { goHome } = t0;
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [hidden, setHidden] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [active, setActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("#hero");
+    const [searchOpen, setSearchOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t1;
+    let t2;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/10 ring-1 ring-emerald-400/40",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "text-lg font-black tracking-tight text-emerald-600 dark:text-emerald-400",
-                children: "₹"
+        t1 = ()=>setMounted(true);
+        t2 = [];
+        $[1] = t1;
+        $[2] = t2;
+    } else {
+        t1 = $[1];
+        t2 = $[2];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
+    let t3;
+    let t4;
+    if ($[3] === Symbol.for("react.memo_cache_sentinel")) {
+        t3 = ()=>{
+            let lastScroll = 0;
+            const handleScroll = ()=>{
+                const current = window.scrollY;
+                setScrolled(current > 10);
+                if (current > lastScroll && current > 80) {
+                    setHidden(true);
+                } else {
+                    setHidden(false);
+                }
+                lastScroll = current;
+            };
+            window.addEventListener("scroll", handleScroll);
+            return ()=>window.removeEventListener("scroll", handleScroll);
+        };
+        t4 = [];
+        $[3] = t3;
+        $[4] = t4;
+    } else {
+        t3 = $[3];
+        t4 = $[4];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t3, t4);
+    let t5;
+    let t6;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t5 = ()=>{
+            const updateActive = ()=>{
+                setActive(window.location.hash || "#hero");
+            };
+            window.addEventListener("hashchange", updateActive);
+            updateActive();
+            return ()=>window.removeEventListener("hashchange", updateActive);
+        };
+        t6 = [];
+        $[5] = t5;
+        $[6] = t6;
+    } else {
+        t5 = $[5];
+        t6 = $[6];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t5, t6);
+    if (!mounted) {
+        let t7;
+        if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+            t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+                className: "fixed w-full top-0 z-50 backdrop-blur-xl bg-white/0 dark:bg-slate-900/0 h-16"
             }, void 0, false, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 22,
-                columnNumber: 124
+                lineNumber: 85,
+                columnNumber: 12
+            }, ("TURBOPACK compile-time value", void 0));
+            $[7] = t7;
+        } else {
+            t7 = $[7];
+        }
+        return t7;
+    }
+    const t7 = `
+        fixed w-full top-0 z-50 transition-transform duration-300
+        ${hidden ? "-translate-y-full" : "translate-y-0"}
+        backdrop-blur-xl
+        ${scrolled ? "bg-white/70 dark:bg-slate-950/70 shadow-lg border-b border-slate-200/20 dark:border-slate-800/20" : "bg-transparent border-b border-transparent"}
+      `;
+    let t8;
+    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 ring-1 ring-emerald-400/40 group-hover:scale-110 transition-transform",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                src: "/Favicon.svg",
+                alt: "logo",
+                width: 40,
+                height: 40,
+                className: "w-[26px]"
+            }, void 0, false, {
+                fileName: "[project]/src/components/Layout/Navbar.jsx",
+                lineNumber: 100,
+                columnNumber: 169
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 22,
+            lineNumber: 100,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[1] = t1;
+        $[8] = t8;
     } else {
-        t1 = $[1];
+        t8 = $[8];
     }
-    let t2;
-    if ($[2] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col leading-tight",
+    let t9;
+    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex flex-col",
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-sm font-semibold tracking-wide text-slate-900 dark:text-slate-100",
-                    children: "FinIPO Hub"
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    src: "/logo1.svg",
+                    alt: "FinIPO Hub",
+                    width: 150,
+                    height: 40,
+                    className: "w-[140px] group-hover:opacity-80 transition"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 29,
-                    columnNumber: 55
+                    lineNumber: 107,
+                    columnNumber: 41
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "text-[11px] text-slate-500 dark:text-slate-400",
+                    className: "text-[11px] text-slate-500 dark:text-slate-400 tracking-wide",
                     children: "Blogs • IPOs • Insights"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 29,
-                    columnNumber: 161
+                    lineNumber: 107,
+                    columnNumber: 164
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 29,
+            lineNumber: 107,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[2] = t2;
+        $[9] = t9;
     } else {
-        t2 = $[2];
+        t9 = $[9];
     }
-    let t3;
-    if ($[3] !== goHome) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-            href: "#hero",
+    let t10;
+    if ($[10] !== goHome) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             onClick: goHome,
-            className: "flex items-center gap-2",
+            className: "flex items-center gap-3 group cursor-pointer select-none",
             children: [
-                t1,
-                t2
+                t8,
+                t9
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 36,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[3] = goHome;
-        $[4] = t3;
-    } else {
-        t3 = $[4];
-    }
-    let t4;
-    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "hidden items-center gap-8 md:flex",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300",
-                    children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map(_temp)
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 44,
-                    columnNumber: 61
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 44,
-                    columnNumber: 185
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                    href: "#newsletter",
-                    className: "rounded-full bg-emerald-500 px-4 py-1.5 text-sm font-semibold text-emerald-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400",
-                    children: "Get IPO Alerts"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 44,
-                    columnNumber: 200
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 44,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[5] = t4;
-    } else {
-        t4 = $[5];
-    }
-    let t5;
-    let t6;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 52,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        t6 = ()=>setOpen(_temp2);
-        $[6] = t5;
-        $[7] = t6;
-    } else {
-        t5 = $[6];
-        t6 = $[7];
-    }
-    let t7;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: "sr-only",
-            children: "Toggle navigation"
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 62,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[8] = t7;
-    } else {
-        t7 = $[8];
-    }
-    const t8 = `absolute inset-x-0 top-0 h-0.5 origin-center rounded-full bg-slate-800 dark:bg-slate-200 transition-transform duration-200 ${open ? "translate-y-1.5 rotate-45" : ""}`;
-    let t9;
-    if ($[9] !== t8) {
-        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t8
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 70,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[9] = t8;
-        $[10] = t9;
-    } else {
-        t9 = $[10];
-    }
-    const t10 = `absolute inset-x-0 top-1.5 h-0.5 rounded-full bg-slate-800 dark:bg-slate-200 transition-opacity duration-200 ${open ? "opacity-0" : "opacity-100"}`;
-    let t11;
-    if ($[11] !== t10) {
-        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t10
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 79,
+            lineNumber: 114,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
+        $[10] = goHome;
         $[11] = t10;
-        $[12] = t11;
     } else {
-        t11 = $[12];
+        t10 = $[11];
     }
-    const t12 = `absolute inset-x-0 top-3 h-0.5 origin-center rounded-full bg-slate-800 dark:bg-slate-200 transition-transform duration-200 ${open ? "-translate-y-1.5 -rotate-45" : ""}`;
-    let t13;
-    if ($[13] !== t12) {
-        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: t12
+    let t11;
+    if ($[12] !== searchOpen) {
+        t11 = ()=>setSearchOpen(!searchOpen);
+        $[12] = searchOpen;
+        $[13] = t11;
+    } else {
+        t11 = $[13];
+    }
+    let t12;
+    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            "aria-hidden": "true",
+            children: "🔍"
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 88,
+            lineNumber: 130,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[13] = t12;
-        $[14] = t13;
+        $[14] = t12;
     } else {
-        t13 = $[14];
+        t12 = $[14];
     }
-    let t14;
-    if ($[15] !== t11 || $[16] !== t13 || $[17] !== t9) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex items-center gap-2 md:hidden",
-            children: [
-                t5,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: t6,
-                    className: "inline-flex items-center justify-center rounded-lg border border-slate-300 p-2 text-slate-800 dark:border-slate-700 dark:text-slate-200",
-                    "aria-label": "Toggle navigation",
-                    children: [
-                        t7,
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative h-4 w-5",
-                            children: [
-                                t9,
-                                t11,
-                                t13
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Layout/Navbar.jsx",
-                            lineNumber: 96,
-                            columnNumber: 270
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 96,
-                    columnNumber: 66
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
+    let t13;
+    if ($[15] !== t11) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            onClick: t11,
+            className: "text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition",
+            children: t12
+        }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 96,
+            lineNumber: 137,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[15] = t11;
         $[16] = t13;
-        $[17] = t9;
-        $[18] = t14;
     } else {
-        t14 = $[18];
+        t13 = $[16];
     }
+    const t14 = `
+                absolute right-0 top-8 px-3 py-2 w-48 rounded-lg 
+                bg-white/90 dark:bg-slate-900/90 shadow-md 
+                border border-slate-200 dark:border-slate-700 text-sm
+                transition-all duration-300
+                ${searchOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
+              `;
     let t15;
-    if ($[19] !== t14 || $[20] !== t3) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-            className: "mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6",
+    if ($[17] !== t14) {
+        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+            type: "text",
+            placeholder: "Search IPOs...",
+            className: t14
+        }, void 0, false, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 152,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[17] = t14;
+        $[18] = t15;
+    } else {
+        t15 = $[18];
+    }
+    let t16;
+    if ($[19] !== t13 || $[20] !== t15) {
+        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "relative",
             children: [
-                t3,
-                t4,
-                t14
+                t13,
+                t15
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 106,
+            lineNumber: 160,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[19] = t14;
-        $[20] = t3;
-        $[21] = t15;
+        $[19] = t13;
+        $[20] = t15;
+        $[21] = t16;
     } else {
-        t15 = $[21];
+        t16 = $[21];
     }
-    let t16;
-    if ($[22] !== open) {
-        t16 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "border-t border-slate-200/70 bg-white/95 backdrop-blur-xl dark:border-slate-800/70 dark:bg-slate-950/95 md:hidden",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3",
+    let t17;
+    if ($[22] !== active) {
+        t17 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                href: link.href,
+                className: "relative group transition",
                 children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: `${active === link.href ? "text-emerald-500" : ""}`,
+                        children: link.label
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Layout/Navbar.jsx",
+                        lineNumber: 169,
+                        columnNumber: 107
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: `
+                    absolute left-0 -bottom-1 h-[2px] rounded-full transition-all duration-300
+                    ${active === link.href ? "w-full bg-emerald-500" : "w-0 bg-emerald-500 group-hover:w-full"}
+                  `
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Layout/Navbar.jsx",
+                        lineNumber: 169,
+                        columnNumber: 196
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, link.href, true, {
+                fileName: "[project]/src/components/Layout/Navbar.jsx",
+                lineNumber: 169,
+                columnNumber: 33
+            }, ("TURBOPACK compile-time value", void 0)));
+        $[22] = active;
+        $[23] = t17;
+    } else {
+        t17 = $[23];
+    }
+    let t18;
+    if ($[24] !== t17) {
+        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300",
+            children: t17
+        }, void 0, false, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 180,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[24] = t17;
+        $[25] = t18;
+    } else {
+        t18 = $[25];
+    }
+    let t19;
+    if ($[26] === Symbol.for("react.memo_cache_sentinel")) {
+        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 188,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[26] = t19;
+    } else {
+        t19 = $[26];
+    }
+    let t20;
+    if ($[27] === Symbol.for("react.memo_cache_sentinel")) {
+        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+            href: "#newsletter",
+            className: "relative rounded-full bg-emerald-500 px-6 py-2 text-sm font-semibold text-white shadow-md hover:bg-emerald-400 transition",
+            children: [
+                "Get IPO Alerts",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "absolute -right-2 -top-2 h-3 w-3 bg-emerald-400 rounded-full animate-ping"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Layout/Navbar.jsx",
+                    lineNumber: 195,
+                    columnNumber: 181
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "absolute -right-2 -top-2 h-3 w-3 bg-emerald-600 rounded-full"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Layout/Navbar.jsx",
+                    lineNumber: 195,
+                    columnNumber: 275
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 195,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[27] = t20;
+    } else {
+        t20 = $[27];
+    }
+    let t21;
+    if ($[28] !== t16 || $[29] !== t18) {
+        t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "hidden md:flex items-center gap-10",
+            children: [
+                t16,
+                t18,
+                t19,
+                t20
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 202,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[28] = t16;
+        $[29] = t18;
+        $[30] = t21;
+    } else {
+        t21 = $[30];
+    }
+    let t22;
+    if ($[31] === Symbol.for("react.memo_cache_sentinel")) {
+        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 211,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[31] = t22;
+    } else {
+        t22 = $[31];
+    }
+    let t23;
+    if ($[32] !== open) {
+        t23 = ()=>setOpen(!open);
+        $[32] = open;
+        $[33] = t23;
+    } else {
+        t23 = $[33];
+    }
+    const t24 = open ? "\u2716" : "\u2630";
+    let t25;
+    if ($[34] !== t23 || $[35] !== t24) {
+        t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex items-center gap-2 md:hidden",
+            children: [
+                t22,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: t23,
+                    className: "p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition",
+                    children: t24
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Layout/Navbar.jsx",
+                    lineNumber: 227,
+                    columnNumber: 67
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 227,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[34] = t23;
+        $[35] = t24;
+        $[36] = t25;
+    } else {
+        t25 = $[36];
+    }
+    let t26;
+    if ($[37] !== t10 || $[38] !== t21 || $[39] !== t25) {
+        t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+            className: "mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6",
+            children: [
+                t10,
+                t21,
+                t25
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Layout/Navbar.jsx",
+            lineNumber: 236,
+            columnNumber: 11
+        }, ("TURBOPACK compile-time value", void 0));
+        $[37] = t10;
+        $[38] = t21;
+        $[39] = t25;
+        $[40] = t26;
+    } else {
+        t26 = $[40];
+    }
+    let t27;
+    if ($[41] !== open) {
+        t27 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "md:hidden border-t bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl transition-all",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex flex-col px-4 py-3 gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        type: "text",
+                        placeholder: "Search...",
+                        className: "px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-sm"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Layout/Navbar.jsx",
+                        lineNumber: 246,
+                        columnNumber: 167
+                    }, ("TURBOPACK compile-time value", void 0)),
                     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((link_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: link_0.href,
                             onClick: ()=>setOpen(false),
-                            className: "rounded-lg px-2 py-2 text-sm font-medium text-slate-800 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70",
+                            className: "px-3 py-2 rounded-lg text-sm text-slate-800 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70 transition",
                             children: link_0.label
                         }, link_0.href, false, {
                             fileName: "[project]/src/components/Layout/Navbar.jsx",
-                            lineNumber: 115,
-                            columnNumber: 240
+                            lineNumber: 246,
+                            columnNumber: 357
                         }, ("TURBOPACK compile-time value", void 0))),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: "#newsletter",
-                        onClick: ()=>setOpen(false),
-                        className: "mt-1 rounded-full bg-emerald-500 px-4 py-2 text-center text-sm font-semibold text-emerald-950 shadow-lg shadow-emerald-500/30 transition hover:bg-emerald-400",
+                        className: "mt-2 rounded-full bg-emerald-500 px-5 py-2 text-center text-sm font-semibold text-white hover:bg-emerald-400 transition",
                         children: "Get IPO Alerts"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Layout/Navbar.jsx",
-                        lineNumber: 115,
-                        columnNumber: 465
+                        lineNumber: 246,
+                        columnNumber: 581
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 115,
-                columnNumber: 150
+                lineNumber: 246,
+                columnNumber: 120
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 115,
+            lineNumber: 246,
             columnNumber: 19
         }, ("TURBOPACK compile-time value", void 0));
-        $[22] = open;
-        $[23] = t16;
+        $[41] = open;
+        $[42] = t27;
     } else {
-        t16 = $[23];
+        t27 = $[42];
     }
-    let t17;
-    if ($[24] !== t15 || $[25] !== t16) {
-        t17 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-            className: "sticky top-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl dark:border-slate-800/70 dark:bg-slate-950/80",
+    let t28;
+    if ($[43] !== t26 || $[44] !== t27 || $[45] !== t7) {
+        t28 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+            className: t7,
             children: [
-                t15,
-                t16
+                t26,
+                t27
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 123,
+            lineNumber: 254,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[24] = t15;
-        $[25] = t16;
-        $[26] = t17;
+        $[43] = t26;
+        $[44] = t27;
+        $[45] = t7;
+        $[46] = t28;
     } else {
-        t17 = $[26];
+        t28 = $[46];
     }
-    return t17;
+    return t28;
 };
-_s(Navbar, "xG1TONbKtDWtdOTrXaTAsNhPg/Q=");
+_s(Navbar, "I9X5Uslqu+fIS5nfdZOYIJFpY6g=");
 _c = Navbar;
 const __TURBOPACK__default__export__ = Navbar;
-function _temp(link) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-        href: link.href,
-        className: "relative transition hover:text-emerald-600 dark:hover:text-emerald-400",
-        children: [
-            link.label,
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "absolute inset-x-0 -bottom-1 h-px scale-x-0 bg-gradient-to-r from-emerald-400 to-cyan-400 transition-transform duration-200 group-hover:scale-x-100"
-            }, void 0, false, {
-                fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 134,
-                columnNumber: 141
-            }, this)
-        ]
-    }, link.href, true, {
-        fileName: "[project]/src/components/Layout/Navbar.jsx",
-        lineNumber: 134,
-        columnNumber: 10
-    }, this);
-}
-function _temp2(p) {
-    return !p;
-}
 var _c;
 __turbopack_context__.k.register(_c, "Navbar");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -881,6 +1058,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+'use client';
 ;
 const AnimatedSection = ({ children, animationClass, rootMargin = '-100px 0px' })=>{
     _s();
@@ -931,7 +1109,7 @@ const AnimatedSection = ({ children, animationClass, rootMargin = '-100px 0px' }
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/Modules/AnimationWeb.jsx",
-        lineNumber: 34,
+        lineNumber: 36,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -962,11 +1140,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules
 ;
 const Footer = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(13);
-    if ($[0] !== "6a544b94436117dc800848f90292cd395a8b4d83159fb7bede7ad2da85456140") {
+    if ($[0] !== "2ec1cebdb6505b1a57d9b6b980b991333aa009af6425bfa664d6518da36833e5") {
         for(let $i = 0; $i < 13; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "6a544b94436117dc800848f90292cd395a8b4d83159fb7bede7ad2da85456140";
+        $[0] = "2ec1cebdb6505b1a57d9b6b980b991333aa009af6425bfa664d6518da36833e5";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -1330,6 +1508,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/Service/axios.js [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+// 'use client';
 __turbopack_context__.s([
     "apiDelete",
     ()=>apiDelete,
@@ -1339,55 +1518,42 @@ __turbopack_context__.s([
     ()=>apiPost,
     "apiPut",
     ()=>apiPut,
-    "default",
-    ()=>__TURBOPACK__default__export__
+    "baseURL",
+    ()=>baseURL
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 ;
-const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
+const baseURL = "http://localhost:5000/api";
+const API = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
     baseURL: "http://localhost:5000/api",
     headers: {
         "Content-Type": "application/json"
-    },
-    timeout: 10000
+    }
 });
-const __TURBOPACK__default__export__ = api;
-async function apiGet(path) {
-    try {
-        const res = await api.get(`/${path}`);
-        return res.data;
-    } catch (error) {
-        console.error("GET API Error:", error);
-        throw error;
-    }
-}
-async function apiPost(path, body) {
-    try {
-        const res = await api.post(`/${path}`, body);
-        return res.data;
-    } catch (error) {
-        console.error("POST API Error:", error);
-        throw error;
-    }
-}
-async function apiPut(path, body) {
-    try {
-        const res = await api.put(`/${path}`, body);
-        return res.data;
-    } catch (error) {
-        console.error("PUT API Error:", error);
-        throw error;
-    }
-}
-async function apiDelete(path) {
-    try {
-        const res = await api.delete(`/${path}`);
-        return res.data;
-    } catch (error) {
-        console.error("DELETE API Error:", error);
-        throw error;
-    }
-}
+const apiGet = async (path, params = {})=>{
+    const res = await API.get(`/${path}`, {
+        params
+    });
+    return res.data;
+};
+const apiPost = async (path, body = {}, params = {})=>{
+    const res = await API.post(`/${path}`, body, {
+        params
+    });
+    return res.data;
+};
+const apiPut = async (path, body = {}, params = {})=>{
+    const res = await API.put(`/${path}`, body, {
+        params
+    });
+    return res.data;
+};
+const apiDelete = async (path, params = {})=>{
+    const res = await API.delete(`/${path}`, {
+        params
+    });
+    return res.data;
+};
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -1399,163 +1565,64 @@ __turbopack_context__.s([
     "default",
     ()=>useAPI
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/Service/axios.js [app-client] (ecmascript)");
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
-;
-function useAPI(path) {
+function useAPI(path, params = {}) {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(21);
-    if ($[0] !== "d943b1507ae443ce9a557589d6d3972b67a13a6651e6614103cb32a52a119c32") {
-        for(let $i = 0; $i < 21; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "d943b1507ae443ce9a557589d6d3972b67a13a6651e6614103cb32a52a119c32";
-    }
-    let t0;
-    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t0 = [];
-        $[1] = t0;
-    } else {
-        t0 = $[1];
-    }
-    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(t0);
+    const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    let t1;
-    if ($[2] !== path) {
-        t1 = ({
-            "useAPI[fetchData]": async ()=>{
-                setLoading(true);
-                ;
-                try {
-                    const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiGet"])(path);
-                    setData(result);
-                    setError(null);
-                } catch (t2) {
-                    const err = t2;
-                    setError(err.message || "API Error");
-                }
-                setLoading(false);
+    // GET
+    const fetchData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "useAPI.useCallback[fetchData]": async ()=>{
+            setLoading(true);
+            try {
+                const result = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiGet"])(path, params);
+                setData(result);
+                setError(null);
+            } catch (err) {
+                setError(err.message || "API Error");
             }
-        })["useAPI[fetchData]"];
-        $[2] = path;
-        $[3] = t1;
-    } else {
-        t1 = $[3];
-    }
-    const fetchData = t1;
-    let t2;
-    if ($[4] !== path) {
-        t2 = ({
-            "useAPI[create]": async (body)=>{
-                ;
-                try {
-                    const result_0 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPost"])(path, body);
-                    return result_0;
-                } catch (t3) {
-                    const err_0 = t3;
-                    console.error("POST Error:", err_0);
-                    throw err_0;
-                }
-            }
-        })["useAPI[create]"];
-        $[4] = path;
-        $[5] = t2;
-    } else {
-        t2 = $[5];
-    }
-    const create = t2;
-    let t3;
-    if ($[6] !== path) {
-        t3 = ({
-            "useAPI[update]": async (body_0)=>{
-                ;
-                try {
-                    const result_1 = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPut"])(path, body_0);
-                    return result_1;
-                } catch (t4) {
-                    const err_1 = t4;
-                    console.error("PUT Error:", err_1);
-                    throw err_1;
-                }
-            }
-        })["useAPI[update]"];
-        $[6] = path;
-        $[7] = t3;
-    } else {
-        t3 = $[7];
-    }
-    const update = t3;
-    let t4;
-    if ($[8] !== path) {
-        t4 = ({
-            "useAPI[remove]": async ()=>{
-                ;
-                try {
-                    const result_2 = await apiDelete(path);
-                    return result_2;
-                } catch (t5) {
-                    const err_2 = t5;
-                    console.error("DELETE Error:", err_2);
-                    throw err_2;
-                }
-            }
-        })["useAPI[remove]"];
-        $[8] = path;
-        $[9] = t4;
-    } else {
-        t4 = $[9];
-    }
-    const remove = t4;
-    let t5;
-    let t6;
-    if ($[10] !== fetchData) {
-        t5 = ({
-            "useAPI[useEffect()]": ()=>{
-                fetchData();
-            }
-        })["useAPI[useEffect()]"];
-        t6 = [
-            fetchData
-        ];
-        $[10] = fetchData;
-        $[11] = t5;
-        $[12] = t6;
-    } else {
-        t5 = $[11];
-        t6 = $[12];
-    }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t5, t6);
-    let t7;
-    if ($[13] !== create || $[14] !== data || $[15] !== error || $[16] !== fetchData || $[17] !== loading || $[18] !== remove || $[19] !== update) {
-        t7 = {
-            data,
-            loading,
-            error,
-            refetch: fetchData,
-            create,
-            update,
-            remove
-        };
-        $[13] = create;
-        $[14] = data;
-        $[15] = error;
-        $[16] = fetchData;
-        $[17] = loading;
-        $[18] = remove;
-        $[19] = update;
-        $[20] = t7;
-    } else {
-        t7 = $[20];
-    }
-    return t7;
+            setLoading(false);
+        }
+    }["useAPI.useCallback[fetchData]"], [
+        path,
+        JSON.stringify(params)
+    ]);
+    // POST
+    const create = async (body = {}, extraParams = {})=>{
+        return await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPost"])(path, body, extraParams);
+    };
+    // PUT
+    const update = async (body_0 = {}, extraParams_0 = {})=>{
+        return await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiPut"])(path, body_0, extraParams_0);
+    };
+    // DELETE
+    const remove = async (extraParams_1 = {})=>{
+        return await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Service$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["apiDelete"])(path, extraParams_1);
+    };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "useAPI.useEffect": ()=>{
+            fetchData();
+        }
+    }["useAPI.useEffect"], [
+        fetchData
+    ]);
+    return {
+        data,
+        loading,
+        error,
+        refetch: fetchData,
+        create,
+        update,
+        remove
+    };
 }
-_s(useAPI, "kWZdzN90hBDc11Mwymr9WP8BN6w=");
+_s(useAPI, "yZpGE5lmr9HR5OiBdmrBaa5atrY=");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -1585,56 +1652,19 @@ var _s = __turbopack_context__.k.signature();
 ;
 const Hero = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(21);
-    if ($[0] !== "3394b44c99393befc799b08528fbfeaa5f56321f66da6e4ad754eede6a5da6a7") {
-        for(let $i = 0; $i < 21; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(18);
+    if ($[0] !== "cb0485a475fc503c5a3e716720b02b4e0d2c69ec1562f05ecc304afd32a0b9f3") {
+        for(let $i = 0; $i < 18; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "3394b44c99393befc799b08528fbfeaa5f56321f66da6e4ad754eede6a5da6a7";
+        $[0] = "cb0485a475fc503c5a3e716720b02b4e0d2c69ec1562f05ecc304afd32a0b9f3";
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
-    const { data, loading, error } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
-    console.log("Ddddddddddd0", data);
-    if (loading) {
-        let t0;
-        if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-            t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: "Loading..."
-            }, void 0, false, {
-                fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 26,
-                columnNumber: 12
-            }, ("TURBOPACK compile-time value", void 0));
-            $[1] = t0;
-        } else {
-            t0 = $[1];
-        }
-        return t0;
-    }
-    if (error) {
-        let t0;
-        if ($[2] !== error) {
-            t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    "ERROR: ",
-                    error
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 36,
-                columnNumber: 12
-            }, ("TURBOPACK compile-time value", void 0));
-            $[2] = error;
-            $[3] = t0;
-        } else {
-            t0 = $[3];
-        }
-        return t0;
-    }
+    const { data } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
     let t0;
     let t1;
     let t2;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
             className: "inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-600 dark:text-emerald-300",
             children: [
@@ -1642,22 +1672,22 @@ const Hero = ()=>{
                     className: "h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 48,
+                    lineNumber: 24,
                     columnNumber: 221
                 }, ("TURBOPACK compile-time value", void 0)),
                 "Live Market Insights • Best IPO Analysis"
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 48,
+            lineNumber: 24,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-            className: "\r\n        text-balance \r\n        text-2xl \r\n        sm:text-3xl \r\n        lg:text-4xl \r\n        font-semibold \r\n        tracking-tight \r\n        text-slate-900 \r\n        dark:text-slate-50\r\n    ",
+            className: "text-balance text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-50",
             children: "Smart IPO Insights & Simplified Investing \u2014 All in One Place."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 49,
+            lineNumber: 25,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1665,19 +1695,19 @@ const Hero = ()=>{
             children: "Capital Mantra brings you real-time GMP updates, concise IPO research, and beginner-friendly financial blogs — everything you need to make confident investment decisions."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 50,
+            lineNumber: 26,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[4] = t0;
-        $[5] = t1;
-        $[6] = t2;
+        $[1] = t0;
+        $[2] = t1;
+        $[3] = t2;
     } else {
-        t0 = $[4];
-        t1 = $[5];
-        t2 = $[6];
+        t0 = $[1];
+        t1 = $[2];
+        t2 = $[3];
     }
     let t3;
-    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex flex-wrap gap-3",
             children: [
@@ -1691,13 +1721,13 @@ const Hero = ()=>{
                             children: "↗"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 61,
+                            lineNumber: 37,
                             columnNumber: 298
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 61,
+                    lineNumber: 37,
                     columnNumber: 48
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1706,21 +1736,21 @@ const Hero = ()=>{
                     children: "Read Latest Blogs"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 61,
+                    lineNumber: 37,
                     columnNumber: 336
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 61,
+            lineNumber: 37,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[7] = t3;
+        $[4] = t3;
     } else {
-        t3 = $[7];
+        t3 = $[4];
     }
     let t4;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "rounded-xl border border-slate-200 bg-white/70 px-3 py-3 dark:border-slate-800 dark:bg-slate-900/70 transition hover:shadow-md duration-300",
             children: [
@@ -1729,7 +1759,7 @@ const Hero = ()=>{
                     children: "100% Free Financial Education"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 68,
+                    lineNumber: 44,
                     columnNumber: 167
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1737,21 +1767,21 @@ const Hero = ()=>{
                     children: "No paywall. Learn the basics of investment, IPOs, and mutual funds."
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 68,
+                    lineNumber: 44,
                     columnNumber: 264
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 68,
+            lineNumber: 44,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[8] = t4;
+        $[5] = t4;
     } else {
-        t4 = $[8];
+        t4 = $[5];
     }
     let t5;
-    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
         t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "rounded-xl border border-slate-200 bg-white/70 px-3 py-3 dark:border-slate-800 dark:bg-slate-900/70 transition hover:shadow-md duration-300",
             children: [
@@ -1760,7 +1790,7 @@ const Hero = ()=>{
                     children: "Beginner-friendly Investing"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 75,
+                    lineNumber: 51,
                     columnNumber: 167
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1768,21 +1798,21 @@ const Hero = ()=>{
                     children: "Simple language, real examples, and clear action points for the Indian market."
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 75,
+                    lineNumber: 51,
                     columnNumber: 262
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 75,
+            lineNumber: 51,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[9] = t5;
+        $[6] = t5;
     } else {
-        t5 = $[9];
+        t5 = $[6];
     }
     let t6;
-    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
         t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex-1 space-y-6",
             children: [
@@ -1803,7 +1833,7 @@ const Hero = ()=>{
                                     children: "Live IPO Tracking (GMP)"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 58,
                                     columnNumber: 331
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1811,46 +1841,46 @@ const Hero = ()=>{
                                     children: "View latest, upcoming, and recently listed IPOs with GMP tracking."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                                    lineNumber: 82,
+                                    lineNumber: 58,
                                     columnNumber: 422
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 82,
+                            lineNumber: 58,
                             columnNumber: 174
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 82,
+                    lineNumber: 58,
                     columnNumber: 60
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 82,
+            lineNumber: 58,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[10] = t6;
+        $[7] = t6;
     } else {
-        t6 = $[10];
+        t6 = $[7];
     }
     let t7;
-    if ($[11] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
         t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "absolute -inset-0.5 rounded-3xl bg-gradient-to-br from-emerald-400/50 via-cyan-400/40 to-teal-500/30 opacity-60 blur-xl animate-pulse-slow"
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 89,
+            lineNumber: 65,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[11] = t7;
+        $[8] = t7;
     } else {
-        t7 = $[11];
+        t7 = $[8];
     }
     let t8;
-    if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
         t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mb-3 flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400",
             children: [
@@ -1858,59 +1888,59 @@ const Hero = ()=>{
                     className: "inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-400"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 96,
+                    lineNumber: 72,
                     columnNumber: 103
                 }, ("TURBOPACK compile-time value", void 0)),
-                "Live IPO Snapshot (Demo Data)"
+                "Live IPO Snapshot"
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 96,
+            lineNumber: 72,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[12] = t8;
+        $[9] = t8;
     } else {
-        t8 = $[12];
+        t8 = $[9];
     }
     let t9;
-    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    children: "Company (IPO)"
+                    children: "Company (IPO) • Exchange"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 103,
+                    lineNumber: 79,
                     columnNumber: 108
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     children: "GMP • Status"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 103,
-                    columnNumber: 134
+                    lineNumber: 79,
+                    columnNumber: 145
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 103,
+            lineNumber: 79,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[13] = t9;
+        $[10] = t9;
     } else {
-        t9 = $[13];
+        t9 = $[10];
     }
     let t10;
-    if ($[14] !== data) {
-        t10 = data?.slice(0, 3).map(_temp);
-        $[14] = data;
-        $[15] = t10;
+    if ($[11] !== data) {
+        t10 = data?.filter(_temp).slice(0, 5).map(_temp2);
+        $[11] = data;
+        $[12] = t10;
     } else {
-        t10 = $[15];
+        t10 = $[12];
     }
     let t11;
-    if ($[16] !== t10) {
+    if ($[13] !== t10) {
         t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "rounded-2xl bg-slate-100/80 p-3 dark:bg-slate-950/80",
             children: [
@@ -1920,36 +1950,36 @@ const Hero = ()=>{
                     children: t10
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 118,
+                    lineNumber: 94,
                     columnNumber: 85
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 118,
+            lineNumber: 94,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[16] = t10;
-        $[17] = t11;
+        $[13] = t10;
+        $[14] = t11;
     } else {
-        t11 = $[17];
+        t11 = $[14];
     }
     let t12;
-    if ($[18] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[15] === Symbol.for("react.memo_cache_sentinel")) {
         t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: "mt-3 text-[10px] leading-relaxed text-slate-500",
             children: "* All IPO and GMP numbers are for demonstration purposes only. Please verify before investing."
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 126,
+            lineNumber: 102,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[18] = t12;
+        $[15] = t12;
     } else {
-        t12 = $[18];
+        t12 = $[15];
     }
     let t13;
-    if ($[19] !== t11) {
+    if ($[16] !== t11) {
         t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             animationClass: "translate-y-10",
             rootMargin: "-50px 0px",
@@ -1976,44 +2006,44 @@ const Hero = ()=>{
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                                        lineNumber: 133,
+                                        lineNumber: 109,
                                         columnNumber: 488
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                                lineNumber: 133,
+                                lineNumber: 109,
                                 columnNumber: 440
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/Hero.jsx",
-                            lineNumber: 133,
+                            lineNumber: 109,
                             columnNumber: 416
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/Hero.jsx",
-                    lineNumber: 133,
+                    lineNumber: 109,
                     columnNumber: 275
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 133,
+                lineNumber: 109,
                 columnNumber: 83
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/Hero.jsx",
-            lineNumber: 133,
+            lineNumber: 109,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[19] = t11;
-        $[20] = t13;
+        $[16] = t11;
+        $[17] = t13;
     } else {
-        t13 = $[20];
+        t13 = $[17];
     }
     return t13;
 };
-_s(Hero, "LL3LF6lZkV+uii2QFAn5n3kBbhk=", false, function() {
+_s(Hero, "9qr3GG6nScO0jMf9+ff6pVA2vq0=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Context$2f$ThemeContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
@@ -2021,7 +2051,10 @@ _s(Hero, "LL3LF6lZkV+uii2QFAn5n3kBbhk=", false, function() {
 });
 _c = Hero;
 const __TURBOPACK__default__export__ = Hero;
-function _temp(ipo) {
+function _temp(item) {
+    return item.status === "O";
+}
+function _temp2(ipo) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex items-center justify-between py-2",
         children: [
@@ -2032,56 +2065,61 @@ function _temp(ipo) {
                         children: ipo.name
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 143,
+                        lineNumber: 122,
                         columnNumber: 84
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-[11px] text-slate-500 dark:text-slate-400",
                         children: [
-                            ipo.symbol,
+                            ipo.exchange,
                             " • ",
-                            ipo.ipoType
+                            ipo.category ? ipo.category : "MAINBOARD"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 143,
+                        lineNumber: 122,
                         columnNumber: 172
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 143,
+                lineNumber: 122,
                 columnNumber: 79
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "text-right",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-[11px] font-semibold text-emerald-600 dark:text-emerald-300",
-                        children: ipo.gmp
-                    }, void 0, false, {
+                        className: `text-[11px] font-semibold {${parseInt(ipo.gmp) > 0 ? "text-emerald-600" : "text-red-600"} dark:text-emerald-300`,
+                        children: [
+                            ipo.gmp && "-",
+                            " (",
+                            ipo.gmp_percent,
+                            ")%"
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 143,
-                        columnNumber: 300
+                        lineNumber: 122,
+                        columnNumber: 332
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-[11px] text-slate-500 dark:text-slate-400",
-                        children: ipo.status
+                        children: ipo.status_text
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/Hero.jsx",
-                        lineNumber: 143,
-                        columnNumber: 393
+                        lineNumber: 122,
+                        columnNumber: 502
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Modules/Hero.jsx",
-                lineNumber: 143,
-                columnNumber: 272
+                lineNumber: 122,
+                columnNumber: 304
             }, this)
         ]
     }, ipo.id, true, {
         fileName: "[project]/src/components/Modules/Hero.jsx",
-        lineNumber: 143,
+        lineNumber: 122,
         columnNumber: 10
     }, this);
 }
@@ -2094,7 +2132,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "[project]/src/components/Modules/IpoSection.jsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// components/Modules/IpoSection.jsx
 __turbopack_context__.s([
     "default",
     ()=>__TURBOPACK__default__export__
@@ -2102,56 +2139,85 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Modules/AnimationWeb.jsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/useAPI.js [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
 ;
 ;
-// Assuming IpoDetailView is in Modules, so we pass navigateToDetail down
+;
+;
+// --- MOCK EXTERNAL DEPENDENCIES (for runnable code) ---
+// const Link = ({ href, children, className }) => <a href="#" onClick={(e) => e.preventDefault()} className={className}>{children}</a>;
+// const AnimatedSection = ({ children }) => <div className="animate-in fade-in">{children}</div>;
+// const slugify = (text) => tex/ mockIpoList, loading: false });
+// --------------------------------------------------------
+// STATUS MAP FOR UI
+// --------------------------------------------------------
+const mapStatusToUI = (code)=>{
+    switch(code){
+        case "U":
+            return "Upcoming";
+        case "O":
+            return "Ongoing";
+        case "CT":
+            return "Ongoing";
+        // Close Today should be treated as Ongoing for UI tabs
+        case "C":
+        case "L":
+            return "Closed";
+        default:
+            return "Upcoming";
+    }
+};
+//
+// --------------------------------------------------------
+// FILTER BAR
+// --------------------------------------------------------
 const IpoFilterBar = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
-    if ($[0] !== "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3") {
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
         for(let $i = 0; $i < 14; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3";
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
     }
     const { selectedStatus, setSelectedStatus, search, setSearch } = t0;
     let t1;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t1 = [
             "All",
-            "Ongoing",
             "Upcoming",
+            "Ongoing",
             "Closed"
         ];
         $[1] = t1;
     } else {
         t1 = $[1];
     }
-    const IPO_STATUSES = t1;
+    const STATUS_TABS = t1;
     let t2;
     if ($[2] !== selectedStatus || $[3] !== setSelectedStatus) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex flex-wrap gap-2 text-xs sm:text-[13px]",
-            children: IPO_STATUSES.map((status)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+            children: STATUS_TABS.map((status)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: ()=>setSelectedStatus(status),
-                    className: `rounded-full px-3 py-1 font-medium transition ${selectedStatus === status ? "bg-emerald-500 text-emerald-950" : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"}`,
+                    className: `rounded-full px-4 py-1.5 font-semibold transition duration-300 ${selectedStatus === status ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/30" : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"}`,
                     children: status
                 }, status, false, {
                     fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 35,
-                    columnNumber: 99
+                    lineNumber: 64,
+                    columnNumber: 98
                 }, ("TURBOPACK compile-time value", void 0)))
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 35,
+            lineNumber: 64,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[2] = selectedStatus;
@@ -2163,11 +2229,10 @@ const IpoFilterBar = (t0)=>{
     let t3;
     if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: "text-slate-500 dark:text-slate-400",
             children: "🔍"
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 44,
+            lineNumber: 73,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[5] = t3;
@@ -2185,24 +2250,24 @@ const IpoFilterBar = (t0)=>{
     let t5;
     if ($[8] !== search || $[9] !== t4) {
         t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex items-center gap-2 rounded-full border border-slate-300 bg-slate-100/80 px-3 py-1.5 text-xs text-slate-700 sm:text-[13px] dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200",
+            className: "flex items-center gap-2 rounded-full border border-slate-300 \n                bg-slate-100/80 px-4 py-1.5 text-sm text-slate-700 \n                dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 w-full sm:w-auto",
             children: [
                 t3,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                     type: "text",
-                    placeholder: "Search by company or symbol...",
+                    placeholder: "Search IPO name or exchange...",
                     value: search,
                     onChange: t4,
-                    className: "w-full bg-transparent text-xs outline-none placeholder:text-slate-500 sm:max-w-xs sm:text-[13px]"
+                    className: "w-full bg-transparent outline-none placeholder:text-slate-500"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 59,
-                    columnNumber: 221
+                    lineNumber: 88,
+                    columnNumber: 261
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 59,
+            lineNumber: 88,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[8] = search;
@@ -2214,14 +2279,14 @@ const IpoFilterBar = (t0)=>{
     let t6;
     if ($[11] !== t2 || $[12] !== t5) {
         t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/80 p-3 sm:flex-row sm:items-center sm:justify-between dark:border-slate-800 dark:bg-slate-950/80",
+            className: "flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/90 p-3 \n            sm:flex-row sm:items-center sm:justify-between \n            dark:border-slate-800 dark:bg-slate-950/90 backdrop-blur-sm shadow-md sticky top-0 z-10",
             children: [
                 t2,
                 t5
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 68,
+            lineNumber: 97,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[11] = t2;
@@ -2233,24 +2298,29 @@ const IpoFilterBar = (t0)=>{
     return t6;
 };
 _c = IpoFilterBar;
+//
+// --------------------------------------------------------
+// IPO TABLE (Grid View)
+// --------------------------------------------------------
 const IpoTable = (t0)=>{
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3") {
-        for(let $i = 0; $i < 7; $i += 1){
+    _s();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3";
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
     }
-    const { ipos } = t0;
-    if (!ipos.length) {
+    const { data } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
+    if (!data.length) {
         let t1;
         if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
             t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "rounded-2xl border border-slate-200 bg-white/80 p-6 text-center text-sm text-slate-500 dark:border-slate-800 dark:bg-slate-950/80 dark:text-slate-400",
-                children: "No IPOs found for the selected filters."
+                className: "rounded-2xl border border-slate-200 bg-white/80 p-6 text-center \n                text-sm text-slate-500 dark:border-slate-800 dark:bg-slate-950/80 dark:text-slate-300 backdrop-blur-sm",
+                children: "No IPOs found matching the filter criteria. "
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                lineNumber: 91,
+                lineNumber: 125,
                 columnNumber: 12
             }, ("TURBOPACK compile-time value", void 0));
             $[1] = t1;
@@ -2259,346 +2329,662 @@ const IpoTable = (t0)=>{
         }
         return t1;
     }
-    const getGmpColor = _temp;
     let t1;
-    if ($[2] !== ipos) {
-        let t2;
-        if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-            t2 = (ipo)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    href: `/ipo/${ipo.id}/${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["slugify"])(ipo.company)}`,
-                    className: "rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm transition hover:border-emerald-500/50 hover:shadow-emerald-500/20 cursor-pointer dark:border-slate-800 dark:bg-slate-950/80 dark:shadow-slate-950/60",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "text-[15px] font-semibold text-slate-900 dark:text-slate-50",
-                            children: ipo.company
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 103,
-                            columnNumber: 310
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-[12px] text-slate-500 dark:text-slate-400 mb-2",
-                            children: [
-                                ipo.symbol,
-                                " • ",
-                                ipo.ipoType
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 103,
-                            columnNumber: 404
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-[12px] text-slate-700 space-y-1 dark:text-slate-300",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-slate-500 dark:text-slate-400",
-                                            children: "Open:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 580
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        " ",
-                                        ipo.openDate
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 577
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-slate-500 dark:text-slate-400",
-                                            children: "Close:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 667
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        " ",
-                                        ipo.closeDate
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 664
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-slate-500 dark:text-slate-400",
-                                            children: "Price Band:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 756
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        " ",
-                                        ipo.priceBand
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 753
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-slate-500 dark:text-slate-400",
-                                            children: "Lot Size:"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                            lineNumber: 103,
-                                            columnNumber: 850
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        " ",
-                                        ipo.lotSize
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 847
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 103,
-                            columnNumber: 503
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mt-3 flex items-center justify-between",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: `text-[12px] font-semibold ${getGmpColor(ipo.gmp)}`,
-                                    children: ipo.gmp
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 999
-                                }, ("TURBOPACK compile-time value", void 0)),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: `inline-flex rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide ${ipo.status === "Ongoing" ? "bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/40 dark:text-emerald-300" : ipo.status === "Upcoming" ? "bg-cyan-500/10 text-cyan-600 ring-1 ring-cyan-500/40 dark:text-cyan-300" : "bg-slate-200/50 text-slate-600 ring-1 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300 dark:ring-slate-500/40"}`,
-                                    children: ipo.status
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                                    lineNumber: 103,
-                                    columnNumber: 1085
-                                }, ("TURBOPACK compile-time value", void 0))
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 103,
-                            columnNumber: 943
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, ipo.id, true, {
-                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 103,
-                    columnNumber: 19
-                }, ("TURBOPACK compile-time value", void 0));
-            $[4] = t2;
-        } else {
-            t2 = $[4];
-        }
-        t1 = ipos.map(t2);
-        $[2] = ipos;
+    if ($[2] !== data) {
+        t1 = data.map(_temp);
+        $[2] = data;
         $[3] = t1;
     } else {
         t1 = $[3];
     }
     let t2;
-    if ($[5] !== t1) {
+    if ($[4] !== t1) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "grid gap-4 sm:grid-cols-2 lg:grid-cols-3",
             children: t1
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 116,
+            lineNumber: 142,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[5] = t1;
-        $[6] = t2;
+        $[4] = t1;
+        $[5] = t2;
     } else {
-        t2 = $[6];
+        t2 = $[5];
     }
     return t2;
 };
+_s(IpoTable, "lnwRJrS8HJ6ZhVFH+AKke3gBBaQ=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+    ];
+});
 _c1 = IpoTable;
-const IpoSection = (t0)=>{
-    _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
-    if ($[0] !== "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3") {
-        for(let $i = 0; $i < 14; $i += 1){
+// Helper component for detail items
+const DetailItem = (t0)=>{
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "474084bbe2734cfe4358d9aa343bc96ba0c9a6205d5f2ced1373fa5244427bf3";
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
     }
-    const { navigateToDetail } = t0;
-    const [selectedStatus, setSelectedStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("All");
-    const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const { label, value } = t0;
     let t1;
-    if ($[1] !== search || $[2] !== selectedStatus) {
-        t1 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["IPO_LIST"].filter((ipo)=>{
-            const statusMatch = selectedStatus === "All" || ipo.status === selectedStatus;
-            const query = search.toLowerCase();
-            const searchMatch = !query || ipo.company.toLowerCase().includes(query) || ipo.symbol.toLowerCase().includes(query);
-            return statusMatch && searchMatch;
-        });
-        $[1] = search;
-        $[2] = selectedStatus;
-        $[3] = t1;
-    } else {
-        t1 = $[3];
-    }
-    const filteredIpos = t1;
-    let t2;
-    if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
-        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-lg font-semibold tracking-tight text-slate-900 sm:text-2xl dark:text-slate-50",
-                            children: "Live IPO Dashboard India: Track Upcoming, Ongoing & Latest Mainboard/SME IPOs."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 154,
-                            columnNumber: 96
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "mt-1 max-w-xl text-sm text-slate-600 dark:text-slate-400",
-                            children: "Get comprehensive IPO data: Bidding Status, Price Bands, Lot Sizes, and real-time Grey Market Premium (GMP) values for both Mainboard and SME IPO segments."
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 154,
-                            columnNumber: 282
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 154,
-                    columnNumber: 91
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-[11px] text-slate-500 sm:text-xs",
-                    children: "Tip: Click any card for detailed dates and financials."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 154,
-                    columnNumber: 519
-                }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
+    if ($[1] !== label) {
+        t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-[10px] uppercase font-medium text-slate-500 dark:text-slate-400",
+            children: label
+        }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 154,
+            lineNumber: 166,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
+        $[1] = label;
+        $[2] = t1;
+    } else {
+        t1 = $[2];
+    }
+    let t2;
+    if ($[3] !== value) {
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-sm font-semibold text-slate-800 dark:text-slate-100",
+            children: value
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 174,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[3] = value;
         $[4] = t2;
     } else {
         t2 = $[4];
     }
     let t3;
-    if ($[5] !== search || $[6] !== selectedStatus) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoFilterBar, {
+    if ($[5] !== t1 || $[6] !== t2) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50",
+            children: [
+                t1,
+                t2
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 182,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[5] = t1;
+        $[6] = t2;
+        $[7] = t3;
+    } else {
+        t3 = $[7];
+    }
+    return t3;
+};
+_c2 = DetailItem;
+// Helper component for GMP display (Includes Low/High range - Point 2)
+const GmpDisplay = (t0)=>{
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 12; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
+    }
+    const { ipo } = t0;
+    if (ipo.status === "L") {
+        return null;
+    }
+    let gmpClasses = "text-slate-600 dark:text-slate-300";
+    let gmpBg = "bg-slate-100 dark:bg-slate-800";
+    let gmpText = ipo.gmp_text;
+    if (ipo.gmp_percent > 0) {
+        gmpClasses = "text-emerald-700 dark:text-emerald-400";
+        gmpBg = "bg-emerald-100 dark:bg-emerald-900/40";
+        gmpText = `+${ipo.gmp_text}`;
+    } else {
+        if (ipo.gmp_percent < 0) {
+            gmpClasses = "text-red-700 dark:text-red-400";
+            gmpBg = "bg-red-100 dark:bg-red-900/40";
+        }
+    }
+    ipo.gmp !== 0 && ipo.gmp_low !== null && ipo.gmp_high !== null;
+    const t1 = `p-3 rounded-lg flex flex-col justify-center font-bold ${gmpBg}`;
+    const t2 = `text-xs uppercase tracking-wider ${gmpClasses}`;
+    let t3;
+    if ($[1] !== t2) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: t2,
+            children: "Live GMP"
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 225,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[1] = t2;
+        $[2] = t3;
+    } else {
+        t3 = $[2];
+    }
+    const t4 = `text-lg ${gmpClasses}`;
+    let t5;
+    if ($[3] !== gmpText || $[4] !== t4) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: t4,
+            children: gmpText
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 234,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[3] = gmpText;
+        $[4] = t4;
+        $[5] = t5;
+    } else {
+        t5 = $[5];
+    }
+    let t6;
+    if ($[6] !== t3 || $[7] !== t5) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "flex justify-between items-center",
+            children: [
+                t3,
+                t5
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 243,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[6] = t3;
+        $[7] = t5;
+        $[8] = t6;
+    } else {
+        t6 = $[8];
+    }
+    let t7;
+    if ($[9] !== t1 || $[10] !== t6) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: t1,
+            children: t6
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 252,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[9] = t1;
+        $[10] = t6;
+        $[11] = t7;
+    } else {
+        t7 = $[11];
+    }
+    return t7;
+};
+_c3 = GmpDisplay;
+// Helper component for Listing Gain
+const ListingGainDisplay = (t0)=>{
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 6; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
+    }
+    const { ipo } = t0;
+    const isGain = ipo.listing_gain_percent >= 0;
+    const gainClasses = isGain ? "text-emerald-600 dark:text-emerald-400" : "text-red-600 dark:text-red-400";
+    const t1 = `text-sm font-bold ${gainClasses}`;
+    const t2 = isGain ? "\u25B2" : "\u25BC";
+    let t3;
+    if ($[1] !== ipo.listing_gain || $[2] !== ipo.listing_gain_percent || $[3] !== t1 || $[4] !== t2) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: t1,
+            children: [
+                t2,
+                " Listing Gain: ",
+                ipo.listing_gain,
+                " (",
+                ipo.listing_gain_percent,
+                "%)"
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 280,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[1] = ipo.listing_gain;
+        $[2] = ipo.listing_gain_percent;
+        $[3] = t1;
+        $[4] = t2;
+        $[5] = t3;
+    } else {
+        t3 = $[5];
+    }
+    return t3;
+};
+_c4 = ListingGainDisplay;
+// Helper component for Status Badge
+const StatusBadge = (t0)=>{
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 4; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
+    }
+    const { uiStatus } = t0;
+    let badgeClasses;
+    bb0: switch(uiStatus){
+        case "Ongoing":
+            {
+                badgeClasses = "bg-emerald-500/10 text-emerald-600 ring-emerald-500/40";
+                break bb0;
+            }
+        case "Upcoming":
+            {
+                badgeClasses = "bg-cyan-500/10 text-cyan-600 ring-cyan-500/40";
+                break bb0;
+            }
+        case "Closed":
+            {
+                badgeClasses = "bg-slate-200/50 text-slate-600 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300";
+                break bb0;
+            }
+        default:
+            {
+                badgeClasses = "bg-slate-200/50 text-slate-600 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300";
+            }
+    }
+    const t1 = `inline-flex rounded-full px-2.5 py-0.5 text-[11px] font-semibold tracking-wide ring-1 ${badgeClasses}`;
+    let t2;
+    if ($[1] !== t1 || $[2] !== uiStatus) {
+        t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            className: t1,
+            children: uiStatus
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 329,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[1] = t1;
+        $[2] = uiStatus;
+        $[3] = t2;
+    } else {
+        t2 = $[3];
+    }
+    return t2;
+};
+_c5 = StatusBadge;
+//
+// --------------------------------------------------------
+// MAIN APP COMPONENT
+// --------------------------------------------------------
+const App = ()=>{
+    _s1();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(22);
+    if ($[0] !== "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d") {
+        for(let $i = 0; $i < 22; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "348aa389dfedea5a3ede85752e7ccb2f1b7cb4e7980a3d5e5b72698b8061f22d";
+    }
+    const [selectedStatus, setSelectedStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("All");
+    const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const { data: rawData, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("ipo/all");
+    let t0;
+    if ($[1] !== rawData) {
+        t0 = rawData || [];
+        $[1] = rawData;
+        $[2] = t0;
+    } else {
+        t0 = $[2];
+    }
+    let t1;
+    if ($[3] !== t0) {
+        t1 = t0.map(_temp2);
+        $[3] = t0;
+        $[4] = t1;
+    } else {
+        t1 = $[4];
+    }
+    const ipos = t1;
+    let t2;
+    if ($[5] !== ipos || $[6] !== search || $[7] !== selectedStatus) {
+        let t3;
+        if ($[9] !== search || $[10] !== selectedStatus) {
+            t3 = (ipo_0)=>{
+                const matchStatus = selectedStatus === "All" || ipo_0.ui_status === selectedStatus;
+                const query = search.toLowerCase();
+                const matchSearch = ipo_0.name.toLowerCase().includes(query) || ipo_0.exchange.toLowerCase().includes(query) || ipo_0.category.toLowerCase().includes(query) || ipo_0.status_text.toLowerCase().includes(query);
+                return matchStatus && matchSearch;
+            };
+            $[9] = search;
+            $[10] = selectedStatus;
+            $[11] = t3;
+        } else {
+            t3 = $[11];
+        }
+        t2 = ipos.filter(t3);
+        $[5] = ipos;
+        $[6] = search;
+        $[7] = selectedStatus;
+        $[8] = t2;
+    } else {
+        t2 = $[8];
+    }
+    const filteredIpos = t2;
+    if (loading) {
+        let t3;
+        if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
+            t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex justify-center items-center min-h-screen bg-slate-50 dark:bg-slate-950",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-lg font-medium text-slate-600 dark:text-slate-400",
+                    children: "Loading IPO data..."
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                    lineNumber: 402,
+                    columnNumber: 105
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 402,
+                columnNumber: 12
+            }, ("TURBOPACK compile-time value", void 0));
+            $[12] = t3;
+        } else {
+            t3 = $[12];
+        }
+        return t3;
+    }
+    let t3;
+    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mb-6",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                    className: "text-xl font-bold text-slate-900 dark:text-slate-50 sm:text-3xl",
+                    children: "Live IPO Dashboard"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                    lineNumber: 411,
+                    columnNumber: 32
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "mt-1 text-sm text-slate-600 dark:text-slate-400 max-w-xl",
+                    children: "Track All Upcoming, Ongoing & Listed IPOs with live Grey Market Premium (GMP)."
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                    lineNumber: 411,
+                    columnNumber: 135
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 411,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[13] = t3;
+    } else {
+        t3 = $[13];
+    }
+    let t4;
+    if ($[14] !== search || $[15] !== selectedStatus) {
+        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoFilterBar, {
             selectedStatus: selectedStatus,
             setSelectedStatus: setSelectedStatus,
             search: search,
             setSearch: setSearch
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 161,
+            lineNumber: 418,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[5] = search;
-        $[6] = selectedStatus;
-        $[7] = t3;
+        $[14] = search;
+        $[15] = selectedStatus;
+        $[16] = t4;
     } else {
-        t3 = $[7];
-    }
-    let t4;
-    if ($[8] !== filteredIpos || $[9] !== navigateToDetail) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoTable, {
-            ipos: filteredIpos,
-            navigateToDetail: navigateToDetail
-        }, void 0, false, {
-            fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 170,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[8] = filteredIpos;
-        $[9] = navigateToDetail;
-        $[10] = t4;
-    } else {
-        t4 = $[10];
+        t4 = $[16];
     }
     let t5;
-    if ($[11] !== t3 || $[12] !== t4) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-            animationClass: "translate-y-10",
-            rootMargin: "-50px 0px",
+    if ($[17] !== filteredIpos) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IpoTable, {
+            ipos: filteredIpos
+        }, void 0, false, {
+            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+            lineNumber: 427,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
+        $[17] = filteredIpos;
+        $[18] = t5;
+    } else {
+        t5 = $[18];
+    }
+    let t6;
+    if ($[19] !== t4 || $[20] !== t5) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules$2f$AnimationWeb$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                id: "ipos",
-                className: "border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950",
+                className: "bg-slate-50 py-8 sm:py-12 min-h-screen\n                dark:bg-slate-950 transition duration-300",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "mx-auto max-w-6xl px-4 sm:px-6",
                     children: [
-                        t2,
+                        t3,
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mt-5 space-y-4",
+                            className: "space-y-6",
                             children: [
-                                t3,
-                                t4
+                                t4,
+                                t5
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                            lineNumber: 179,
-                            columnNumber: 264
+                            lineNumber: 435,
+                            columnNumber: 200
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                    lineNumber: 179,
-                    columnNumber: 212
+                    lineNumber: 435,
+                    columnNumber: 148
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/Modules/IpoSection.jsx",
-                lineNumber: 179,
-                columnNumber: 82
+                lineNumber: 435,
+                columnNumber: 27
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Modules/IpoSection.jsx",
-            lineNumber: 179,
+            lineNumber: 435,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[11] = t3;
-        $[12] = t4;
-        $[13] = t5;
+        $[19] = t4;
+        $[20] = t5;
+        $[21] = t6;
     } else {
-        t5 = $[13];
+        t6 = $[21];
     }
-    return t5;
+    return t6;
 };
-_s(IpoSection, "z3rtYTUCq6nd5ZC5S86hp0Wbgog=");
-_c2 = IpoSection;
-const __TURBOPACK__default__export__ = IpoSection;
-function _temp(gmp) {
-    if (gmp && gmp.includes("+")) {
-        return "text-emerald-600 dark:text-emerald-400";
+_s1(App, "7J++RpoGAaNlRDo5KRIXxsAYHIw=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useAPI$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"]
+    ];
+});
+_c6 = App;
+const __TURBOPACK__default__export__ = App;
+function _temp(ipo) {
+    let dateDisplay;
+    if (ipo.status === "L") {
+        dateDisplay = `Listed: ${ipo.listing_date_display}`;
+    } else {
+        dateDisplay = `Open: ${ipo.open_date} - Close: ${ipo.close_date}`;
     }
-    if (gmp && gmp.includes("-")) {
-        return "text-red-600 dark:text-red-400";
-    }
-    return "text-slate-600 dark:text-slate-300";
+    const showRange = ipo.gmp_low !== null && ipo.gmp_high !== null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        href: `/ipo/${ipo.id}/${(0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["slugify"])(ipo.name)}`,
+        className: "flex flex-col relative rounded-xl border border-slate-200 bg-white p-4 shadow-lg \n                            transition hover:shadow-xl hover:shadow-emerald-500/20 \n                            dark:border-slate-800 dark:bg-slate-900 overflow-hidden group",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-between mb-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-base font-bold text-slate-900 dark:text-slate-50 truncate pr-4",
+                        children: ipo.name
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 402
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatusBadge, {
+                        uiStatus: ipo.status_text == "Listed" ? "Alotted" : ipo.status_text
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 501
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 453,
+                columnNumber: 346
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-medium mb-3 pb-2 border-b border-slate-100 dark:border-slate-800",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: [
+                            ipo.exchange || "Mainboard",
+                            " / ",
+                            ipo.category || "Main"
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 759
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "font-semibold text-slate-600 dark:text-slate-300",
+                        children: dateDisplay
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 822
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 453,
+                columnNumber: 591
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "grid grid-flow-col auto-cols-fr gap-3 mb-4",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailItem, {
+                        label: "Price Band",
+                        value: ipo.price ? `₹${ipo.price}` : "--"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 969
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailItem, {
+                        label: "Lot Size",
+                        value: ipo.lot_size || "--"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 1045
+                    }, this),
+                    showRange && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DetailItem, {
+                        label: "Gmp Range  \u2191 | \u2193",
+                        value: `₹${ipo.gmp_low} - ₹${ipo.gmp_high}`
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 1119
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 453,
+                columnNumber: 909
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GmpDisplay, {
+                ipo: ipo
+            }, void 0, false, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 453,
+                columnNumber: 1222
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mt-4 flex justify-between items-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "text-[11px] font-medium",
+                        children: ipo.status === "L" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ListingGainDisplay, {
+                            ipo: ipo
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                            lineNumber: 453,
+                            columnNumber: 1365
+                        }, this) : ipo.allotted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-emerald-600 dark:text-emerald-400",
+                            children: "✔ Allotment Published "
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                            lineNumber: 453,
+                            columnNumber: 1415
+                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-slate-500 dark:text-slate-400",
+                            children: [
+                                "Listing: ",
+                                ipo.listing_date_display,
+                                " "
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                            lineNumber: 453,
+                            columnNumber: 1498
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 1302
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "inline-flex items-center justify-center px-3 py-1 text-xs font-semibold \n                                bg-emerald-500 text-white rounded-full shadow-md \n                                transition group-hover:bg-emerald-600",
+                        children: "View Details "
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                        lineNumber: 453,
+                        columnNumber: 1595
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Modules/IpoSection.jsx",
+                lineNumber: 453,
+                columnNumber: 1246
+            }, this)
+        ]
+    }, ipo.id, true, {
+        fileName: "[project]/src/components/Modules/IpoSection.jsx",
+        lineNumber: 453,
+        columnNumber: 10
+    }, this);
 }
-var _c, _c1, _c2;
+function _temp2(ipo) {
+    return {
+        ...ipo,
+        ui_status: mapStatusToUI(ipo.status)
+    };
+}
+var _c, _c1, _c2, _c3, _c4, _c5, _c6;
 __turbopack_context__.k.register(_c, "IpoFilterBar");
 __turbopack_context__.k.register(_c1, "IpoTable");
-__turbopack_context__.k.register(_c2, "IpoSection");
+__turbopack_context__.k.register(_c2, "DetailItem");
+__turbopack_context__.k.register(_c3, "GmpDisplay");
+__turbopack_context__.k.register(_c4, "ListingGainDisplay");
+__turbopack_context__.k.register(_c5, "StatusBadge");
+__turbopack_context__.k.register(_c6, "App");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -2626,11 +3012,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 const BlogFilters = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48") {
+    if ($[0] !== "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48";
+        $[0] = "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b";
     }
     const { activeCategory, setActiveCategory } = t0;
     let t1;
@@ -2672,11 +3058,11 @@ const BlogFilters = (t0)=>{
 _c = BlogFilters;
 const BlogPostCard = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(38);
-    if ($[0] !== "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48") {
+    if ($[0] !== "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b") {
         for(let $i = 0; $i < 38; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48";
+        $[0] = "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b";
     }
     const { post } = t0;
     const t1 = post.id;
@@ -2966,11 +3352,11 @@ _c1 = BlogPostCard;
 const BlogSection = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(22);
-    if ($[0] !== "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48") {
+    if ($[0] !== "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b") {
         for(let $i = 0; $i < 22; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "37550ffc468e60fa8727adc1474a5715e0e0056d081fbb2303b5d27d79ee1f48";
+        $[0] = "302f69733f592bceabd5e2d93ade9cf6559136a6d38aa7d284e084d19364117b";
     }
     const [activeCategory, setActiveCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("All");
     let t0;
@@ -3158,11 +3544,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules
 ;
 const CalculatorSection = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
-    if ($[0] !== "2eddf04eefd513508ad65ff2542cc6679f3efb78fc02926967da84ecaa1fe053") {
+    if ($[0] !== "5f7bfbb998c9c0acecf20d034bbc4ff913ced9764734d6571829a5e840a43dd1") {
         for(let $i = 0; $i < 4; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2eddf04eefd513508ad65ff2542cc6679f3efb78fc02926967da84ecaa1fe053";
+        $[0] = "5f7bfbb998c9c0acecf20d034bbc4ff913ced9764734d6571829a5e840a43dd1";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -3343,11 +3729,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const NewsletterSection = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(4);
-    if ($[0] !== "b5d879ccff7d8fca005626539a8c2fa7f12a01d749d5ad33b68397125b84c5ae") {
+    if ($[0] !== "bcd228ee306a0245398ade58f9bfc06f4b89223846d6aae24e2c1bf10be9be6c") {
         for(let $i = 0; $i < 4; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "b5d879ccff7d8fca005626539a8c2fa7f12a01d749d5ad33b68397125b84c5ae";
+        $[0] = "bcd228ee306a0245398ade58f9bfc06f4b89223846d6aae24e2c1bf10be9be6c";
     }
     let t0;
     let t1;
@@ -3470,11 +3856,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules
 ;
 const WhyIposMatterSection = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "9aa052318089528540273994a09267858cf1828fb8f4923e1eb3a91578bb29a6") {
+    if ($[0] !== "f7178b66aafab67833d010bd985a54876a451db0ce3ef25377c98ee9393349f2") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "9aa052318089528540273994a09267858cf1828fb8f4923e1eb3a91578bb29a6";
+        $[0] = "f7178b66aafab67833d010bd985a54876a451db0ce3ef25377c98ee9393349f2";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -3672,11 +4058,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Modules
 ;
 const AboutSection = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "f9a826a324b24ff578202064c86d22a0d72bbb650b241e4ce7b2fe5658755226") {
+    if ($[0] !== "25ea35aa9141cb02a63ba2415a4d3135bbad08031177225f83a3e85e90451933") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f9a826a324b24ff578202064c86d22a0d72bbb650b241e4ce7b2fe5658755226";
+        $[0] = "25ea35aa9141cb02a63ba2415a4d3135bbad08031177225f83a3e85e90451933";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {

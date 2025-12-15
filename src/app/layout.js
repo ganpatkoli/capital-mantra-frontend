@@ -1,5 +1,5 @@
 // app/layout.js
-"use client";
+// "use client";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,13 +7,21 @@ import { ThemeProvider } from "../Context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata is typically outside the client component, but since ThemeProvider controls the root class, 
-// we keep ThemeProvider outside the metadata for the client-side logic to work on initial load.
+// FIX: metadata must be lowercase
+export const metadata = {
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.svg",
+        sizes: "192x192",
+      },
+    ],
+  },
+};
 
-
-
-
-console.log("ThemeProvider0" ,ThemeProvider)
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>

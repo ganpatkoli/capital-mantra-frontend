@@ -1,56 +1,63 @@
-// app/blog/[...slug]/page.js
-"use client";
-import Navbar from '../../../components/Layout/Navbar';
-import Footer from '../../../components/Layout/Footer';
-import IpoDetailView from '../../../components/Modules/IpoDetailView';
-import { IPO_LIST } from '../../../data/Data';
-import ClientBackButton from '../../../UI/ClientBackButton';
+// ❌ DO NOT PUT "use client" HERE (Server Component)
 
-// ---------- Metadata ----------
-// export async function generateMetadata({ params }) {
-//     const resolved = await params;           // 🔥 FIX
-//     const slugArray = resolved.slug || [];
-//     const id = Number(slugArray[0]);
+import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
+import IpoDetailView from "@/components/Modules/IpoDetailView";
+import ClientBackButton from "@/UI/ClientBackButton";
+import { IPO_LIST } from "@/data/Data";
+import axios from "axios";
+import { baseURL } from "@/Service/axios";
 
-//     const post = IPO_LIST.find(p => p.id === id);
-
-//     return {
-//         title: post ? post.title : "Blog Post",
-//         description: post ? post.excerpt : "Default description",
-//     };
-// }
-
-// ---------- PAGE ----------
 export default async function IpoDetailPageDetail(props) {
 
-    const params = await props.params;       // 🔥🔥 MAIN FIX HERE
+    const resolved = await props.params;
+    const slugs = resolved.slug;
 
-    console.log("🔥 RESOLVED PARAMS:", params);
+    const id = Number(slugs?.[0]);
+    const slug = slugs?.[1];
+    let mainData = null; // final usable data
+    let gmpData = null; // final usable data
 
-    const slugArray = Array.isArray(params.slug) ? params.slug : [];
-    console.log("🔥 SLUG ARRAY:", slugArray);
+    try {
+        // console.log("---------------", `${baseURL}/ipo/detail/${slug}/${id}`)
+        const response = await axios.get(`${baseURL}/ipo/detail/${slug}/${id}`);
+        const response2 = await axios.get(`${baseURL}/ipo/gmp/${id}`);
 
-    const id = Number(slugArray[0]);
-    const post = IPO_LIST.find(p => p.id === id);
+        console.log("SERVER API RAW:", response2);
 
-    if (!post) {
+        // ⭐ FIX — only send response.data, NOT full axios object
+        mainData = response.data;
+        gmpData = response2.data;
+
+        // console.log("SERVER API DATA:", mainData);
+
+    } catch (error) {
+        console.log("Server → API Error:", error);
+    }
+
+    const fallback = IPO_LIST.find((p) => p.id === id);
+
+    if (!mainData && !fallback) {
         return (
             <div className="min-h-screen pt-40 text-center bg-slate-50 dark:bg-slate-950">
-                <h1 className="text-3xl font-bold text-red-500">404 - Blog Not Found</h1>
+                <h1 className="text-3xl font-bold text-red-500">404 - IPO Not Found</h1>
             </div>
         );
     }
 
-
-
-    console.log("postpostpostpost", post)
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
             <Navbar />
+
             <IpoDetailView
-                ipo={post}
-                goBackNode={<ClientBackButton />}
+                // ipo={fallback}
+                apiReponse={mainData}  // ⭐ Now this will be visible inside your component
+                goBack={<ClientBackButton />}
+                gmpApiResponse={gmpData}
+                id={id}
+                slug={slug}
             />
+
             <Footer />
         </div>
     );
