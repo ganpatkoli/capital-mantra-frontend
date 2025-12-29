@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { NAV_LINKS } from "../../data/Data";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = ({ goHome }) => {
   // ---------- STABLE HOOK ORDER ----------
@@ -64,10 +65,9 @@ const Navbar = ({ goHome }) => {
         fixed w-full top-0 z-50 transition-transform duration-300
         ${hidden ? "-translate-y-full" : "translate-y-0"}
         backdrop-blur-xl
-        ${
-          scrolled
-            ? "bg-white/70 dark:bg-slate-950/70 shadow-lg border-b border-slate-200/20 dark:border-slate-800/20"
-            : "bg-transparent border-b border-transparent"
+        ${scrolled
+          ? "bg-white/70 dark:bg-slate-950/70 shadow-lg border-b border-slate-200/20 dark:border-slate-800/20"
+          : "bg-transparent border-b border-transparent"
         }
       `}
     >
@@ -98,7 +98,7 @@ const Navbar = ({ goHome }) => {
               className="w-[140px] group-hover:opacity-80 transition"
             />
             <span className="text-[11px] text-slate-500 dark:text-slate-400 tracking-wide">
-              Blogs • IPOs • Insights
+             <Link href="/ipo"> IPO </Link>• <Link href="/calculators"> Calculators </Link>• <Link href="/news"> Insights </Link>
             </span>
           </div>
         </div>
@@ -106,36 +106,12 @@ const Navbar = ({ goHome }) => {
         {/* ---------------------- DESKTOP NAV ---------------------- */}
         <div className="hidden md:flex items-center gap-10">
 
-          {/* SEARCH BUTTON + FIELD */}
-          <div className="relative">
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition"
-            >
-              <span aria-hidden="true">🔍</span>
-            </button>
-
-            <input
-              type="text"
-              placeholder="Search IPOs..."
-              className={`
-                absolute right-0 top-8 px-3 py-2 w-48 rounded-lg 
-                bg-white/90 dark:bg-slate-900/90 shadow-md 
-                border border-slate-200 dark:border-slate-700 text-sm
-                transition-all duration-300
-                ${
-                  searchOpen
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95 pointer-events-none"
-                }
-              `}
-            />
-          </div>
+        
 
           {/* NAV LINKS */}
           <div className="flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300">
             {NAV_LINKS.map((link) => (
-              <a key={link.href} href={link.href} className="relative group transition">
+              <Link key={link.href} href={link.href} className="relative group transition">
                 <span className={`${active === link.href ? "text-emerald-500" : ""}`}>
                   {link.label}
                 </span>
@@ -143,14 +119,13 @@ const Navbar = ({ goHome }) => {
                 <span
                   className={`
                     absolute left-0 -bottom-1 h-[2px] rounded-full transition-all duration-300
-                    ${
-                      active === link.href
-                        ? "w-full bg-emerald-500"
-                        : "w-0 bg-emerald-500 group-hover:w-full"
+                    ${active === link.href
+                      ? "w-full bg-emerald-500"
+                      : "w-0 bg-emerald-500 group-hover:w-full"
                     }
                   `}
                 />
-              </a>
+              </Link>
             ))}
           </div>
 

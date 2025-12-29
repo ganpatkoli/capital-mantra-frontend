@@ -68,7 +68,7 @@ export const InputGroup = ({ label, value, setter, min, max, unit, accentColor, 
             step={step}
             value={value || min}
             onChange={(e) => setter(e.target.value)}
-            className={`w-full h-1 rounded-lg appearance-none cursor-pointer range-slider-${label.replace(/\s/g, '-')}`}
+            className={`w-full h-2 rounded-full appearance-none cursor-pointer range-slider-${label.replace(/\s/g, '-')}`}
             style={{
                 '--range-color': accentColor.includes('emerald') ? '#10B981' :
                                  accentColor.includes('cyan') ? '#06B6D4' :

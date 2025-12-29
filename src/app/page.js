@@ -11,6 +11,7 @@ import CalculatorSection from "../components/Modules/CalculatorSectionInfo";
 import NewsletterSection from "../components/Modules/NewsletterSection";
 import WhyIpoMatters from "../components/Modules/WhyIpoMatters";
 import AboutSection from "@/components/Modules/AboutUs";
+import { ThemeProvider } from "../components/Layout/ThemeProvider";
 
 // Note: No need for activeView/detailData state here anymore!
 // The page itself only renders the dashboard content.
@@ -24,20 +25,22 @@ const Dashboard = () => {
     };
 
     return (
-        <div id="fin-ipo-hub" className="min-h-screen font-sans">
-            <Navbar goHome={goHome} />
-            <main>
-                <Hero />
-                {/* navigateToDetail is no longer needed, components will use <Link> */}
-                <IpoSection />
-                <WhyIpoMatters />
-                <BlogSection />
-                <CalculatorSection />
-                <AboutSection />
-                <NewsletterSection />
-            </main>
-            <Footer />
-        </div>
+        // <ThemeProvider>
+            <div id="fin-ipo-hub" className="min-h-screen mt-10 font-sans">
+                <Navbar goHome={goHome} />
+                <main>
+                    <Hero />
+                    <IpoSection />
+                    <WhyIpoMatters />
+                    <BlogSection />
+                    <CalculatorSection />
+                    <AboutSection />
+                    <NewsletterSection />
+                </main>
+                <Footer />
+            </div>
+        // </ThemeProvider>
+
     );
 };
 

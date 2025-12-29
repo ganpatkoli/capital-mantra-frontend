@@ -1,9 +1,8 @@
-// components/Calculators/CalculatorSection.jsx
 "use client";
 
 import React, { useState, useMemo } from "react";
 
-// Import all sub-calculators
+// Import sub-calculators
 import SIPCalculator from "./SubCalculators/SIPCalculator";
 import LumpsumCalculator from "./SubCalculators/LumpsumCalculator";
 import IpoProfitCalculator from "./SubCalculators/IpoProfitCalculator";
@@ -32,60 +31,72 @@ const CalculatorSection = () => {
         { id: 'fd', label: 'FD Calculator', component: FDCalculator, icon: '🗓️' },
         { id: 'taxfd', label: 'Tax Saving FD', component: TaxFDCalculator, icon: '🏦' },
         { id: 'swp', label: 'Reverse SIP / SWP', component: ReverseSIPCalculator, icon: '💸' },
-        { id: 'ipo', label: 'IPO Profit Estimator', component: IpoProfitCalculator, icon: ' IPO' },
+        { id: 'ipo', label: 'IPO Profit Estimator', component: IpoProfitCalculator, icon: '📈' },
         { id: 'gold', label: 'Gold Future Value', component: GoldInvestmentCalculator, icon: '🥇' },
         { id: 'gsec', label: 'G-Sec Bond Planner', component: GsecBondCalculator, icon: '🏛️' },
     ], []);
     
-    // Default to the first calculator
     const [activeCalculator, setActiveCalculator] = useState(CALCULATOR_OPTIONS[0].id);
 
     const ActiveComponent = CALCULATOR_OPTIONS.find(opt => opt.id === activeCalculator)?.component || SIPCalculator;
 
-
     return (
         <section
             id="calculators"
-            className="border-b border-slate-200/70 bg-slate-50 py-12 sm:py-16 dark:border-slate-800/70 dark:bg-slate-950"
+            className="border-b border-slate-200/70 bg-slate-50 py-8 sm:py-12 dark:border-slate-800/70 dark:bg-slate-950"
         >
-            <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6">
                 
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                {/* ---------- LAYOUT WRAPPER ---------- */}
+                <div className="flex flex-col md:flex-row gap-8">
                     
-                    {/* LEFT COLUMN: Titles (List Format) */}
-                    <div className="lg:col-span-1 border-r border-slate-200 dark:border-slate-800 lg:pr-6">
-                        <h2 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-50 mb-4">
-                            Popular Calculators
+                    {/* LEFT SIDEBAR: Navigation Area */}
+                    <aside className="w-full md:w-1/4 lg:w-1/5">
+                        <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50 mb-6 text-center md:text-left">
+                            Calculators
                         </h2>
-                        
-                        <nav className="space-y-1">
+
+                        {/* MOBILE VIEW: Dropdown Selector */}
+                        <div className="sm:hidden mb-6">
+                            <select
+                                value={activeCalculator}
+                                onChange={(e) => setActiveCalculator(e.target.value)}
+                                className="w-full rounded-xl border border-slate-300 bg-white p-3 text-slate-900 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 font-medium"
+                            >
+                                {CALCULATOR_OPTIONS.map((opt) => (
+                                    <option key={opt.id} value={opt.id}>
+                                        {opt.icon} {opt.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        {/* DESKTOP VIEW: Sidebar List */}
+                        <div className="hidden sm:flex flex-col gap-2">
                             {CALCULATOR_OPTIONS.map((opt) => (
                                 <button
                                     key={opt.id}
                                     onClick={() => setActiveCalculator(opt.id)}
-                                    className={`w-full text-left rounded-lg px-4 py-3 text-sm transition duration-150 flex items-center ${
+                                    className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 border text-left ${
                                         activeCalculator === opt.id
-                                            ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 font-semibold"
-                                            : "text-slate-700 hover:bg-slate-200/50 dark:text-slate-300 dark:hover:bg-slate-800"
+                                            ? "bg-emerald-600 text-white border-emerald-600 shadow-md translate-x-1"
+                                            : "bg-white text-slate-600 border-slate-200 hover:border-emerald-500 hover:bg-slate-50 dark:bg-slate-900 dark:text-slate-400 dark:border-slate-800 dark:hover:bg-slate-800/50"
                                     }`}
                                 >
-                                    <span className="mr-3 text-lg">
-                                        {opt.icon}
-                                    </span>
-                                    {opt.label}
+                                    <span className="text-lg">{opt.icon}</span>
+                                    <span className="truncate">{opt.label}</span>
                                 </button>
                             ))}
-                        </nav>
-                        
-                        <p className="mt-8 text-xs text-slate-500">
-                            उपलब्ध कैलकुलेटर में से चुनें और अपनी निवेश योजना बनाएं।
-                        </p>
-                    </div>
+                        </div>
+                    </aside>
 
-                    {/* RIGHT COLUMN: Active Calculator */}
-                    <div className="lg:col-span-3">
-                        <ActiveComponent />
-                    </div>
+                    {/* RIGHT SIDE: Active Calculator Display Area */}
+                    <main className="w-full md:w-3/4 lg:w-4/5">
+                        <div className="bg-white dark:bg-slate-900 rounded-3xl p-2 md:p-6 shadow-xl border border-slate-200 dark:border-slate-800 min-h-[500px] transition-all duration-300">
+                            <ActiveComponent />
+                        </div>
+                    </main>
+
                 </div>
             </div>
         </section>

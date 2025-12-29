@@ -483,23 +483,19 @@ const IPO_LIST = [
 const NAV_LINKS = [
     {
         label: "Home",
-        href: "#hero"
+        href: "/"
     },
     {
         label: "IPOs",
-        href: "#ipos"
+        href: "ipos"
     },
     {
-        label: "Blogs",
-        href: "#blogs"
+        label: "Tranding News",
+        href: "news"
     },
     {
         label: "Calculators",
-        href: "#calculators"
-    },
-    {
-        label: "Newsletter",
-        href: "#newsletter"
+        href: "calculators"
     }
 ];
 const slugify = (title)=>{
@@ -524,6 +520,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/Layout/ThemeToggle.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/Data.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -532,21 +529,22 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const Navbar = (t0)=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(47);
-    if ($[0] !== "c0f295b81376c45917efcf4846fad2b9fdf2aaa843dfedc8dbfa72f83e39cd4b") {
-        for(let $i = 0; $i < 47; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(36);
+    if ($[0] !== "46f283875b7f281f13769d7b1af59260ce82e4206936e5071924d2d6bdf1db73") {
+        for(let $i = 0; $i < 36; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "c0f295b81376c45917efcf4846fad2b9fdf2aaa843dfedc8dbfa72f83e39cd4b";
+        $[0] = "46f283875b7f281f13769d7b1af59260ce82e4206936e5071924d2d6bdf1db73";
     }
     const { goHome } = t0;
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [hidden, setHidden] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [active, setActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("#hero");
-    const [searchOpen, setSearchOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [mounted, setMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t1;
     let t2;
@@ -612,7 +610,7 @@ const Navbar = (t0)=>{
                 className: "fixed w-full top-0 z-50 backdrop-blur-xl bg-white/0 dark:bg-slate-900/0 h-16"
             }, void 0, false, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 85,
+                lineNumber: 86,
                 columnNumber: 12
             }, ("TURBOPACK compile-time value", void 0));
             $[7] = t7;
@@ -639,12 +637,12 @@ const Navbar = (t0)=>{
                 className: "w-[26px]"
             }, void 0, false, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 100,
+                lineNumber: 101,
                 columnNumber: 169
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 100,
+            lineNumber: 101,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[8] = t8;
@@ -664,7 +662,7 @@ const Navbar = (t0)=>{
                     className: "w-[140px] group-hover:opacity-80 transition"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 107,
+                    lineNumber: 108,
                     columnNumber: 41
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -672,13 +670,13 @@ const Navbar = (t0)=>{
                     children: "Blogs • IPOs • Insights"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 107,
+                    lineNumber: 108,
                     columnNumber: 164
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 107,
+            lineNumber: 108,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[9] = t9;
@@ -696,7 +694,7 @@ const Navbar = (t0)=>{
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 114,
+            lineNumber: 115,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
         $[10] = goHome;
@@ -705,88 +703,8 @@ const Navbar = (t0)=>{
         t10 = $[11];
     }
     let t11;
-    if ($[12] !== searchOpen) {
-        t11 = ()=>setSearchOpen(!searchOpen);
-        $[12] = searchOpen;
-        $[13] = t11;
-    } else {
-        t11 = $[13];
-    }
-    let t12;
-    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
-        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            "aria-hidden": "true",
-            children: "🔍"
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 130,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[14] = t12;
-    } else {
-        t12 = $[14];
-    }
-    let t13;
-    if ($[15] !== t11) {
-        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            onClick: t11,
-            className: "text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition",
-            children: t12
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 137,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[15] = t11;
-        $[16] = t13;
-    } else {
-        t13 = $[16];
-    }
-    const t14 = `
-                absolute right-0 top-8 px-3 py-2 w-48 rounded-lg 
-                bg-white/90 dark:bg-slate-900/90 shadow-md 
-                border border-slate-200 dark:border-slate-700 text-sm
-                transition-all duration-300
-                ${searchOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}
-              `;
-    let t15;
-    if ($[17] !== t14) {
-        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-            type: "text",
-            placeholder: "Search IPOs...",
-            className: t14
-        }, void 0, false, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 152,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[17] = t14;
-        $[18] = t15;
-    } else {
-        t15 = $[18];
-    }
-    let t16;
-    if ($[19] !== t13 || $[20] !== t15) {
-        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative",
-            children: [
-                t13,
-                t15
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 160,
-            columnNumber: 11
-        }, ("TURBOPACK compile-time value", void 0));
-        $[19] = t13;
-        $[20] = t15;
-        $[21] = t16;
-    } else {
-        t16 = $[21];
-    }
-    let t17;
-    if ($[22] !== active) {
-        t17 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+    if ($[12] !== active) {
+        t11 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 href: link.href,
                 className: "relative group transition",
                 children: [
@@ -795,8 +713,8 @@ const Navbar = (t0)=>{
                         children: link.label
                     }, void 0, false, {
                         fileName: "[project]/src/components/Layout/Navbar.jsx",
-                        lineNumber: 169,
-                        columnNumber: 107
+                        lineNumber: 123,
+                        columnNumber: 110
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: `
@@ -805,49 +723,49 @@ const Navbar = (t0)=>{
                   `
                     }, void 0, false, {
                         fileName: "[project]/src/components/Layout/Navbar.jsx",
-                        lineNumber: 169,
-                        columnNumber: 196
+                        lineNumber: 123,
+                        columnNumber: 199
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, link.href, true, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 169,
+                lineNumber: 123,
                 columnNumber: 33
             }, ("TURBOPACK compile-time value", void 0)));
-        $[22] = active;
-        $[23] = t17;
+        $[12] = active;
+        $[13] = t11;
     } else {
-        t17 = $[23];
+        t11 = $[13];
     }
-    let t18;
-    if ($[24] !== t17) {
-        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t12;
+    if ($[14] !== t11) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300",
-            children: t17
+            children: t11
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 180,
+            lineNumber: 134,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[24] = t17;
-        $[25] = t18;
+        $[14] = t11;
+        $[15] = t12;
     } else {
-        t18 = $[25];
+        t12 = $[15];
     }
-    let t19;
-    if ($[26] === Symbol.for("react.memo_cache_sentinel")) {
-        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+    let t13;
+    if ($[16] === Symbol.for("react.memo_cache_sentinel")) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 188,
+            lineNumber: 142,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[26] = t19;
+        $[16] = t13;
     } else {
-        t19 = $[26];
+        t13 = $[16];
     }
-    let t20;
-    if ($[27] === Symbol.for("react.memo_cache_sentinel")) {
-        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+    let t14;
+    if ($[17] === Symbol.for("react.memo_cache_sentinel")) {
+        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
             href: "#newsletter",
             className: "relative rounded-full bg-emerald-500 px-6 py-2 text-sm font-semibold text-white shadow-md hover:bg-emerald-400 transition",
             children: [
@@ -856,118 +774,116 @@ const Navbar = (t0)=>{
                     className: "absolute -right-2 -top-2 h-3 w-3 bg-emerald-400 rounded-full animate-ping"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 195,
+                    lineNumber: 149,
                     columnNumber: 181
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                     className: "absolute -right-2 -top-2 h-3 w-3 bg-emerald-600 rounded-full"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 195,
+                    lineNumber: 149,
                     columnNumber: 275
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 195,
+            lineNumber: 149,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[27] = t20;
+        $[17] = t14;
     } else {
-        t20 = $[27];
+        t14 = $[17];
     }
-    let t21;
-    if ($[28] !== t16 || $[29] !== t18) {
-        t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t15;
+    if ($[18] !== t12) {
+        t15 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "hidden md:flex items-center gap-10",
             children: [
-                t16,
-                t18,
-                t19,
-                t20
+                t12,
+                t13,
+                t14
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 202,
+            lineNumber: 156,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[28] = t16;
-        $[29] = t18;
-        $[30] = t21;
+        $[18] = t12;
+        $[19] = t15;
     } else {
-        t21 = $[30];
+        t15 = $[19];
     }
-    let t22;
-    if ($[31] === Symbol.for("react.memo_cache_sentinel")) {
-        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+    let t16;
+    if ($[20] === Symbol.for("react.memo_cache_sentinel")) {
+        t16 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Layout$2f$ThemeToggle$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 211,
+            lineNumber: 164,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[31] = t22;
+        $[20] = t16;
     } else {
-        t22 = $[31];
+        t16 = $[20];
     }
-    let t23;
-    if ($[32] !== open) {
-        t23 = ()=>setOpen(!open);
-        $[32] = open;
-        $[33] = t23;
+    let t17;
+    if ($[21] !== open) {
+        t17 = ()=>setOpen(!open);
+        $[21] = open;
+        $[22] = t17;
     } else {
-        t23 = $[33];
+        t17 = $[22];
     }
-    const t24 = open ? "\u2716" : "\u2630";
-    let t25;
-    if ($[34] !== t23 || $[35] !== t24) {
-        t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    const t18 = open ? "\u2716" : "\u2630";
+    let t19;
+    if ($[23] !== t17 || $[24] !== t18) {
+        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex items-center gap-2 md:hidden",
             children: [
-                t22,
+                t16,
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: t23,
+                    onClick: t17,
                     className: "p-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition",
-                    children: t24
+                    children: t18
                 }, void 0, false, {
                     fileName: "[project]/src/components/Layout/Navbar.jsx",
-                    lineNumber: 227,
+                    lineNumber: 180,
                     columnNumber: 67
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 227,
+            lineNumber: 180,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[34] = t23;
-        $[35] = t24;
-        $[36] = t25;
+        $[23] = t17;
+        $[24] = t18;
+        $[25] = t19;
     } else {
-        t25 = $[36];
+        t19 = $[25];
     }
-    let t26;
-    if ($[37] !== t10 || $[38] !== t21 || $[39] !== t25) {
-        t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+    let t20;
+    if ($[26] !== t10 || $[27] !== t15 || $[28] !== t19) {
+        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: "mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6",
             children: [
                 t10,
-                t21,
-                t25
+                t15,
+                t19
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 236,
+            lineNumber: 189,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[37] = t10;
-        $[38] = t21;
-        $[39] = t25;
-        $[40] = t26;
+        $[26] = t10;
+        $[27] = t15;
+        $[28] = t19;
+        $[29] = t20;
     } else {
-        t26 = $[40];
+        t20 = $[29];
     }
-    let t27;
-    if ($[41] !== open) {
-        t27 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t21;
+    if ($[30] !== open) {
+        t21 = open && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "md:hidden border-t bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl transition-all",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col px-4 py-3 gap-2",
@@ -978,7 +894,7 @@ const Navbar = (t0)=>{
                         className: "px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white/90 dark:bg-slate-900/90 text-sm"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Layout/Navbar.jsx",
-                        lineNumber: 246,
+                        lineNumber: 199,
                         columnNumber: 167
                     }, ("TURBOPACK compile-time value", void 0)),
                     __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$Data$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["NAV_LINKS"].map((link_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -988,7 +904,7 @@ const Navbar = (t0)=>{
                             children: link_0.label
                         }, link_0.href, false, {
                             fileName: "[project]/src/components/Layout/Navbar.jsx",
-                            lineNumber: 246,
+                            lineNumber: 199,
                             columnNumber: 357
                         }, ("TURBOPACK compile-time value", void 0))),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -997,48 +913,48 @@ const Navbar = (t0)=>{
                         children: "Get IPO Alerts"
                     }, void 0, false, {
                         fileName: "[project]/src/components/Layout/Navbar.jsx",
-                        lineNumber: 246,
+                        lineNumber: 199,
                         columnNumber: 581
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Layout/Navbar.jsx",
-                lineNumber: 246,
+                lineNumber: 199,
                 columnNumber: 120
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 246,
+            lineNumber: 199,
             columnNumber: 19
         }, ("TURBOPACK compile-time value", void 0));
-        $[41] = open;
-        $[42] = t27;
+        $[30] = open;
+        $[31] = t21;
     } else {
-        t27 = $[42];
+        t21 = $[31];
     }
-    let t28;
-    if ($[43] !== t26 || $[44] !== t27 || $[45] !== t7) {
-        t28 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+    let t22;
+    if ($[32] !== t20 || $[33] !== t21 || $[34] !== t7) {
+        t22 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
             className: t7,
             children: [
-                t26,
-                t27
+                t20,
+                t21
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Layout/Navbar.jsx",
-            lineNumber: 254,
+            lineNumber: 207,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[43] = t26;
-        $[44] = t27;
-        $[45] = t7;
-        $[46] = t28;
+        $[32] = t20;
+        $[33] = t21;
+        $[34] = t7;
+        $[35] = t22;
     } else {
-        t28 = $[46];
+        t22 = $[35];
     }
-    return t28;
+    return t22;
 };
-_s(Navbar, "I9X5Uslqu+fIS5nfdZOYIJFpY6g=");
+_s(Navbar, "6qBtSZmB5YDKzDtloaUDNIH6U7o=");
 _c = Navbar;
 const __TURBOPACK__default__export__ = Navbar;
 var _c;
@@ -1508,7 +1424,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
             columnNumber: 59
         }, ("TURBOPACK compile-time value", void 0)));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "py-12 sm:py-16 bg-slate-50 dark:bg-slate-950",
+        className: "py-12 sm:py-16 bg-slate-50 dark:bg-slate-950 mt-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mx-auto max-w-6xl px-4 sm:px-6",
             children: [
@@ -1522,20 +1438,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                     className: "mt-4 border-b pb-4 border-slate-200 dark:border-slate-800 flex items-start gap-4",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-16 h-16 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: gmpData.logo || "/no-logo.png",
-                                alt: `${gmpData.matched_item.name} Logo`,
-                                className: "w-full h-full object-contain p-2"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                lineNumber: 186,
-                                columnNumber: 25
-                            }, ("TURBOPACK compile-time value", void 0))
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: gmpData.logo || "/no-logo.png",
+                            alt: `${gmpData.matched_item.name} Logo`,
+                            className: "w-20 h-20 rounded-full object-contain border p-0.5 "
                         }, void 0, false, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 185,
+                            lineNumber: 186,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1556,6 +1465,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             className: `inline-flex rounded-full px-3 py-1 text-xs font-semibold 
                                     ${gmpData.matched_item.category === "Mainboard" ? "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400" : "bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400"}`,
                                             children: [
+                                                console.log("gmpData.matched_item.category", gmpData.matched_item),
                                                 gmpData.matched_item.category,
                                                 " IPO"
                                             ]
@@ -1574,13 +1484,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: gmpData.matched_item.status_text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 202,
+                                                    lineNumber: 204,
                                                     columnNumber: 33
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 200,
+                                            lineNumber: 202,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
@@ -1608,11 +1518,11 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                         [
                             {
                                 label: "Price Band",
-                                value: ipo.ipoDetails["Price Band"]
+                                value: ipo.ipoDetails["Price Band"] || ipo.ipoDetails["Issue Price"] || '-'
                             },
                             {
                                 label: "Lot Size",
-                                value: ipo.ipoDetails['Lot Size']
+                                value: ipo.ipoDetails['Lot Size'] || '-'
                             },
                             {
                                 label: "GMP",
@@ -1621,7 +1531,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     children: "0.00"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 219,
+                                    lineNumber: 221,
                                     columnNumber: 18
                                 }, ("TURBOPACK compile-time value", void 0))
                             },
@@ -1638,30 +1548,27 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 223,
+                                        lineNumber: 225,
                                         columnNumber: 71
                                     }, ("TURBOPACK compile-time value", void 0)),
-                                    " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-lg font-bold text-slate-900 dark:text-slate-50 mt-1",
                                         children: item.value
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 223,
-                                        columnNumber: 146
-                                    }, ("TURBOPACK compile-time value", void 0)),
-                                    " "
+                                        lineNumber: 226,
+                                        columnNumber: 33
+                                    }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, i_0, true, {
                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                lineNumber: 223,
+                                lineNumber: 225,
                                 columnNumber: 31
-                            }, ("TURBOPACK compile-time value", void 0))),
-                        " "
+                            }, ("TURBOPACK compile-time value", void 0)))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 211,
+                    lineNumber: 213,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1683,12 +1590,12 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                             ]
                         }, t, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 228,
+                            lineNumber: 233,
                             columnNumber: 70
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 227,
+                    lineNumber: 232,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0)),
                 tab === "about" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1705,7 +1612,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 247,
+                                    lineNumber: 252,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1715,7 +1622,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: gmpData.matched_item.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 252,
+                                            lineNumber: 257,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " is coming up with a",
@@ -1727,7 +1634,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 253,
+                                            lineNumber: 258,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " offering a price band of",
@@ -1738,7 +1645,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 254,
+                                            lineNumber: 259,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ". Investors can apply with a minimum lot size of ",
@@ -1746,7 +1653,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: ipo.ipoDetails["Lot Size"]
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 255,
+                                            lineNumber: 260,
                                             columnNumber: 45
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ". The IPO opens on ",
@@ -1754,7 +1661,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: gmpData.matched_item.open_date
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 256,
+                                            lineNumber: 261,
                                             columnNumber: 50
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " and closes on",
@@ -1765,14 +1672,14 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 257,
+                                            lineNumber: 262,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 251,
+                                    lineNumber: 256,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1783,7 +1690,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: ipo.ipoDetails["Total Issue Size"]
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 261,
+                                            lineNumber: 266,
                                             columnNumber: 59
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ". Market buzz, driven by the ",
@@ -1791,20 +1698,20 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "Grey Market Premium (GMP)"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 262,
+                                            lineNumber: 267,
                                             columnNumber: 60
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ", shows increasing retail and HNI interest. DRHP reveals that the raised funds will be utilized for business expansion, operational efficiency, and strengthening the financial position."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 260,
+                                    lineNumber: 265,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 244,
+                            lineNumber: 249,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1818,7 +1725,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 273,
+                                    lineNumber: 278,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1831,13 +1738,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: ipo.ipoDetails["Price Band"] || ipo.ipoDetails["Issue Price"]
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 278,
+                                                    lineNumber: 283,
                                                     columnNumber: 60
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 278,
+                                            lineNumber: 283,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1847,13 +1754,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: ipo.ipoDetails["Lot Size"]
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 279,
+                                                    lineNumber: 284,
                                                     columnNumber: 63
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 279,
+                                            lineNumber: 284,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1868,13 +1775,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 280,
+                                                    lineNumber: 285,
                                                     columnNumber: 76
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 280,
+                                            lineNumber: 285,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -1884,26 +1791,26 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 281,
+                                            lineNumber: 286,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Sector demand and promoter credibility enhance long-term potential"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 285,
+                                            lineNumber: 290,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 277,
+                                    lineNumber: 282,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 270,
+                            lineNumber: 275,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1918,7 +1825,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 293,
+                                    lineNumber: 298,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1935,14 +1842,14 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 298,
+                                            lineNumber: 303,
                                             columnNumber: 45
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " indicates positive market expectations ahead of listing. However, subscription numbers across QIB, NII, and Retail categories will determine the final sentiment."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 297,
+                                    lineNumber: 302,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1950,13 +1857,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     children: "Investors should evaluate valuation, growth potential, financial stability, and industry environment before applying. Early financial indicators suggest strong prospects for both listing gains and long-term holdings."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 303,
+                                    lineNumber: 308,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 290,
+                            lineNumber: 295,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1970,7 +1877,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 314,
+                                    lineNumber: 319,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1986,14 +1893,14 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 319,
+                                            lineNumber: 324,
                                             columnNumber: 61
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ", the potential listing price is influenced by:"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 318,
+                                    lineNumber: 323,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2003,40 +1910,40 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "Subscription trends across investor categories"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 324,
+                                            lineNumber: 329,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Market conditions during the listing week"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 325,
+                                            lineNumber: 330,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Sector performance and liquidity trends"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 326,
+                                            lineNumber: 331,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: "Company valuation vs. listed peers"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 327,
+                                            lineNumber: 332,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 323,
+                                    lineNumber: 328,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 311,
+                            lineNumber: 316,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2050,7 +1957,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 335,
+                                    lineNumber: 340,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2065,7 +1972,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 341,
+                                            lineNumber: 346,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ". All information is structured to help with ",
@@ -2074,7 +1981,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "investment decisions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 342,
+                                            lineNumber: 347,
                                             columnNumber: 76
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ",",
@@ -2083,7 +1990,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "GMP expectations"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 343,
+                                            lineNumber: 348,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         ", and ",
@@ -2092,14 +1999,14 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "listing-day predictions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 343,
+                                            lineNumber: 348,
                                             columnNumber: 101
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         "."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 339,
+                                    lineNumber: 344,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2145,25 +2052,25 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 answer: item_0.a
                                             }, idx_0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 380,
+                                                lineNumber: 385,
                                                 columnNumber: 39
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 347,
+                                    lineNumber: 352,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 332,
+                            lineNumber: 337,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 241,
+                    lineNumber: 246,
                     columnNumber: 37
                 }, ("TURBOPACK compile-time value", void 0)),
                 tab === "financials" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2171,7 +2078,6 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "max-w-7xl mx-auto space-y-10 mt-5",
                         children: [
-                            console.log("ipoipoipoipoipo", ipo),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                                 className: "p-6 rounded-xl border bg-white dark:bg-slate-900 dark:border-slate-800 shadow-xl",
                                 children: [
@@ -2188,7 +2094,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 397,
+                                                lineNumber: 401,
                                                 columnNumber: 50
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2199,13 +2105,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 401,
+                                                lineNumber: 405,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 396,
+                                        lineNumber: 400,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2213,7 +2119,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                         children: "Key Dates, Price Band, and Issue Details"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 406,
+                                        lineNumber: 410,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -2239,25 +2145,25 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                     d: "M22 11.08V12a10 10 0 1 1-5.93-9.14"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 413,
+                                                                    lineNumber: 417,
                                                                     columnNumber: 274
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                     d: "m9 11 3 3L22 4"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 413,
+                                                                    lineNumber: 417,
                                                                     columnNumber: 321
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 413,
+                                                            lineNumber: 417,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 412,
+                                                        lineNumber: 416,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2266,24 +2172,24 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 415,
+                                                        lineNumber: 419,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, idx_1, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 411,
+                                                lineNumber: 415,
                                                 columnNumber: 72
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 410,
+                                        lineNumber: 414,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                lineNumber: 395,
+                                lineNumber: 399,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2296,7 +2202,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 children: card.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 427,
+                                                lineNumber: 431,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2304,18 +2210,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 children: card.value
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 428,
+                                                lineNumber: 432,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, idx_2, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 425,
+                                        lineNumber: 429,
                                         columnNumber: 69
                                     }, ("TURBOPACK compile-time value", void 0)))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                lineNumber: 424,
+                                lineNumber: 428,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2332,7 +2238,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 439,
+                                                lineNumber: 443,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2350,7 +2256,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Category"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 447,
+                                                                        lineNumber: 451,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2358,18 +2264,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Value"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 448,
+                                                                        lineNumber: 452,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 446,
+                                                                lineNumber: 450,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 445,
+                                                            lineNumber: 449,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2381,7 +2287,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             children: formatIpoDetailKey(label)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 453,
+                                                                            lineNumber: 457,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2389,35 +2295,35 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             children: val || "-"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 454,
+                                                                            lineNumber: 458,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, i_1, true, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 452,
+                                                                    lineNumber: 456,
                                                                     columnNumber: 108
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 451,
+                                                            lineNumber: 455,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 444,
+                                                    lineNumber: 448,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 443,
+                                                lineNumber: 447,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 438,
+                                        lineNumber: 442,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2431,7 +2337,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "IPO Allocation Breakdown"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 467,
+                                                        lineNumber: 471,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2449,7 +2355,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Investor Category"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 475,
+                                                                                lineNumber: 479,
                                                                                 columnNumber: 57
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2457,18 +2363,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Shares / Portion"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 476,
+                                                                                lineNumber: 480,
                                                                                 columnNumber: 57
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 474,
+                                                                        lineNumber: 478,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 473,
+                                                                    lineNumber: 477,
                                                                     columnNumber: 49
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2482,7 +2388,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: formatIpoDetailKey(key_2)
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 483,
+                                                                                    lineNumber: 487,
                                                                                     columnNumber: 61
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2490,35 +2396,35 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: ipo.ipoDetails[key_2] || "-"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 489,
+                                                                                    lineNumber: 493,
                                                                                     columnNumber: 61
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, i_2, true, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 481,
+                                                                            lineNumber: 485,
                                                                             columnNumber: 92
                                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 480,
+                                                                    lineNumber: 484,
                                                                     columnNumber: 49
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 472,
+                                                            lineNumber: 476,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 471,
+                                                        lineNumber: 475,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 464,
+                                                lineNumber: 468,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             ipo.lotSize?.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2529,7 +2435,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "IPO Lot Size"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 502,
+                                                        lineNumber: 506,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2547,7 +2453,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Category"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 510,
+                                                                                lineNumber: 514,
                                                                                 columnNumber: 61
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2555,7 +2461,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Lots"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 511,
+                                                                                lineNumber: 515,
                                                                                 columnNumber: 61
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2563,7 +2469,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Shares"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 512,
+                                                                                lineNumber: 516,
                                                                                 columnNumber: 61
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2571,18 +2477,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 children: "Amount"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 513,
+                                                                                lineNumber: 517,
                                                                                 columnNumber: 61
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 509,
+                                                                        lineNumber: 513,
                                                                         columnNumber: 57
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 508,
+                                                                    lineNumber: 512,
                                                                     columnNumber: 53
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2594,7 +2500,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: item_1.application
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 520,
+                                                                                    lineNumber: 524,
                                                                                     columnNumber: 65
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2602,7 +2508,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: item_1.lots
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 524,
+                                                                                    lineNumber: 528,
                                                                                     columnNumber: 65
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2610,7 +2516,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: item_1.shares
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 528,
+                                                                                    lineNumber: 532,
                                                                                     columnNumber: 65
                                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2618,41 +2524,41 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                     children: item_1.amount
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                    lineNumber: 532,
+                                                                                    lineNumber: 536,
                                                                                     columnNumber: 65
                                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                                             ]
                                                                         }, i_3, true, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 518,
+                                                                            lineNumber: 522,
                                                                             columnNumber: 91
                                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 517,
+                                                                    lineNumber: 521,
                                                                     columnNumber: 53
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 507,
+                                                            lineNumber: 511,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 506,
+                                                        lineNumber: 510,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 499,
+                                                lineNumber: 503,
                                                 columnNumber: 65
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 461,
+                                        lineNumber: 465,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     ipo.financials?.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2663,7 +2569,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 children: "Historical Financial Performance (₹ Crores)"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 548,
+                                                lineNumber: 552,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2681,7 +2587,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Metric"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 554,
+                                                                        lineNumber: 558,
                                                                         columnNumber: 57
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     financialYears.map((year_0, idx_3)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2689,42 +2595,42 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             children: year_0.includes('Mar') ? year_0.replace('31 Mar ', 'FY ') : year_0.replace('30 Sep ', 'H1 ')
                                                                         }, idx_3, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 556,
+                                                                            lineNumber: 560,
                                                                             columnNumber: 96
                                                                         }, ("TURBOPACK compile-time value", void 0)))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 553,
+                                                                lineNumber: 557,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 552,
+                                                            lineNumber: 556,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                                                             children: financialRows
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 561,
+                                                            lineNumber: 565,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 551,
+                                                    lineNumber: 555,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 550,
+                                                lineNumber: 554,
                                                 columnNumber: 41
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 547,
+                                        lineNumber: 551,
                                         columnNumber: 64
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -2732,7 +2638,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                         children: "Key Financial Ratios & Indicators (Latest)"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 570,
+                                        lineNumber: 574,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2753,7 +2659,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Valuation Ratio"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 578,
+                                                                        lineNumber: 582,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2761,18 +2667,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Value"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 579,
+                                                                        lineNumber: 583,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 577,
+                                                                lineNumber: 581,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 576,
+                                                            lineNumber: 580,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2784,7 +2690,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             children: ratio.label
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 584,
+                                                                            lineNumber: 588,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2796,29 +2702,29 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 585,
+                                                                            lineNumber: 589,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, i_4, true, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 583,
+                                                                    lineNumber: 587,
                                                                     columnNumber: 80
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 582,
+                                                            lineNumber: 586,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 575,
+                                                    lineNumber: 579,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 574,
+                                                lineNumber: 578,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2836,7 +2742,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Balance Sheet Indicator"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 598,
+                                                                        lineNumber: 602,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -2844,18 +2750,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: "Amount"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 599,
+                                                                        lineNumber: 603,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 597,
+                                                                lineNumber: 601,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 596,
+                                                            lineNumber: 600,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -2867,7 +2773,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             children: financial.label
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 604,
+                                                                            lineNumber: 608,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -2879,35 +2785,35 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 605,
+                                                                            lineNumber: 609,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, i_5, true, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 603,
+                                                                    lineNumber: 607,
                                                                     columnNumber: 95
                                                                 }, ("TURBOPACK compile-time value", void 0)))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 602,
+                                                            lineNumber: 606,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 595,
+                                                    lineNumber: 599,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 594,
+                                                lineNumber: 598,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 572,
+                                        lineNumber: 576,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2921,7 +2827,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "IPO Key Dates"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 622,
+                                                        lineNumber: 626,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2934,7 +2840,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: key_3
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 627,
+                                                                        lineNumber: 631,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2942,24 +2848,24 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: value_1
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 628,
+                                                                        lineNumber: 632,
                                                                         columnNumber: 53
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, idx_4, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 626,
+                                                                lineNumber: 630,
                                                                 columnNumber: 114
                                                             }, ("TURBOPACK compile-time value", void 0)))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 625,
+                                                        lineNumber: 629,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 621,
+                                                lineNumber: 625,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2970,7 +2876,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "Registrar Details"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 637,
+                                                        lineNumber: 641,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2981,7 +2887,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 children: ipo.registrar.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 641,
+                                                                lineNumber: 645,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3007,20 +2913,20 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                                 rx: "2"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 643,
+                                                                                lineNumber: 647,
                                                                                 columnNumber: 272
                                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                                                 d: "m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                                lineNumber: 643,
+                                                                                lineNumber: 647,
                                                                                 columnNumber: 322
                                                                             }, ("TURBOPACK compile-time value", void 0))
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 643,
+                                                                        lineNumber: 647,
                                                                         columnNumber: 49
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3029,13 +2935,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                         children: ipo.registrar.email
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 644,
+                                                                        lineNumber: 648,
                                                                         columnNumber: 49
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 642,
+                                                                lineNumber: 646,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3056,25 +2962,25 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 3.08 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 647,
+                                                                            lineNumber: 651,
                                                                             columnNumber: 274
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 647,
+                                                                        lineNumber: 651,
                                                                         columnNumber: 49
                                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         children: ipo.registrar.phone.split(',,')[0]
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                        lineNumber: 648,
+                                                                        lineNumber: 652,
                                                                         columnNumber: 49
                                                                     }, ("TURBOPACK compile-time value", void 0))
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 646,
+                                                                lineNumber: 650,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3087,30 +2993,30 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                     children: "Visit Registrar Website →"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 651,
+                                                                    lineNumber: 655,
                                                                     columnNumber: 49
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 650,
+                                                                lineNumber: 654,
                                                                 columnNumber: 45
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 640,
+                                                        lineNumber: 644,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 636,
+                                                lineNumber: 640,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 618,
+                                        lineNumber: 622,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -3121,7 +3027,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 children: "Investment Thesis: Financial Analysis"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 663,
+                                                lineNumber: 667,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3136,7 +3042,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 669,
+                                                        lineNumber: 673,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " clearly shows strong operational efficiency. The company has demonstrated robust growth across key balance sheet items, notably",
@@ -3145,7 +3051,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: " Assets"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 672,
+                                                        lineNumber: 676,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " (Latest: ₹",
@@ -3156,7 +3062,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: " Net Worth"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 673,
+                                                        lineNumber: 677,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " (Latest: ₹",
@@ -3170,7 +3076,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 675,
+                                                        lineNumber: 679,
                                                         columnNumber: 41
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     ", indicating superior capital utilization by the management. The post-IPO P/E ratio stands at ",
@@ -3179,7 +3085,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 667,
+                                                lineNumber: 671,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3197,7 +3103,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "listing gains"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 680,
+                                                        lineNumber: 684,
                                                         columnNumber: 250
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     " and ",
@@ -3206,37 +3112,37 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                         children: "long-term investment"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 680,
+                                                        lineNumber: 684,
                                                         columnNumber: 313
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "."
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 678,
+                                                lineNumber: 682,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 662,
+                                        lineNumber: 666,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                lineNumber: 435,
+                                lineNumber: 439,
                                 columnNumber: 29
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                        lineNumber: 391,
+                        lineNumber: 396,
                         columnNumber: 25
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 390,
+                    lineNumber: 395,
                     columnNumber: 42
                 }, ("TURBOPACK compile-time value", void 0)),
                 tab === "gmp" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3250,7 +3156,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     children: "GMP – Daily Price Trend & Listing Estimate"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 698,
+                                    lineNumber: 702,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3268,7 +3174,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "GMP Date"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 707,
+                                                            lineNumber: 711,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3276,7 +3182,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "IPO Price"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 708,
+                                                            lineNumber: 712,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3284,7 +3190,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "GMP"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 709,
+                                                            lineNumber: 713,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3292,7 +3198,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "Sub2 Sauda"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 710,
+                                                            lineNumber: 714,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3300,7 +3206,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "Est. Listing"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 711,
+                                                            lineNumber: 715,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3308,7 +3214,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "Profit"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 712,
+                                                            lineNumber: 716,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -3316,18 +3222,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: "Updated"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 713,
+                                                            lineNumber: 717,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 706,
+                                                    lineNumber: 710,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 705,
+                                                lineNumber: 709,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -3342,7 +3248,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 children: row_0.date
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 722,
+                                                                lineNumber: 726,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3353,7 +3259,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 723,
+                                                                lineNumber: 727,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3366,7 +3272,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 725,
+                                                                lineNumber: 729,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3374,7 +3280,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 children: row_0.sub2 || "--"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 732,
+                                                                lineNumber: 736,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3385,7 +3291,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 733,
+                                                                lineNumber: 737,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3397,7 +3303,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 735,
+                                                                lineNumber: 739,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -3405,30 +3311,30 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 children: row_0.last_updated || row_0.date
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 740,
+                                                                lineNumber: 744,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, i_6, true, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 721,
+                                                        lineNumber: 725,
                                                         columnNumber: 26
                                                     }, ("TURBOPACK compile-time value", void 0));
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                lineNumber: 717,
+                                                lineNumber: 721,
                                                 columnNumber: 37
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                        lineNumber: 704,
+                                        lineNumber: 708,
                                         columnNumber: 33
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 703,
+                                    lineNumber: 707,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3436,13 +3342,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     children: "* GMP values are unofficial & vary daily."
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 749,
+                                    lineNumber: 753,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 695,
+                            lineNumber: 699,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3456,7 +3362,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "GMP Trend Chart"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 760,
+                                            lineNumber: 764,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3467,7 +3373,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: "Trendwise Date"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 765,
+                                                    lineNumber: 769,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3475,7 +3381,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: "GMP Value (₹)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 770,
+                                                    lineNumber: 774,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$ResponsiveContainer$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ResponsiveContainer"], {
@@ -3496,7 +3402,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 strokeDasharray: "4 4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 781,
+                                                                lineNumber: 785,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -3509,7 +3415,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 dy: 18
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 783,
+                                                                lineNumber: 787,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["YAxis"], {
@@ -3518,12 +3424,12 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 }
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 787,
+                                                                lineNumber: 791,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {}, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 791,
+                                                                lineNumber: 795,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
@@ -3540,7 +3446,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             stopOpacity: 0.6
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 795,
+                                                                            lineNumber: 799,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
@@ -3549,18 +3455,18 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                             stopOpacity: 0
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                            lineNumber: 796,
+                                                                            lineNumber: 800,
                                                                             columnNumber: 57
                                                                         }, ("TURBOPACK compile-time value", void 0))
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 794,
+                                                                    lineNumber: 798,
                                                                     columnNumber: 53
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 793,
+                                                                lineNumber: 797,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0)),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Area$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Area"], {
@@ -3571,30 +3477,30 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 fill: "url(#gmpGradient)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 800,
+                                                                lineNumber: 804,
                                                                 columnNumber: 49
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                        lineNumber: 775,
+                                                        lineNumber: 779,
                                                         columnNumber: 45
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 774,
+                                                    lineNumber: 778,
                                                     columnNumber: 41
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 762,
+                                            lineNumber: 766,
                                             columnNumber: 37
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 758,
+                                    lineNumber: 762,
                                     columnNumber: 59
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3605,7 +3511,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                             children: "Important Dates"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 808,
+                                            lineNumber: 812,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -3639,7 +3545,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                 ring-4 ring-${item_2.color}-200`
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 829,
+                                                            lineNumber: 833,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("time", {
@@ -3647,7 +3553,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: item_2.date
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 832,
+                                                            lineNumber: 836,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -3655,36 +3561,36 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                             children: item_2.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 833,
+                                                            lineNumber: 837,
                                                             columnNumber: 45
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, i_7, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 828,
+                                                    lineNumber: 832,
                                                     columnNumber: 39
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 810,
+                                            lineNumber: 814,
                                             columnNumber: 33
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 807,
+                                    lineNumber: 811,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 755,
+                            lineNumber: 759,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 692,
+                    lineNumber: 696,
                     columnNumber: 35
                 }, ("TURBOPACK compile-time value", void 0)),
                 tab === "news" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -3701,7 +3607,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 847,
+                                    lineNumber: 851,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3728,12 +3634,12 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                 className: "max-w-full max-h-full object-contain"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                lineNumber: 872,
+                                                                lineNumber: 876,
                                                                 columnNumber: 53
                                                             }, ("TURBOPACK compile-time value", void 0))
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 869,
+                                                            lineNumber: 873,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0)),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3744,7 +3650,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                     children: formattedDate
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 876,
+                                                                    lineNumber: 880,
                                                                     columnNumber: 53
                                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3752,19 +3658,19 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                                     children: news.source_name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                                    lineNumber: 879,
+                                                                    lineNumber: 883,
                                                                     columnNumber: 53
                                                                 }, ("TURBOPACK compile-time value", void 0))
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                            lineNumber: 875,
+                                                            lineNumber: 879,
                                                             columnNumber: 49
                                                         }, ("TURBOPACK compile-time value", void 0))
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 866,
+                                                    lineNumber: 870,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3772,7 +3678,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: news.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 887,
+                                                    lineNumber: 891,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3783,7 +3689,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 892,
+                                                    lineNumber: 896,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3793,25 +3699,25 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: "Read Full News →"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 897,
+                                                    lineNumber: 901,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, idx_5, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 861,
+                                            lineNumber: 865,
                                             columnNumber: 22
                                         }, ("TURBOPACK compile-time value", void 0));
                                     })
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 852,
+                                    lineNumber: 856,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 846,
+                            lineNumber: 850,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3822,7 +3728,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                     children: "IPO Alerts – Important Announcements"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 909,
+                                    lineNumber: 913,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3844,7 +3750,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 924,
+                                                    lineNumber: 928,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3852,7 +3758,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     children: alert.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 928,
+                                                    lineNumber: 932,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3862,25 +3768,25 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                                    lineNumber: 932,
+                                                    lineNumber: 936,
                                                     columnNumber: 45
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, idx_6, true, {
                                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                            lineNumber: 920,
+                                            lineNumber: 924,
                                             columnNumber: 22
                                         }, ("TURBOPACK compile-time value", void 0));
                                     })
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                                    lineNumber: 913,
+                                    lineNumber: 917,
                                     columnNumber: 29
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                            lineNumber: 908,
+                            lineNumber: 912,
                             columnNumber: 25
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
@@ -3892,12 +3798,12 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug })=>{
                         children: "Disclaimer: IPO investments involve risk. GMP values are unofficial and may vary."
                     }, void 0, false, {
                         fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                        lineNumber: 944,
+                        lineNumber: 948,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/components/Modules/IpoDetailView.jsx",
-                    lineNumber: 943,
+                    lineNumber: 947,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             ]

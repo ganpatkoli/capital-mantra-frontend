@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/ipo/layout.js"],"sourcesContent":["// src/app/ipo/layout.js\n\nexport default function IpoLayout({ children }) {\n    // This layout simply wraps all pages under /blog/ (i.e., [id]/page.js)\n    return <div>{children}</div>;\n}"],"names":[],"mappings":"AAAA,wBAAwB;;;;;;;AAET,SAAS,UAAU,EAAE,QAAQ,EAAE;IAC1C,uEAAuE;IACvE,qBAAO,8OAAC;kBAAK;;;;;;AACjB"}}]
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/ipo/layout.js"],"sourcesContent":["// src/app/ipo/layout.js\n\nexport default function IpoLayout({ children }) {\n    // This layout simply wraps all pages under /blog/ (i.e., [id]/page.js)\n    return <div>\n        \n        {children}\n        </div>;\n}"],"names":[],"mappings":"AAAA,wBAAwB;;;;;;;AAET,SAAS,UAAU,EAAE,QAAQ,EAAE;IAC1C,uEAAuE;IACvE,qBAAO,8OAAC;kBAEH;;;;;;AAET"}}]
 }

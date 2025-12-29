@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/components/Layout/ThemeProvider.jsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\";\r\n\r\nexport function ThemeProvider({ children }) {\r\n  return (\r\n    <NextThemesProvider attribute=\"class\" defaultTheme=\"system\" enableSystem>\r\n      {children}\r\n    </NextThemesProvider>\r\n  );\r\n}"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIO,SAAS,cAAc,EAAE,QAAQ,EAAE;IACxC,qBACE,8OAAC,iKAAkB;QAAC,WAAU;QAAQ,cAAa;QAAS,YAAY;kBACrE;;;;;;AAGP"}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/Providers.js"],"sourcesContent":["\"use client\"\r\nimport { ThemeProvider } from \"next-themes\"\r\n\r\nexport function Providers({ children }) {\r\n  return (\r\n    <ThemeProvider attribute=\"class\" defaultTheme=\"system\" enableSystem>\r\n      {children}\r\n    </ThemeProvider>\r\n  )\r\n}"],"names":[],"mappings":";;;;;AACA;AADA;;;AAGO,SAAS,UAAU,EAAE,QAAQ,EAAE;IACpC,qBACE,8OAAC,iKAAa;QAAC,WAAU;QAAQ,cAAa;QAAS,YAAY;kBAChE;;;;;;AAGP"}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/blog/layout.js"],"sourcesContent":["// src/app/blog/layout.js\n\nexport default function BlogLayout({ children }) {\n    // This layout simply wraps all pages under /blog/ (i.e., [id]/page.js)\n    return <div>{children}</div>;\n}"],"names":[],"mappings":"AAAA,yBAAyB;;;;;;;AAEV,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC3C,uEAAuE;IACvE,qBAAO,8OAAC;kBAAK;;;;;;AACjB"}}]
+}

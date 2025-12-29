@@ -1,352 +1,235 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import AnimatedSection from "./AnimationWeb";
 import { slugify } from "../../data/Data";
 import useAPI from "../../hooks/useAPI";
 
-import { useMemo } from 'react';
+const LARGE_LIMIT = 10; // Table mein limit thodi badha di hai
 
-
-
-// --- MOCK EXTERNAL DEPENDENCIES (for runnable code) ---
-// const Link = ({ href, children, className }) => <a href="#" onClick={(e) => e.preventDefault()} className={className}>{children}</a>;
-// const AnimatedSection = ({ children }) => <div className="animate-in fade-in">{children}</div>;
-// const slugify = (text) => tex/ mockIpoList, loading: false });
-
-
-// --------------------------------------------------------
-// STATUS MAP FOR UI
-// --------------------------------------------------------
-const mapStatusToUI = (code) => {
-    switch (code) {
-        case "U": return "Upcoming";
-        case "O": return "Ongoing";
-        case "CT": return "Ongoing"; // Close Today should be treated as Ongoing for UI tabs
-        case "C":
-        case "L": return "Closed";
-        default: return "Upcoming";
-    }
-};
-
-//
-// --------------------------------------------------------
-// FILTER BAR
-// --------------------------------------------------------
-const IpoFilterBar = ({ selectedStatus, setSelectedStatus, search, setSearch }) => {
-    const STATUS_TABS = ["All", "Upcoming", "Ongoing", "Closed"];
-
-    return (
-        <div className="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/90 p-3 
-            sm:flex-row sm:items-center sm:justify-between 
-            dark:border-slate-800 dark:bg-slate-950/90 backdrop-blur-sm shadow-md sticky top-0 z-10">
-
-            {/* Status Tabs (Sthiti Tabs) */}
-            <div className="flex flex-wrap gap-2 text-xs sm:text-[13px]">
-                {STATUS_TABS.map((status) => (
-                    <button
-                        key={status}
-                        onClick={() => setSelectedStatus(status)}
-                        className={`rounded-full px-4 py-1.5 font-semibold transition duration-300 ${selectedStatus === status
-                            ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/30"
-                            : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-                            }`}
-                    >
-                        {status}
-                    </button>
-                ))}
-            </div>
-
-            {/* Search (Khoj) */}
-            <div className="flex items-center gap-2 rounded-full border border-slate-300 
-                bg-slate-100/80 px-4 py-1.5 text-sm text-slate-700 
-                dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 w-full sm:w-auto">
-                <span>🔍</span>
-                <input
-                    type="text"
-                    placeholder="Search IPO name or exchange..." // IPO ka naam ya exchange khojein...
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="w-full bg-transparent outline-none placeholder:text-slate-500"
-                />
-            </div>
-        </div>
-    );
-};
-
-//
-// --------------------------------------------------------
-// IPO TABLE (Grid View)
-// --------------------------------------------------------
-const IpoTable = ({ ipos }) => {
-
-    const { data, loading, error, refetch, create } = useAPI("ipo/all");
-
-
-    if (!data.length) {
-        return (
-            <div className="rounded-2xl border border-slate-200 bg-white/80 p-6 text-center 
-                text-sm text-slate-500 dark:border-slate-800 dark:bg-slate-950/80 dark:text-slate-300 backdrop-blur-sm">
-                No IPOs found matching the filter criteria. {/* Filter criteria se koi IPO nahi mila. */}
-            </div>
-        );
-    }
-
-    return (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {data.map((ipo) => {
-
-                let dateDisplay;
-                if (ipo.status === "L") {
-                    // Listed: Show Listing Date only
-                    dateDisplay = `Listed: ${ipo.listing_date_display}`;
-                } else {
-                    // U, O, CT, C: Show Open and Close Date
-                    dateDisplay = `Open: ${ipo.open_date} - Close: ${ipo.close_date}`;
-                }
-
-                const showRange = ipo.gmp_low !== null && ipo.gmp_high !== null;
-
-                return (
-                    <Link
-                        key={ipo.id}
-                        href={`/ipo/${ipo.id}/${slugify(ipo.name)}`}
-                        className="flex flex-col relative rounded-xl border border-slate-200 bg-white p-4 shadow-lg 
-                            transition hover:shadow-xl hover:shadow-emerald-500/20 
-                            dark:border-slate-800 dark:bg-slate-900 overflow-hidden group" // Added group for hover effects
-                    >
-
-                        {/* TOP HEADER: Name and Status */}
-                        <div className="flex items-center justify-between mb-2">
-                            <h3 className="text-base font-bold text-slate-900 dark:text-slate-50 truncate pr-4">
-                                {ipo.name}
-                            </h3>
-                            <StatusBadge uiStatus={ipo.status_text == "Listed" ? "Alotted" : ipo.status_text} />
-                        </div>
-
-                        {/* SUB-HEADER: Exchange, Category, and Key Date */}
-                        <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-medium mb-3 pb-2 border-b border-slate-100 dark:border-slate-800">
-                            <p>
-                                {/* Exchange / Category (Exchange / Varg) */}
-                                {ipo.exchange || 'Mainboard'} / {ipo.category || 'Main'}
-                            </p>
-                            <p className="font-semibold text-slate-600 dark:text-slate-300">
-                                {/* Date Information (Tareekh ki Jankari) */}
-                                {dateDisplay}
-                            </p>
-                        </div>
-
-                        {/* KEY DETAILS GRID: Price & Lot Size */}
-                {/* KEY DETAILS GRID: Price & Lot Size */}
-<div className="grid grid-flow-col auto-cols-fr gap-3 mb-4">
-    <DetailItem label="Price Band" value={ipo.price ? `₹${ipo.price}` : "--"} />
-    <DetailItem label="Lot Size" value={ipo.lot_size || "--"} />
-
-    {showRange && (
-        <DetailItem
-            label="Gmp Range  ↑ | ↓"
-            value={`₹${ipo.gmp_low} - ₹${ipo.gmp_high}`}
-        />
-    )}
-</div>
-
-                        {/* GMP SECTION (Bottom Bar) */}
-                        <GmpDisplay ipo={ipo} />
-
-                        {/* BOTTOM FOOTER / BUTTONS */}
-                        <div className="mt-4 flex justify-between items-center">
-                            {/* Left Side Info: Allotment Status / Listing Gain */}
-                            <div className="text-[11px] font-medium">
-                                {ipo.status === "L" ? (
-                                    <ListingGainDisplay ipo={ipo} />
-                                ) : ipo.allotted ? (
-                                    <p className="text-emerald-600 dark:text-emerald-400">
-                                        ✔ Allotment Published {/* Aavantan Jaari */}
-                                    </p>
-                                ) : (
-                                    <p className="text-slate-500 dark:text-slate-400">
-                                        Listing: {ipo.listing_date_display} {/* Soochi Hone Ki Tareekh */}
-                                    </p>
-                                )}
-                            </div>
-
-                            {/* Right Side: View Details Button (Point 4) */}
-                            <div className="inline-flex items-center justify-center px-3 py-1 text-xs font-semibold 
-                                bg-emerald-500 text-white rounded-full shadow-md 
-                                transition group-hover:bg-emerald-600">
-                                View Details {/* Aur Jankari Dekhein */}
-                            </div>
-                        </div>
-                    </Link>
-                );
-            })}
-        </div>
-    );
-};
-
-// Helper component for detail items
-const DetailItem = ({ label, value }) => (
-    <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-800/50">
-        <p className="text-[10px] uppercase font-medium text-slate-500 dark:text-slate-400">{label}</p>
-        <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">{value}</p>
-    </div>
-);
-
-// Helper component for GMP display (Includes Low/High range - Point 2)
-const GmpDisplay = ({ ipo }) => {
-    if (ipo.status === "L") {
-        return null; // Listed IPOs show gain in ListingGainDisplay
-    }
-
-    let gmpClasses = "text-slate-600 dark:text-slate-300";
-    let gmpBg = "bg-slate-100 dark:bg-slate-800";
-    let gmpText = ipo.gmp_text;
-
-    if (ipo.gmp_percent > 0) {
-        gmpClasses = "text-emerald-700 dark:text-emerald-400";
-        gmpBg = "bg-emerald-100 dark:bg-emerald-900/40";
-        gmpText = `+${ipo.gmp_text}`; // Add + sign for clarity
-    } else if (ipo.gmp_percent < 0) {
-        gmpClasses = "text-red-700 dark:text-red-400";
-        gmpBg = "bg-red-100 dark:bg-red-900/40";
-    }
-
-    // Show range if GMP is non-zero and range data is available
-    const showRange = ipo.gmp !== 0 && ipo.gmp_low !== null && ipo.gmp_high !== null;
-
-    return (
-        <div className={`p-3 rounded-lg flex flex-col justify-center font-bold ${gmpBg}`}>
-            <div className="flex justify-between items-center">
-                <p className={`text-xs uppercase tracking-wider ${gmpClasses}`}>Live GMP</p>
-                <p className={`text-lg ${gmpClasses}`}>{gmpText}</p>
-            </div>
-
-            {/* {showRange && (
-                <p className="text-[10px] text-right font-medium text-slate-500 dark:text-slate-400 mt-0.5">
-                    Range: Low/High (Seema: Kam/Zyaada)
-                    Gmp : ₹{ipo.gmp_low} - ₹{ipo.gmp_high}
-                </p>
-            )} */}
-        </div>
-    );
-};
-
-// Helper component for Listing Gain
-const ListingGainDisplay = ({ ipo }) => {
-    const isGain = ipo.listing_gain_percent >= 0;
-    const gainClasses = isGain ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-600 dark:text-red-400';
-
-    return (
-        <p className={`text-sm font-bold ${gainClasses}`}>
-            {/* Listing Gain (Soochi Hone Par Labh) */}
-            {isGain ? '▲' : '▼'} Listing Gain: {ipo.listing_gain} ({ipo.listing_gain_percent}%)
-        </p>
-    );
-};
-
-
-// Helper component for Status Badge
 const StatusBadge = ({ uiStatus }) => {
-    let badgeClasses = "";
-    switch (uiStatus) {
-        case "Ongoing":
-            badgeClasses = "bg-emerald-500/10 text-emerald-600 ring-emerald-500/40";
-            break;
-        case "Upcoming":
-            badgeClasses = "bg-cyan-500/10 text-cyan-600 ring-cyan-500/40";
-            break;
-        case "Closed":
-            badgeClasses = "bg-slate-200/50 text-slate-600 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300";
-            break;
-        default:
-            badgeClasses = "bg-slate-200/50 text-slate-600 ring-slate-400/40 dark:bg-slate-500/10 dark:text-slate-300";
-    }
-
+    const isOngoing = uiStatus === "Open" || uiStatus === "Closing Today";
     return (
-        <span
-            className={`inline-flex rounded-full px-2.5 py-0.5 text-[11px] font-semibold tracking-wide ring-1 ${badgeClasses}`}
-        >
-            {/* IPO Status (IPO Ki Sthiti) */}
+        <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider ring-1 ring-inset ${isOngoing
+            ? "bg-emerald-500/10 text-emerald-600 ring-emerald-500/30 dark:text-emerald-400"
+            : "bg-slate-100 text-slate-600 ring-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:ring-slate-700"
+            }`}>
             {uiStatus}
         </span>
     );
 };
 
-
-//
-// --------------------------------------------------------
-// MAIN APP COMPONENT
-// --------------------------------------------------------
-const App = () => {
-    const [selectedStatus, setSelectedStatus] = useState("All");
+const AllIpoSection = () => {
+    const [mainCategory, setMainCategory] = useState("all");
+    const [subStatus, setSubStatus] = useState("all");
     const [search, setSearch] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
 
-    const { data: rawData, loading } = useAPI("ipo/all");
+    const apiPath = useMemo(() => {
+        if (mainCategory === "all") return "ipo/all";
+        const statusPath = subStatus === "all" ? "active" : subStatus;
+        return `ipo/${mainCategory}/${statusPath}`;
+    }, [mainCategory, subStatus]);
 
-    // Add UI status field to the raw data
-    const ipos = useMemo(() => (rawData || []).map((ipo) => ({
-        ...ipo,
-        ui_status: mapStatusToUI(ipo.status),
-    })), [rawData]);
+    const { data: rawData, loading } = useAPI(apiPath);
 
-    // FILTER LOGIC
-    const filteredIpos = ipos.filter((ipo) => {
-        const matchStatus = selectedStatus === "All" || ipo.ui_status === selectedStatus;
-        const query = search.toLowerCase();
-        const matchSearch =
-            ipo.name.toLowerCase().includes(query) ||
-            ipo.exchange.toLowerCase().includes(query) ||
-            ipo.category.toLowerCase().includes(query) ||
-            ipo.status_text.toLowerCase().includes(query);
+    useEffect(() => { setCurrentPage(1); }, [mainCategory, subStatus]);
 
-        return matchStatus && matchSearch;
-    });
+    const mapStatusToUI = (code) => {
+        switch (code) {
+            case "U": return "Upcoming";
+            case "O": return "Open";
+            case "CT": return "Closing Today";
+            case "C": return "Closed";
+            case "L": return "Listed";
+            default: return "Upcoming";
+        }
+    };
 
-    if (loading) {
-        return (
-            <div className="flex justify-center items-center min-h-screen bg-slate-50 dark:bg-slate-950">
-                {/* Loading IPO data... (IPO data load ho raha hai...) */}
-                <p className="text-lg font-medium text-slate-600 dark:text-slate-400">Loading IPO data...</p>
-            </div>
-        );
-    }
+    const processedIpos = useMemo(() => {
+        const baseData = (rawData || []).map(ipo => ({
+            ...ipo,
+            ui_status: mapStatusToUI(ipo.status),
+        }));
+        return baseData.filter(ipo => {
+            const query = search.toLowerCase();
+            return ipo.name.toLowerCase().includes(query) || ipo.exchange?.toLowerCase().includes(query);
+        });
+    }, [rawData, search]);
+
+    const totalPages = Math.ceil(processedIpos.length / LARGE_LIMIT);
+    const paginatedIpos = processedIpos.slice((currentPage - 1) * LARGE_LIMIT, currentPage * LARGE_LIMIT);
+
+    const mainCategories = [
+        { id: "all", label: "All IPOs" },
+        { id: "mainboard", label: "Mainboard" },
+        { id: "sme", label: "SME" },
+    ];
+
+    const statusFilters = [
+        { id: "all", label: "All Status" },
+        { id: "open", label: "Live Open" },
+        { id: "upcoming", label: "Upcoming" },
+        { id: "closing-today", label: "Closing Today" },
+        { id: "closed", label: "Closed" },
+        { id: "listed", label: "Listed" },
+    ];
 
     return (
         <AnimatedSection>
-            <section className="bg-slate-50 py-8 sm:py-12 min-h-screen
-                dark:bg-slate-950 transition duration-300">
+            <section id="ipos" className="bg-white dark:bg-[#020617] py-12 sm:py-20 min-h-screen transition-colors duration-500">
+                <div className="mx-auto max-w-7xl px-4 sm:px-6">
 
-                <div className="mx-auto max-w-7xl w-7xl px-4 sm:px-6">
+                    {/* Header */}
+                    <header className="mb-10 text-center">
+                        <h2 className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white sm:text-5xl lg:text-5xl">
 
-                    {/* HEADER */}
-                    <div className="mb-6">
-                        <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50 sm:text-3xl">
-                            {/* Live IPO Dashboard (Live IPO Dashboard) */}
-                            Live IPO Dashboard
+                            Capital <span className="text-blue-600 dark:text-emerald-500">Mitra</span> Live IPO Tracker
+
                         </h2>
-                        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400 max-w-xl">
-                            {/* Track All Upcoming, Ongoing & Listed IPOs... (Sabhi aane wale, chal rahe aur soochi hue IPOs ko track karein...) */}
-                            Track All Upcoming, Ongoing & Listed IPOs with live Grey Market Premium (GMP).
+                        <p className="mt-4 text-base font-medium text-slate-500 dark:text-slate-400">
+                            Professional tracking for Mainboard and SME listings with real-time GMP data.
                         </p>
-                    </div>
+                    </header>
 
-                    {/* CONTENT */}
-                    <div className="space-y-6">
-                        <IpoFilterBar
-                            selectedStatus={selectedStatus}
-                            setSelectedStatus={setSelectedStatus}
-                            search={search}
-                            setSearch={setSearch}
-                        />
+                    {/* Filter Bar (Two-Tier) */}
+                    <nav className="sticky top-0 z-40 space-y-4 mb-8 p-4 rounded-2xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-xl">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl overflow-x-auto no-scrollbar w-full md:w-auto">
+                                {mainCategories.map((cat) => (
+                                    <button
+                                        key={cat.id}
+                                        onClick={() => { setMainCategory(cat.id); setSubStatus("all"); }}
+                                        className={`flex-1 whitespace-nowrap px-6 py-2 rounded-lg text-xs font-black uppercase tracking-wider transition-all ${mainCategory === cat.id
+                                            ? "bg-white dark:bg-slate-700 text-blue-600 dark:text-emerald-400 shadow-sm"
+                                            : "text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
+                                            }`}
+                                    >
+                                        {cat.label}
+                                    </button>
+                                ))}
+                            </div>
+                            <div className="relative w-full md:w-64">
+                                <input
+                                    type="text"
+                                    placeholder="Search company..."
+                                    value={search}
+                                    onChange={(e) => setSearch(e.target.value)}
+                                    className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 px-10 py-2 text-sm font-bold outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
+                                />
+                                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 opacity-50">🔍</span>
+                            </div>
+                        </div>
 
-                        <IpoTable ipos={filteredIpos} />
-                    </div>
+                        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+                            {statusFilters.map((status) => (
+                                <button
+                                    key={status.id}
+                                    onClick={() => setSubStatus(status.id)}
+                                    className={`whitespace-nowrap px-4 py-1.5 rounded-full text-[11px] font-bold border transition-all ${subStatus === status.id
+                                        ? "bg-blue-600 border-blue-600 text-white dark:bg-emerald-500 dark:border-emerald-500"
+                                        : "bg-transparent border-slate-200 dark:border-slate-700 text-slate-500 hover:border-blue-400 dark:hover:border-emerald-400"
+                                        }`}
+                                >
+                                    {status.label}
+                                </button>
+                            ))}
+                        </div>
+                    </nav>
 
+                    {/* Tabular Content Section */}
+                    {loading ? (
+                        <div className="flex flex-col items-center justify-center min-h-[400px]">
+                            <div className="h-10 w-10 animate-spin rounded-full border-4 border-blue-600 border-t-transparent" />
+                        </div>
+                    ) : paginatedIpos.length > 0 ? (
+                        <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl bg-white dark:bg-slate-900">
+                            <table className="w-full text-sm text-left border-collapse min-w-[900px]">
+                                <thead className="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
+                                    <tr className="text-[10px] font-black uppercase tracking-widest">
+                                        <th className="px-6 py-4 w-16 text-center">#</th>
+                                        <th className="px-6 py-4  left-0 bg-slate-50 dark:bg-slate-800 z-10">Company Name</th>
+                                        <th className="px-6 py-4">Price</th>
+                                        <th className="px-6 py-4">GMP</th>
+                                        <th className="px-6 py-4">Sub.</th>
+                                        <th className="px-6 py-4">Listing Date</th>
+                                        <th className="px-6 py-4 text-center">Status</th>
+                                        <th className="px-6 py-4 text-right">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                                    {paginatedIpos.map((ipo, index) => (
+                                        <tr key={ipo.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors group">
+                                            <td className="px-6 py-4 text-center text-slate-400 font-mono text-xs">
+                                                {(currentPage - 1) * LARGE_LIMIT + index + 1}
+                                            </td>
+                                            <td className="px-6 py-4  left-0 bg-white dark:bg-slate-900 z-10 group-hover:bg-slate-50 dark:group-hover:bg-slate-800 font-bold text-slate-900 dark:text-white">
+                                                <div className="truncate max-w-[200px]">{ipo.name}</div>
+                                                <div className="text-[9px] text-slate-400 uppercase tracking-tighter">{ipo.exchange} • {ipo.category}</div>
+                                            </td>
+                                            <td className="px-6 py-4 font-black text-blue-600 dark:text-emerald-400 whitespace-nowrap">
+                                                ₹{ipo.price || 'TBA'}
+                                            </td>
+                                            <td className="px-6 py-4 font-bold">
+                                                <span className={`${parseFloat(ipo.gmp) >= 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
+                                                    ₹{ipo.gmp || '0'}
+                                                </span>
+                                                <span className="text-[9px] block text-slate-400">({ipo.gmp_percent || '0'}%)</span>
+                                            </td>
+                                            <td className="px-6 py-4 font-medium text-slate-600 dark:text-slate-400 whitespace-nowrap">
+                                                {ipo.subscription || 'N/A'}
+                                            </td>
+                                            <td className="px-6 py-4 text-slate-500 dark:text-slate-400 whitespace-nowrap">
+                                                {ipo.listing_date_display || 'TBA'}
+                                            </td>
+                                            <td className="px-6 py-4 text-center">
+                                                <StatusBadge uiStatus={ipo.ui_status} />
+                                            </td>
+                                            <td className="px-6 py-4 text-right">
+                                                <Link
+                                                    href={`/ipo/${ipo.id}/${slugify(ipo.name)}`}
+                                                    className="inline-flex items-center justify-center rounded-lg bg-slate-900 dark:bg-white px-3 py-1.5 text-[10px] font-black uppercase text-white dark:text-slate-900 hover:scale-105 transition-transform"
+                                                >
+                                                    View Details
+                                                </Link>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    ) : (
+                        <div className="py-20 text-center border-2 border-dashed rounded-3xl dark:border-slate-800">
+                            <p className="text-slate-500">No results found.</p>
+                        </div>
+                    )}
+
+                    {/* Pagination */}
+                    {totalPages > 1 && !loading && (
+                        <div className="mt-8 flex items-center justify-center gap-3">
+                            <button
+                                onClick={() => { setCurrentPage(p => Math.max(p - 1, 1)); }}
+                                disabled={currentPage === 1}
+                                className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-[10px] disabled:opacity-20 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                            >PREV</button>
+                            <span className="text-xs font-black dark:text-slate-400 uppercase tracking-widest">Page {currentPage} of {totalPages}</span>
+                            <button
+                                onClick={() => { setCurrentPage(p => Math.min(p + 1, totalPages)); }}
+                                disabled={currentPage === totalPages}
+                                className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 font-bold text-[10px] disabled:opacity-20 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800"
+                            >NEXT</button>
+                        </div>
+                    )}
                 </div>
+
+                <style jsx global>{`
+                    .no-scrollbar::-webkit-scrollbar { display: none; }
+                    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                `}</style>
             </section>
         </AnimatedSection>
     );
 };
 
-export default App;
+export default AllIpoSection;

@@ -168,11 +168,11 @@ export const IPO_LIST = [
 ];
 
 export const NAV_LINKS = [
-  { label: "Home", href: "#hero" },
-  { label: "IPOs", href: "#ipos" },
-  { label: "Blogs", href: "#blogs" },
-  { label: "Calculators", href: "#calculators" },
-  { label: "Newsletter", href: "#newsletter" },
+  { label: "Home", href: "/" },
+  { label: "IPOs", href: "ipo" },
+  { label: "Tranding News", href: "news" },
+  { label: "Calculators", href: "calculators" },
+  // { label: "Newsletter", href: "newsletter" },
 ];
 
 export const slugify = (title) => {

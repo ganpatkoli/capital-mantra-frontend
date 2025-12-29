@@ -686,23 +686,19 @@ const IPO_LIST = [
 const NAV_LINKS = [
     {
         label: "Home",
-        href: "#hero"
+        href: "/"
     },
     {
         label: "IPOs",
-        href: "#ipos"
+        href: "ipos"
     },
     {
-        label: "Blogs",
-        href: "#blogs"
+        label: "Tranding News",
+        href: "news"
     },
     {
         label: "Calculators",
-        href: "#calculators"
-    },
-    {
-        label: "Newsletter",
-        href: "#newsletter"
+        href: "calculators"
     }
 ];
 const slugify = (title)=>{

@@ -188,7 +188,7 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug }) => {
     ));
 
     return (
-        <section className="py-12 sm:py-16 bg-slate-50 dark:bg-slate-950">
+        <section className="py-12 sm:py-16 bg-slate-50 dark:bg-slate-950 mt-10">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
 
                 {/* BACK BUTTON */}
@@ -198,13 +198,13 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug }) => {
                     HEADER SECTION
                 -------------------------------------- */}
                 <header className="mt-4 border-b pb-4 border-slate-200 dark:border-slate-800 flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden">
-                        <img
-                            src={gmpData.logo || "/no-logo.png"}
-                            alt={`${gmpData.matched_item.name} Logo`}
-                            className="w-full h-full object-contain p-2"
-                        />
-                    </div>
+                    {/* <div className=" rounded-full object-contain bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden"> */}
+                    <img
+                        src={gmpData.logo || "/no-logo.png"}
+                        alt={`${gmpData.matched_item.name} Logo`}
+                        className="w-20 h-20 rounded-full object-contain border p-0.5 "
+                    />
+                    {/* </div> */}
 
                     <div className="flex-1">
                         <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-50 sm:text-4xl">
@@ -219,6 +219,8 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug }) => {
                                         : "bg-fuchsia-500/10 text-fuchsia-600 dark:text-fuchsia-400"
                                     }`}
                             >
+
+                                {console.log("gmpData.matched_item.category" ,gmpData.matched_item)}
                                 {gmpData.matched_item.category} IPO
                             </span>
 
@@ -238,7 +240,16 @@ const IpoDetailView = ({ goBack, apiReponse, gmpApiResponse, id, slug }) => {
                     </div>
                 </header>
 
-                <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"> {[{ label: "Price Band", value: ipo.ipoDetails["Price Band"] }, { label: "Lot Size", value: ipo.ipoDetails['Lot Size'] }, { label: "GMP", value: <span className={"-"}>0.00</span> }, { label: "Issue Size", value: ipo.ipoDetails["Total Issue Size"] },].map((item, i) => (<div key={i} className="text-center"> <p className="text-xs text-slate-500 dark:text-slate-400">{item.label}</p> <p className="text-lg font-bold text-slate-900 dark:text-slate-50 mt-1">{item.value}</p> </div>))} </div>
+                <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"> {
+                    [{ label: "Price Band", value: ipo.ipoDetails["Price Band"] || ipo.ipoDetails["Issue Price"] || '-' },
+                    { label: "Lot Size", value: ipo.ipoDetails['Lot Size'] || '-' },
+                    { label: "GMP", value: <span className={"-"}>0.00</span> },
+                    { label: "Issue Size", value: ipo.ipoDetails["Total Issue Size"] }
+                        ,].map((item, i) => (
+                            <div key={i} className="text-center"> <p className="text-xs text-slate-500 dark:text-slate-400">{item.label}</p>
+                                <p className="text-lg font-bold text-slate-900 dark:text-slate-50 mt-1">{item.value}</p>
+                            </div>))}
+                </div>
                 {/* --------------------------------------
                     TABS
                 -------------------------------------- */}
@@ -430,7 +441,6 @@ dark:bg-slate-900 dark:border-slate-800 shadow-sm mt-6">
                     <div className="p-4 sm:p-6 lg:p-8 min-h-screen bg-slate-50 dark:bg-slate-950 font-sans">
                         <div className="max-w-7xl mx-auto space-y-10 mt-5">
 
-                            {console.log("ipoipoipoipoipo", ipo)}
                             {/* ========================= HEADER AND SUMMARY SECTION ========================= */}
                             <section className="p-6 rounded-xl border bg-white dark:bg-slate-900 dark:border-slate-800 shadow-xl">
                                 <div className="flex items-center space-x-4 mb-4">

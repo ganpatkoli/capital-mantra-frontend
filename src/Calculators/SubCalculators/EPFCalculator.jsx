@@ -37,7 +37,7 @@ const EPFCalculator = () => {
 
     return (
         <div className="bg-white p-6 rounded-xl border border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-xl">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-6">EPF Calculator (कर्मचारी भविष्य निधि)</h3>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-6"></h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 space-y-6">

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///F:/CapitalMantra/cpfrotend/src/app/news/page.js"],"sourcesContent":["// src/app/news/page.jsx\r\n\r\nimport React from 'react'\r\n\r\nconst pages = () => {\r\n  return (\r\n    <div>pages</div>\r\n  )\r\n}\r\n\r\nexport default pages\r\n"],"names":[],"mappings":"AAAA,wBAAwB;;;;;;AAExB;;;AAEA,MAAM,QAAQ;IACZ,qBACE,8OAAC;kBAAI;;;;;;AAET;uCAEe"}}]
+}
